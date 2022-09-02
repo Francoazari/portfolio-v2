@@ -1,0 +1,202 @@
+@import "../../styles/mixins.module.scss";
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #0a192f;
+    animation-name: modify-color;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+
+    .centralInformation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        &.centralInformationDissapear {
+            animation-name: dissapear-text;
+            animation-duration: 200ms;
+            animation-iteration-count: 1;
+            animation-delay: 100ms;
+            animation-fill-mode: forwards;
+        }
+
+        span {
+            &.title {
+                animation-name: modify-text;
+                animation-duration: 500ms;
+                animation-iteration-count: 1;
+                animation-delay: 100ms;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        .buttonClickHere {
+            width: 70px;
+            border: 2px solid #fff;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            opacity: 0;
+            cursor: pointer;
+            animation-name: fade-in-buttom;
+            animation-duration: 100ms;
+            animation-iteration-count: 1;
+            animation-delay: 1000ms;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .linesTop,
+    .linesBottom {
+        width: 100%;
+        div {
+            margin-bottom: 15px;
+            height: 4px;
+            background-color: rgb(161, 161, 161);
+        }
+    }
+
+    .linesTop {
+        &.linesTopAppear {
+            div {
+                $widthList: "70", "65", "60", "55", "50";
+
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        //animation-name: line-animation-#{$widthList[#{i}-1]};
+                        animation-name: line-animation-#{nth($widthList, $i)};
+                        animation-duration: 1000ms;
+                        animation-iteration-count: 1;
+                        animation-timing-function: ease-in-out;
+                        animation-fill-mode: forwards;
+                    }
+                }
+            }
+        }
+
+        &.linesTopDissapear {
+            div {
+                $widthList: "r-70", "r-65", "r-60", "r-55", "r-50";
+
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        //animation-name: line-animation-#{$widthList[#{i}-1]};
+                        animation-name: line-animation-#{nth($widthList, $i)};
+                        animation-duration: 300ms;
+                        animation-iteration-count: 1;
+                        animation-timing-function: ease-in-out;
+                        animation-fill-mode: forwards;
+                    }
+                }
+            }
+        }
+    }
+
+    .linesBottom {
+        transform: scaleX(-1);
+
+        &.linesBottomAppear {
+            div {
+                $widthList: "-70", "-65", "-60", "-55", "-50";
+
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        //animation-name: line-animation-#{$widthList[#{i}-1]};
+                        animation-name: line-animation-#{nth($widthList, $i)};
+                        animation-duration: 1000ms;
+                        animation-iteration-count: 1;
+                        animation-timing-function: ease-in-out;
+                        animation-fill-mode: forwards;
+                    }
+                }
+            }
+        }
+
+        &.linesBottomDissapear {
+            div {
+                $widthList: "-r-70", "-r-65", "-r-60", "-r-55", "-r-50";
+
+                @for $i from 1 through 5 {
+                    &:nth-child(#{$i}) {
+                        //animation-name: line-animation-#{$widthList[#{i}-1]};
+                        animation-name: line-animation-#{nth($widthList, $i)};
+                        animation-duration: 300ms;
+                        animation-iteration-count: 1;
+                        animation-timing-function: ease-in-out;
+                        animation-fill-mode: forwards;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fade-in-buttom {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes modify-color {
+    50% {
+        background-color: #020b1b;
+    }
+
+    100% {
+        background-color: #0a192f;
+    }
+}
+
+@keyframes modify-text {
+    0% {
+        opacity: 0;
+        margin-left: 100px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+@keyframes modify-color {
+    50% {
+        background-color: #020b1b;
+    }
+
+    100% {
+        background-color: #0a192f;
+    }
+}
+
+@keyframes dissapear-text {
+    0% {
+        opacity: 1;
+        margin-left: 0px;
+    }
+
+    100% {
+        opacity: 0;
+        margin-left: 30px;
+    }
+}

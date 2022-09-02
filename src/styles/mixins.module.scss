@@ -1,0 +1,35 @@
+@mixin line-animation($width-start: 0, $width-end: 100%, $name: default) {
+    @keyframes line-animation-#{$name} {
+        0% {
+            width: $width-start;
+        }
+
+        100% {
+            width: $width-end;
+        }
+    }
+}
+
+@include line-animation($width-end: 70%, $name: "70");
+@include line-animation($width-end: 65%, $name: "65");
+@include line-animation($width-end: 60%, $name: "60");
+@include line-animation($width-end: 55%, $name: "55");
+@include line-animation($width-end: 50%, $name: "50");
+
+@include line-animation($width-end: 70%, $name: "-70");
+@include line-animation($width-end: 65%, $name: "-65");
+@include line-animation($width-end: 60%, $name: "-60");
+@include line-animation($width-end: 55%, $name: "-55");
+@include line-animation($width-end: 50%, $name: "-50");
+
+@include line-animation($width-start: 70%, $width-end: 0%, $name: "r-70");
+@include line-animation($width-start: 65%, $width-end: 0%, $name: "r-65");
+@include line-animation($width-start: 60%, $width-end: 0%, $name: "r-60");
+@include line-animation($width-start: 55%, $width-end: 0%, $name: "r-55");
+@include line-animation($width-start: 50%, $width-end: 0%, $name: "r-50");
+
+@include line-animation($width-start: 70%, $width-end: 0%, $name: "-r-70");
+@include line-animation($width-start: 65%, $width-end: 0%, $name: "-r-65");
+@include line-animation($width-start: 60%, $width-end: 0%, $name: "-r-60");
+@include line-animation($width-start: 55%, $width-end: 0%, $name: "-r-55");
+@include line-animation($width-start: 50%, $width-end: 0%, $name: "-r-50");
