@@ -2,12 +2,14 @@ import styles from "./IntroAnimation.module.scss";
 import clsx from "clsx";
 import { useState } from "react";
 
-function IntroAnimation() {
+function IntroAnimation({ introFinished }) {
     let [introEnd, setIntroEnd] = useState(false);
 
     const handleClick = () => {
         setIntroEnd(true);
-        //const title = document.getAnimations;
+        setTimeout(function () {
+            introFinished(true);
+        }, 400);
     };
 
     return (
