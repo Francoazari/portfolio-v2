@@ -115,58 +115,7 @@
                     transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
                 }
             }
-
-            // .buttonClickHere {
-            //     width: 70px;
-            //     border: 2px solid #020b1b;
-            //     background-color: #020b1b;
-            //     border-radius: 20px;
-            //     display: flex;
-            //     justify-content: center;
-            //     align-items: center;
-            //     padding: 10px 20px;
-            //     opacity: 0;
-            //     cursor: pointer;
-            //     animation-name: fade-in-buttom;
-            //     animation-duration: 200ms;
-            //     animation-iteration-count: 1;
-            //     animation-delay: 200ms;
-            //     animation-timing-function: ease-in-out;
-            //     animation-fill-mode: forwards;
-            //     box-shadow: 11px 12px 24px -10px rgba(0, 0, 0, 0.69);
-            //     -webkit-box-shadow: 11px 12px 24px -10px rgba(0, 0, 0, 0.69);
-            //     -moz-box-shadow: 11px 12px 24px -10px rgba(0, 0, 0, 0.69);
-
-            //     span {
-            //         color: white;
-            //         font-size: 12px;
-            //     }
-
-            //     &:hover {
-            //         background-color: rgba(2, 11, 27, 0.8);
-            //     }
-            // }
         }
-    }
-}
-
-@keyframes fade-in-buttom {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes modify-color {
-    50% {
-        background-color: #020b1b;
-    }
-
-    100% {
-        background-color: #0a192f;
     }
 }
 
@@ -179,16 +128,6 @@
     100% {
         opacity: 1;
         margin-left: 0px;
-    }
-}
-
-@keyframes modify-color {
-    50% {
-        background-color: #020b1b;
-    }
-
-    100% {
-        background-color: #0a192f;
     }
 }
 
