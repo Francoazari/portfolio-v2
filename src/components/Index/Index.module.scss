@@ -1,13 +1,16 @@
 .container {
     width: 100vw;
     height: 100vh;
-    background-color: #0a192f;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: calc(10px + 2vmin);
+    overflow: hidden;
 
     p {
         display: block;
