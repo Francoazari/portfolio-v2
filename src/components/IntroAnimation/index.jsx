@@ -40,7 +40,7 @@ function IntroAnimation({ introFinished }) {
                         x2: 1,
                         y2: 1,
                         color1: "#0a192f",
-                        color2: "#2E3244"
+                        color2: "#0a192f"
                     },
                     width: window.innerWidth,
                     height: window.innerHeight,
@@ -51,21 +51,23 @@ function IntroAnimation({ introFinished }) {
     }, []);
 
     return (
-        <div className={styles.background}>
-            <canvas id="particles" className={clsx({ [styles.hideCanvas]: introEnd })}></canvas>
-            <div className={styles.container}>
-                <div
-                    className={clsx({
-                        [styles.centralInformation]: true,
-                        [styles.centralInformationHide]: introEnd
-                    })}
-                >
-                    <div className={styles.information}>
-                        <span className={styles.portfolio}>PORTFOLIO</span>
-                        <span className={styles.title}>FRANCO AZARI</span>
-                    </div>
-                    <div className={styles.buttonClickHere} onClick={() => handleClick()}>
-                        <span>CLICK HERE</span>
+        <div className={styles.container}>
+            <div className={styles.background}>
+                <canvas id="particles" className={clsx({ [styles.hideCanvas]: introEnd })}></canvas>
+                <div className={styles.container}>
+                    <div
+                        className={clsx({
+                            [styles.centralInformation]: true,
+                            [styles.centralInformationHide]: introEnd
+                        })}
+                    >
+                        <div className={styles.information}>
+                            <span className={styles.portfolio}>PORTFOLIO</span>
+                            <span className={styles.title}>FRANCO AZARI</span>
+                        </div>
+                        <div className={styles.buttonClickHere} onClick={() => handleClick()}>
+                            <span>CLICK HERE</span>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,118 +1,139 @@
 @import "../../styles/mixins.module.scss";
 
-.background {
-    width: 100%;
+.container {
+    width: 100vw;
     height: 100vh;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: calc(10px + 2vmin);
+    overflow: hidden;
 
-    canvas {
-        &.hideCanvas {
-            animation-name: hide-canvas;
-            animation-duration: 200ms;
-            animation-iteration-count: 1;
-            animation-delay: 300ms;
-            animation-fill-mode: forwards;
-        }
-
-        z-index: -1;
+    p {
+        display: block;
+        margin: auto;
+        color: #fff;
     }
 
-    .container {
-        width: 100vw;
+    .background {
+        width: 100%;
         height: 100vh;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
 
-        .centralInformation {
-            width: 400px;
-            height: 300px;
-            background-color: rgba(255, 255, 255, 0.9);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            gap: 20px;
-            border-radius: 20px;
-            color: #020b1b;
-            -webkit-box-shadow: 9px 10px 55px -10px rgba(255, 255, 255, 0.8);
-            -moz-box-shadow: 9px 10px 55px -10px rgba(255, 255, 255, 0.8);
-            box-shadow: 9px 10px 55px -10px rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            z-index: 2;
-
-            &.centralInformationHide {
-                animation-name: hide-text;
+        canvas {
+            &.hideCanvas {
+                animation-name: hide-canvas;
                 animation-duration: 200ms;
                 animation-iteration-count: 1;
-                animation-delay: 100ms;
+                animation-delay: 300ms;
                 animation-fill-mode: forwards;
             }
 
-            .information {
+            z-index: -1;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .centralInformation {
+                width: 400px;
+                height: 300px;
+                background-color: rgba(255, 255, 255, 0.9);
                 display: flex;
                 flex-direction: column;
-                line-height: 0.8;
-
-                span {
-                    &.portfolio {
-                        align-self: flex-start;
-                        font-size: 12px;
-                        margin-left: -20px;
-                    }
-
-                    &.title {
-                        font-weight: bold;
-                        animation-name: modify-text;
-                        animation-duration: 500ms;
-                        animation-iteration-count: 1;
-                        animation-delay: 100ms;
-                        animation-fill-mode: forwards;
-                    }
-                }
-            }
-
-            .buttonClickHere {
-                border: 1px solid;
-                overflow: hidden;
-                position: relative;
-                width: 100px;
-                display: flex;
-                justify-content: center;
+                justify-content: space-evenly;
                 align-items: center;
-                padding: 10px;
+                gap: 20px;
                 border-radius: 20px;
+                color: #020b1b;
+                -webkit-box-shadow: 9px 10px 55px -10px rgba(255, 255, 255, 0.8);
+                -moz-box-shadow: 9px 10px 55px -10px rgba(255, 255, 255, 0.8);
+                box-shadow: 9px 10px 55px -10px rgba(255, 255, 255, 0.8);
+                padding: 20px;
+                z-index: 2;
 
-                span {
-                    font-size: 14px;
-                    z-index: 20;
+                &.centralInformationHide {
+                    animation-name: hide-text;
+                    animation-duration: 200ms;
+                    animation-iteration-count: 1;
+                    animation-delay: 100ms;
+                    animation-fill-mode: forwards;
                 }
 
-                &:after {
-                    background: #101d69;
-                    content: "";
-                    height: 155px;
-                    left: -75px;
-                    opacity: 0.2;
-                    position: absolute;
-                    top: -50px;
-                    transform: rotate(35deg);
-                    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
-                    width: 50px;
-                    z-index: -10;
-                }
-            }
+                .information {
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 0.8;
 
-            .buttonClickHere:hover {
-                &:after {
-                    left: 120%;
-                    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+                    span {
+                        &.portfolio {
+                            align-self: flex-start;
+                            font-size: 12px;
+                            margin-left: -20px;
+                        }
+
+                        &.title {
+                            font-weight: bold;
+                            animation-name: modify-text;
+                            animation-duration: 500ms;
+                            animation-iteration-count: 1;
+                            animation-delay: 100ms;
+                            animation-fill-mode: forwards;
+                        }
+                    }
+                }
+
+                .buttonClickHere {
+                    border: 1px solid;
+                    overflow: hidden;
+                    position: relative;
+                    width: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                    border-radius: 20px;
+
+                    span {
+                        font-size: 14px;
+                        z-index: 20;
+                    }
+
+                    &:after {
+                        background: #101d69;
+                        content: "";
+                        height: 155px;
+                        left: -75px;
+                        opacity: 0.2;
+                        position: absolute;
+                        top: -50px;
+                        transform: rotate(35deg);
+                        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+                        width: 50px;
+                        z-index: -10;
+                    }
+                }
+
+                .buttonClickHere:hover {
+                    &:after {
+                        left: 120%;
+                        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+                    }
                 }
             }
         }

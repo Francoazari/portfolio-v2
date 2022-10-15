@@ -1,5 +1,6 @@
 import { useState } from "react";
 import IntroAnimation from "../IntroAnimation";
+import Portfolio from "../Portfolio";
 import styles from "./Index.module.scss";
 
 function Index() {
@@ -9,7 +10,7 @@ function Index() {
         <>
             <div className={styles.container}>
                 {!introFinished && <IntroAnimation introFinished={setIntroFinished} />}
-                {introFinished && "SITIO EN CONSTRUCCIÓN"}
+                {introFinished && <Portfolio />}
             </div>
         </>
     );

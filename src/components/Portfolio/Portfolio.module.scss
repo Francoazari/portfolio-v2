@@ -1,0 +1,129 @@
+.firstScreen {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 60px);
+    padding-left: 10vw;
+
+    h1 {
+        font-size: 70px;
+        color: rgb(49, 99, 141);
+        letter-spacing: 0.2em;
+    }
+}
+
+.aboutMe,
+.works {
+    padding: 0 20vw;
+    margin-bottom: 50px;
+}
+
+.aboutMe {
+    padding: 0 20vw;
+
+    h2 {
+        margin-bottom: 25px;
+        letter-spacing: 3px;
+    }
+
+    p {
+        line-height: 2;
+        letter-spacing: 3px;
+    }
+}
+
+.works {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .card {
+        width: 60vw;
+        height: 300px;
+        position: relative;
+
+        .cardContainer {
+            position: relative;
+
+            .cardImage {
+                width: 40%;
+                height: auto;
+                max-height: 300px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    max-height: 300px;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+            }
+
+            .cardInfo {
+                position: absolute;
+                width: auto;
+                text-align: right;
+                top: 0;
+                right: 0;
+                left: 30%;
+
+                h2 {
+                    text-align: right;
+                    letter-spacing: 0.2em;
+                }
+
+                .paragraph {
+                    width: 100%;
+                    max-height: 180px;
+                    background-color: rgba(0, 39, 90, 0.7);
+                    backdrop-filter: blur(5px);
+                    text-align: right;
+                    border-radius: 5px;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    padding: 10px;
+                    margin-top: 20px;
+                    margin-right: 0;
+
+                    p {
+                        text-align: right;
+                        letter-spacing: 0.1em;
+                        line-height: 1.5;
+                    }
+                }
+
+                .skillTags {
+                    margin-top: 10px;
+                    ul {
+                        display: flex;
+                        justify-content: flex-end;
+                        gap: 10px;
+
+                        li {
+                            height: 25px;
+                            min-width: 50px;
+                            list-style: none;
+                            padding: 5px 10px;
+                            background-color: rgb(12, 53, 114);
+                            color: #fff;
+                            border-radius: 5px;
+                            font-size: 0.7em;
+                            letter-spacing: 0.1em;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .worksLinks {
+                    margin-top: 10px;
+                    a {
+                        img {
+                            width: 24px;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
