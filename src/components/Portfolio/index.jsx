@@ -30,7 +30,7 @@ function Portfolio() {
                                 <img src={"./assets/works/example.jpg"} alt={"asd"} />
                             </div>
                             <div className={styles.cardInfo}>
-                                <h2>Trabajo 1</h2>
+                                <h2>Project 1</h2>
                                 <div className={styles.paragraph}>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam similique suscipit corrupti non dolor vel quos,
@@ -59,7 +59,7 @@ function Portfolio() {
                                 <img src={"./assets/works/example.jpg"} alt={"asd"} />
                             </div>
                             <div className={styles.cardInfo}>
-                                <h2>Trabajo 2</h2>
+                                <h2>Project 2</h2>
                                 <div className={styles.paragraph}>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam similique suscipit corrupti non dolor vel quos,
@@ -75,7 +75,7 @@ function Portfolio() {
                                 <img src={"./assets/works/example.jpg"} alt={"asd"} />
                             </div>
                             <div className={styles.cardInfo}>
-                                <h2>Trabajo 3</h2>
+                                <h2>Project 3</h2>
                                 <div className={styles.paragraph}>
                                     <p>
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam similique suscipit corrupti non dolor vel quos,
