@@ -1,6 +1,6 @@
 import styles from "./ProjectCard.module.scss";
 
-function ProjectCard() {
+function ProjectCard(projectInformation) {
     return (
         <div className={styles.card}>
             <div className={styles.cardContainer}>
@@ -8,21 +8,16 @@ function ProjectCard() {
                     <img src={"./assets/works/example.jpg"} alt={"asd"} />
                 </div>
                 <div className={styles.cardInfo}>
-                    <h2>Project 1</h2>
+                    <h2>{projectInformation.title}</h2>
                     <div className={styles.paragraph}>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam similique suscipit corrupti non dolor vel quos, error enim
-                            officiis dolorum temporibus magnam a velit voluptatibus. Ipsa aliquam animi consequuntur.
-                        </p>
+                        <p>{projectInformation.paragraph}</p>
                     </div>
                     <div className={styles.skillTags}>
                         <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JAVASCRIPT</li>
-                            <li>REACT</li>
-                            <li>Angular</li>
-                            <li>Next</li>
+                            {projectInformation.skillTags.map((skill, index) => {
+                                return(<li key={index}>{skill}</li>)
+                            })}
+                            
                         </ul>
                     </div>
                     <div className={styles.worksLinks}>
