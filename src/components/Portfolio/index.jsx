@@ -1,5 +1,6 @@
 import Footer from "../Footer";
 import Navbar from "../Navbar";
+import ProjectCard from "../ProjectCard";
 import styles from "./Portfolio.module.scss";
 //import imgExample from "./assets/works/example.jpg";
 
@@ -8,7 +9,7 @@ function Portfolio() {
         <>
             <Navbar />
             <main>
-                <section class={styles.firstScreen}>
+                <section className={styles.firstScreen}>
                     <h1>FRANCO AZARI</h1>
                 </section>
 
@@ -27,67 +28,10 @@ function Portfolio() {
                 <section className={styles.works}>
                     <h2>Projects</h2>
 
-                    <div className={styles.card}>
-                        <div className={styles.cardContainer}>
-                            <div className={styles.cardImage}>
-                                <img src={"./assets/works/example.jpg"} alt={"asd"} />
-                            </div>
-                            <div className={styles.cardInfo}>
-                                <h2>Project 1</h2>
-                                <div className={styles.paragraph}>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam similique suscipit corrupti non dolor vel quos,
-                                        error enim officiis dolorum temporibus magnam a velit voluptatibus. Ipsa aliquam animi consequuntur.
-                                    </p>
-                                </div>
-                                <div className={styles.skillTags}>
-                                    <ul>
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                        <li>JAVASCRIPT</li>
-                                        <li>REACT</li>
-                                    </ul>
-                                </div>
-                                <div className={styles.worksLinks}>
-                                    <a href={"https://www.github.com"}>
-                                        <img src={"./assets/works/github.svg"} alt="GitHub logo" />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.card}>
-                        <div className={styles.cardContainer}>
-                            <div className={styles.cardImage}>
-                                <img src={"./assets/works/example.jpg"} alt={"asd"} />
-                            </div>
-                            <div className={styles.cardInfo}>
-                                <h2>Project 2</h2>
-                                <div className={styles.paragraph}>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam similique suscipit corrupti non dolor vel quos,
-                                        error enim officiis dolorum temporibus magnam a velit voluptatibus. Ipsa aliquam animi consequuntur.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.card}>
-                        <div className={styles.cardContainer}>
-                            <div className={styles.cardImage}>
-                                <img src={"./assets/works/example.jpg"} alt={"asd"} />
-                            </div>
-                            <div className={styles.cardInfo}>
-                                <h2>Project 3</h2>
-                                <div className={styles.paragraph}>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, aliquam similique suscipit corrupti non dolor vel quos,
-                                        error enim officiis dolorum temporibus magnam a velit voluptatibus. Ipsa aliquam animi consequuntur.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <ProjectCard />
+                    <ProjectCard />
+                    <ProjectCard />
+                    <ProjectCard />
                 </section>
             </main>
 
