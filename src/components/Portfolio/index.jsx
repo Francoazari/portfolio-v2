@@ -7,26 +7,16 @@ import styles from "./Portfolio.module.scss";
 function Portfolio() {
     const projects = [
         {
-            title: "project 1",
-            paragraph: "nmskd andnl dsnslakn dk lansdsa lkndakl",
-            skillTags: [
-                "HTML",
-                "CSS",
-                "JAVASCRIPT",
-            ]
+            title: "Project 1",
+            paragraph: "Paragraph paragraph  paragraph paragraph paragraph",
+            skillTags: ["HTML", "CSS", "JAVASCRIPT"]
         },
         {
-            title: "project 2",
-            paragraph: "nmskd andnl dsnslakn dk lansdsa lkndakl ",
-            skillTags: [
-                "HTML",
-                "CSS",
-                "JAVASCRIPT",
-                "REACT"
-            ]
+            title: "Project 2",
+            paragraph: "Paragraph paragraph  paragraph paragraph paragraph",
+            skillTags: ["HTML", "CSS", "JAVASCRIPT", "REACT"]
         }
-
-    ]
+    ];
     return (
         <>
             <Navbar />
@@ -47,18 +37,14 @@ function Portfolio() {
                         </p>
                     </div>
                 </section>
-                <section className={styles.works}>
-                    <h2>Projects</h2>
-                    {projects.map((project, index) => {
-                        return(
-                            <ProjectCard 
-                                key={index}
-                                projectInformation={project}
-                            />
-                        )
-                    })}
-                    
-                </section>
+                {projects && (
+                    <section className={styles.works}>
+                        <h2>Projects</h2>
+                        {projects.map((project, index) => {
+                            return <ProjectCard key={index} projectInformation={project} />;
+                        })}
+                    </section>
+                )}
             </main>
 
             <Footer />
