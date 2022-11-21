@@ -1,6 +1,6 @@
 import styles from "./ProjectCard.module.scss";
 
-function ProjectCard(projectInformation) {
+function ProjectCard({projectInformation}   ) {
     return (
         <div className={styles.card}>
             <div className={styles.cardContainer}>

@@ -5,6 +5,28 @@ import styles from "./Portfolio.module.scss";
 //import imgExample from "./assets/works/example.jpg";
 
 function Portfolio() {
+    const projects = [
+        {
+            title: "project 1",
+            paragraph: "nmskd andnl dsnslakn dk lansdsa lkndakl",
+            skillTags: [
+                "HTML",
+                "CSS",
+                "JAVASCRIPT",
+            ]
+        },
+        {
+            title: "project 2",
+            paragraph: "nmskd andnl dsnslakn dk lansdsa lkndakl ",
+            skillTags: [
+                "HTML",
+                "CSS",
+                "JAVASCRIPT",
+                "REACT"
+            ]
+        }
+
+    ]
     return (
         <>
             <Navbar />
@@ -27,11 +49,15 @@ function Portfolio() {
                 </section>
                 <section className={styles.works}>
                     <h2>Projects</h2>
-
-                    <ProjectCard />
-                    <ProjectCard />
-                    <ProjectCard />
-                    <ProjectCard />
+                    {projects.map((project, index) => {
+                        return(
+                            <ProjectCard 
+                                key={index}
+                                projectInformation={project}
+                            />
+                        )
+                    })}
+                    
                 </section>
             </main>
 
