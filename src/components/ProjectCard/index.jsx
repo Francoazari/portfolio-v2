@@ -22,11 +22,17 @@ function ProjectCard({ projectInformation }) {
                                 </ul>
                             </div>
                         )}
-                        <div className={styles.worksLinks}>
-                            <a href={"https://www.github.com"}>
-                                <img src={"./assets/works/github.svg"} alt="GitHub logo" />
-                            </a>
-                        </div>
+                        {projectInformation.worksLinks && (
+                            <div className={styles.worksLinks}>
+                                {projectInformation.worksLinks.map((workLink, index) => {
+                                    return (
+                                        <a key={index} href={workLink.url}>
+                                            <img src={workLink.image} alt={workLink.alternativeText} />
+                                        </a>
+                                    );
+                                })}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

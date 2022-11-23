@@ -5,24 +5,68 @@ import styles from "./Portfolio.module.scss";
 //import imgExample from "./assets/works/example.jpg";
 
 function Portfolio() {
+    let nombre = "Franco Azari";
+
     const projects = [
         {
             title: "Project 1",
             paragraph: "Paragraph paragraph  paragraph paragraph paragraph",
-            skillTags: ["HTML", "CSS", "JAVASCRIPT"]
+            skillTags: ["HTML", "CSS", "JAVASCRIPT"],
+            worksLinks: [
+                {
+                    url: "http://github.com",
+                    image: "./assets/works/github.svg",
+                    alternatiText: "Github Alternative Text"
+                },
+                {
+                    url: "http://linkedin.com",
+                    image: "./assets/works/linkedin.svg",
+                    alternatiText: "LinkedIn Alternative Text"
+                }
+            ]
         },
         {
             title: "Project 2",
             paragraph: "Paragraph paragraph  paragraph paragraph paragraph",
-            skillTags: ["HTML", "CSS", "JAVASCRIPT", "REACT"]
+            skillTags: ["HTML", "CSS", "JAVASCRIPT", "REACT"],
+            worksLinks: [
+                {
+                    url: "http://github.com",
+                    image: "./assets/works/github.svg",
+                    alternatiText: "Github Alternative Text"
+                },
+                {
+                    url: "http://twitter.com",
+                    image: "./assets/works/twitter.svg",
+                    alternatiText: "Twitter Alternative Text"
+                }
+            ]
+        },
+        {
+            title: "Project 3",
+            paragraph: "Paragraph paragraph  paragraph paragraph paragraph",
+            skillTags: ["HTML", "CSS", "JAVASCRIPT", "REACT"],
+            worksLinks: [
+                {
+                    url: "http://github.com",
+                    image: "./assets/works/github.svg",
+                    alternatiText: "Github Alternative Text"
+                },
+                {
+                    url: "http://twitter.com",
+                    image: "./assets/works/twitter.svg",
+                    alternatiText: "Twitter Alternative Text"
+                }
+            ]
         }
     ];
+
     return (
         <>
             <Navbar />
             <main>
                 <section className={styles.firstScreen}>
-                    <h1>FRANCO AZARI</h1>
+                    <h1>{nombre.toUpperCase()}</h1>
                 </section>
 
                 <section className={styles.aboutMe}>
@@ -37,7 +81,7 @@ function Portfolio() {
                         </p>
                     </div>
                 </section>
-                {projects && (
+                {projects && projects.length > 0 && (
                     <section className={styles.works}>
                         <h2>Projects</h2>
                         {projects.map((project, index) => {
