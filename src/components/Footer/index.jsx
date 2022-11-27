@@ -1,9 +1,11 @@
-//import styles from "./Footer.module.scss";
+import styles from "./Footer.module.scss";
 
 function Footer() {
     return (
         <footer>
-            <p>Pagina web desarrollada por Franco Azari</p>
+            <div className={styles.bottom}>
+                <p>Pagina web desarrollada por Franco Azari</p>
+            </div>
         </footer>
     );
 }
