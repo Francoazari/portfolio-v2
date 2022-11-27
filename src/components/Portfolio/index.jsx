@@ -89,6 +89,19 @@ function Portfolio() {
                         })}
                     </section>
                 )}
+                <section className={styles.contactToMe}>
+                    <h2>Contact to me</h2>
+                    <form>
+                        <input name="firstName" type="text" placeholder="First name"></input>
+                        <input name="lastName" type="text" placeholder="Last name"></input>
+                        <input name="email" type="email" placeholder="Email"></input>
+                        <input name="phone" placeholder="Phone number"></input>
+                        <textarea name="comment" placeholder="Tell me about you"></textarea>
+                        <button type="submit" value="Send form">
+                            Send form
+                        </button>
+                    </form>
+                </section>
             </main>
 
             <Footer />
