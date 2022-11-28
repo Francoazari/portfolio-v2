@@ -74,10 +74,10 @@ function Portfolio() {
                     <div className={styles.information}>
                         <div className={styles.image}>{/* <img src={} alt={} /> */}</div>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quae, recusandae quidem et in corporis eaque cumque, doloribus suscipit,
-                            incidunt quis qui ea possimus deleniti a quaerat voluptatum voluptatem dolore! Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Quasi mollitia magnam voluptas nesciunt debitis adipisci magni, aperiam ipsum asperiores vel doloribus ab iure deserunt non
-                            labore quidem tenetur ducimus accusamus.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi enim laboriosam optio velit earum! Rem ipsa repudiandae corrupti,
+                            debitis iste sequi quam similique necessitatibus ullam distinctio repellat? Laboriosam, nemo ipsum. Lorem ipsum, dolor sit amet
+                            consectetur adipisicing elit. Dignissimos esse nihil ratione quis odit doloremque aspernatur! Provident asperiores, qui inventore,
+                            rerum assumenda cumque reprehenderit voluptate alias, distinctio corporis nam numquam!
                         </p>
                     </div>
                 </section>
