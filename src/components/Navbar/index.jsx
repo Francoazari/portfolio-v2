@@ -1,15 +1,40 @@
 import "./Navbar.module.scss";
 
 function Navbar() {
+    const menuItem = [
+        {
+            label: "Home",
+            url: "/"
+        },
+        {
+            label: "About me",
+            url: "/"
+        },
+        {
+            label: "Portfolio",
+            url: "/"
+        },
+        {
+            label: "Contact",
+            url: "/"
+        }
+    ];
+
     return (
         <nav>
             <p>FRANCO AZARI</p>
-            <ul>
-                <li>Home</li>
-                <li>About me</li>
-                <li>Portfolio</li>
-                <li>Contact</li>
-            </ul>
+
+            {menuItem && (
+                <ul>
+                    {menuItem.map((item, index) => {
+                        return (
+                            <a key={index} href={item.url}>
+                                <li>{item.label}</li>
+                            </a>
+                        );
+                    })}
+                </ul>
+            )}
         </nav>
     );
 }

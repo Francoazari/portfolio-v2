@@ -25,19 +25,27 @@ nav {
         justify-content: center;
         height: 100%;
 
-        li {
-            height: 100%;
-            list-style: none;
-            cursor: pointer;
-            //color: rgb(13, 22, 110);
-            padding: 20px 30px;
-            font-weight: 200;
-            transition: background-color 300ms;
-            letter-spacing: 0.15em;
+        a {
+            text-decoration: none;
 
-            &:hover {
-                color: rgb(13, 22, 110);
-                background-color: rgba(255, 255, 255, 0.8);
+            &:visited {
+                color: #fff;
+            }
+
+            li {
+                height: 100%;
+                list-style: none;
+                cursor: pointer;
+                //color: rgb(13, 22, 110);
+                padding: 20px 30px;
+                font-weight: 200;
+                transition: background-color 300ms;
+                letter-spacing: 0.15em;
+
+                &:hover {
+                    color: rgb(13, 22, 110);
+                    background-color: rgba(255, 255, 255, 0.8);
+                }
             }
         }
     }

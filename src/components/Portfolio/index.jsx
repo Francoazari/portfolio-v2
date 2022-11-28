@@ -70,9 +70,9 @@ function Portfolio() {
                 </section>
 
                 <section className={styles.aboutMe}>
-                    <div className={styles.image}>{/* <img src={} alt={} /> */}</div>
+                    <h2>About me</h2>
                     <div className={styles.information}>
-                        <h2>About me</h2>
+                        <div className={styles.image}>{/* <img src={} alt={} /> */}</div>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quae, recusandae quidem et in corporis eaque cumque, doloribus suscipit,
                             incidunt quis qui ea possimus deleniti a quaerat voluptatum voluptatem dolore! Lorem ipsum dolor sit amet consectetur adipisicing
@@ -89,16 +89,16 @@ function Portfolio() {
                         })}
                     </section>
                 )}
-                <section className={styles.contactToMe}>
-                    <h2>Contact to me</h2>
+                <section className={styles.contact}>
+                    <h2>GET IN TOUCH</h2>
                     <form>
                         <input name="firstName" type="text" placeholder="First name"></input>
                         <input name="lastName" type="text" placeholder="Last name"></input>
                         <input name="email" type="email" placeholder="Email"></input>
                         <input name="phone" placeholder="Phone number"></input>
-                        <textarea name="comment" placeholder="Tell me about you"></textarea>
-                        <button type="submit" value="Send form">
-                            Send form
+                        <textarea name="message" placeholder="Message"></textarea>
+                        <button type="submit" value="">
+                            Send message
                         </button>
                     </form>
                 </section>

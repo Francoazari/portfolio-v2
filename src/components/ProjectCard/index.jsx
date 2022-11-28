@@ -9,7 +9,7 @@ function ProjectCard({ projectInformation }) {
                         <img src={"./assets/works/example.jpg"} alt={"asd"} />
                     </div>
                     <div className={styles.cardInfo}>
-                        <h2>{projectInformation.title}</h2>
+                        <h3>{projectInformation.title}</h3>
                         <div className={styles.paragraph}>
                             <p>{projectInformation.paragraph}</p>
                         </div>
