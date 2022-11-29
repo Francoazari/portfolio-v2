@@ -7,7 +7,7 @@ function Navbar() {
             <ul>
                 <li>Inicio</li>
                 <li>About me</li>
-                <li>Projects</li>
+                <li>Portfolio</li>
                 <li>Contacto</li>
             </ul>
         </nav>
