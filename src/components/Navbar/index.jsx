@@ -1,6 +1,7 @@
 import "./Navbar.module.scss";
 
 function Navbar() {
+    const title = "Franco Azari";
     const menuItem = [
         {
             label: "Home",
@@ -22,7 +23,7 @@ function Navbar() {
 
     return (
         <nav>
-            <p>FRANCO AZARI</p>
+            <p>{title.toUpperCase()}</p>
 
             {menuItem && (
                 <ul>
