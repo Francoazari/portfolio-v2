@@ -16,7 +16,7 @@ function Navbar() {
             url: "/"
         },
         {
-            label: "Contact asd",
+            label: "Contact",
             url: "/"
         }
     ];
