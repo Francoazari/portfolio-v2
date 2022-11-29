@@ -12,7 +12,7 @@ function Navbar() {
             url: "/"
         },
         {
-            label: "Portfolio",
+            label: "Projects",
             url: "/"
         },
         {
