@@ -1,4 +1,4 @@
-import "./Navbar.module.scss";
+import styles from "./Navbar.module.scss";
 
 function Navbar() {
     const title = "Franco Azari";
