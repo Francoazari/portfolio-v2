@@ -1,11 +1,3 @@
-section {
-    h2 {
-        color: #2b4775;
-        font-size: 60px;
-        align-self: flex-start;
-    }
-}
-
 .firstScreen {
     display: flex;
     align-items: center;
@@ -20,10 +12,19 @@ section {
     }
 }
 
-.aboutMe,
-.works {
+section {
     padding: 0 20vw;
     margin-bottom: 20vh;
+    h2 {
+        color: #2b4775;
+        font-size: 60px;
+        align-self: flex-start;
+        margin-left: -5vw;
+    }
+
+    &:first-child {
+        margin-bottom: 0;
+    }
 }
 
 .aboutMe {
@@ -55,6 +56,43 @@ section {
     }
 }
 
+.experience {
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &.experienceList {
+            li {
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+                background-color: #8f8f8f;
+                gap: 15px;
+
+                ul {
+                    &.experienceSkill {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 5px;
+
+                        li {
+                            min-width: 70px;
+                            padding: 5px 10px;
+                            border: 0;
+                            background-color: #2b4775;
+                            font-size: 0.8rem;
+                            border-radius: 5px;
+                            text-align: center;
+                            line-height: 1.2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .works {
     display: flex;
     flex-direction: column;
@@ -68,7 +106,7 @@ section {
     align-items: center;
 
     form {
-        width: 50%;
+        width: 70%;
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -84,11 +122,16 @@ section {
             border-left: 0;
             border-right: 0;
             border-bottom: 1px solid #fff;
-            font-size: 14px;
+            font-size: 1.2rem;
+            outline-style: none;
+            margin-bottom: 10px;
+
+            &:focus {
+                border-bottom: 1px solid #8f8f8f;
+            }
         }
 
         textarea {
-            font-size: 14px;
             font-family: roboto;
         }
 

@@ -81,6 +81,69 @@ function Portfolio() {
                         </p>
                     </div>
                 </section>
+
+                <section className={styles.experience}>
+                    <h2>Experience</h2>
+                    <ul className={styles.experienceList}>
+                        <li>
+                            <span>Experience 1</span>
+                            <span>Enero 2022 - Diciembre 2022</span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non
+                                consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!
+                            </p>
+                            <ul className={styles.experienceSkill}>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Javascript</li>
+                                <li>React</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Experience 2</span>
+                            <span>Enero 2022 - Diciembre 2022</span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non
+                                consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!
+                            </p>
+                            <ul className={styles.experienceSkill}>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Javascript</li>
+                                <li>React</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Experience 3</span>
+                            <span>Enero 2022 - Diciembre 2022</span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non
+                                consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!
+                            </p>
+                            <ul className={styles.experienceSkill}>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Javascript</li>
+                                <li>React</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Experience 4</span>
+                            <span>Enero 2022 - Diciembre 2022</span>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non
+                                consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!
+                            </p>
+                            <ul className={styles.experienceSkill}>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Javascript</li>
+                                <li>React</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
                 {projects && projects.length > 0 && (
                     <section className={styles.works}>
                         <h2>Projects</h2>
@@ -92,8 +155,7 @@ function Portfolio() {
                 <section className={styles.contact}>
                     <h2>GET IN TOUCH</h2>
                     <form>
-                        <input name="firstName" type="text" placeholder="First name"></input>
-                        <input name="lastName" type="text" placeholder="Last name"></input>
+                        <input name="name" type="text" placeholder="Name"></input>
                         <input name="email" type="email" placeholder="Email"></input>
                         <input name="phone" placeholder="Phone number"></input>
                         <textarea name="message" placeholder="Message"></textarea>
