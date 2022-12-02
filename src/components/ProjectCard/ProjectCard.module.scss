@@ -77,6 +77,9 @@
 
             .worksLinks {
                 margin-top: 10px;
+                display: flex;
+                gap: 5px;
+                justify-content: flex-end;
                 a {
                     img {
                         width: 24px;
