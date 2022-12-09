@@ -73,7 +73,7 @@ function Portfolio() {
                     </section>
                 </a>
 
-                <a name="aboutMe">
+                <a name="about-me">
                     <section className={styles.aboutMe}>
                         <h2>About me</h2>
                         <div className={styles.information}>
@@ -161,7 +161,7 @@ function Portfolio() {
                     </section>
                 )}
                 
-                <a name="getInTouch">
+                <a name="get-in-touch">
                     <section className={styles.contact}>
                         <h2>GET IN TOUCH</h2>
                         <form>

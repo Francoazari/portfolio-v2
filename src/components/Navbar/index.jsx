@@ -9,7 +9,7 @@ function Navbar() {
         },
         {
             label: "About me",
-            url: "#aboutMe"
+            url: "#about-me"
         },
         {
             label: "Projects",
@@ -17,7 +17,7 @@ function Navbar() {
         },
         {
             label: "Contact",
-            url: "#getInTouch"
+            url: "#get-in-touch"
         }
     ];
 
