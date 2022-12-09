@@ -5,19 +5,19 @@ function Navbar() {
     const menuItem = [
         {
             label: "Home",
-            url: "/"
+            url: "#home"
         },
         {
             label: "About me",
-            url: "/"
+            url: "#aboutMe"
         },
         {
             label: "Projects",
-            url: "/"
+            url: "#projects"
         },
         {
             label: "Contact",
-            url: "/"
+            url: "#getInTouch"
         }
     ];
 
@@ -41,3 +41,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
