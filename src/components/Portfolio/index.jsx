@@ -9,12 +9,10 @@ function Portfolio() {
 
     const projects = [
         {
-
             title: "Project 1",
             paragraph: "Paragraph paragraph  paragraph paragraph paragraph",
             skillTags: ["HTML", "CSS", "JAVASCRIPT"],
             worksLinks: [
-                
                 {
                     url: "http://github.com",
                     image: "./assets/works/github.svg",
@@ -67,13 +65,13 @@ function Portfolio() {
         <>
             <Navbar />
             <main>
-                <a name="home">
+                <a href="/#" name="home">
                     <section className={styles.firstScreen} id="home">
                         <h1>{nombre.toUpperCase()}</h1>
                     </section>
                 </a>
 
-                <a name="about-me">
+                <a href="/#" name="about-me">
                     <section className={styles.aboutMe}>
                         <h2>About me</h2>
                         <div className={styles.information}>
@@ -81,14 +79,14 @@ function Portfolio() {
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi enim laboriosam optio velit earum! Rem ipsa repudiandae corrupti,
                                 debitis iste sequi quam similique necessitatibus ullam distinctio repellat? Laboriosam, nemo ipsum. Lorem ipsum, dolor sit amet
-                                consectetur adipisicing elit. Dignissimos esse nihil ratione quis odit doloremque aspernatur! Provident asperiores, qui inventore,
-                                rerum assumenda cumque reprehenderit voluptate alias, distinctio corporis nam numquam!
+                                consectetur adipisicing elit. Dignissimos esse nihil ratione quis odit doloremque aspernatur! Provident asperiores, qui
+                                inventore, rerum assumenda cumque reprehenderit voluptate alias, distinctio corporis nam numquam!
                             </p>
                         </div>
                     </section>
                 </a>
-                
-                <a name="projects">
+
+                <a href="/#" name="projects">
                     <section className={styles.experience}>
                         <h2>Experience</h2>
                         <ul className={styles.experienceList}>
@@ -151,7 +149,7 @@ function Portfolio() {
                         </ul>
                     </section>
                 </a>
-                
+
                 {projects && projects.length > 0 && (
                     <section className={styles.works} id="projects">
                         <h2>Projects</h2>
@@ -160,8 +158,8 @@ function Portfolio() {
                         })}
                     </section>
                 )}
-                
-                <a name="get-in-touch">
+
+                <a href="/#" name="get-in-touch">
                     <section className={styles.contact}>
                         <h2>GET IN TOUCH</h2>
                         <form>
@@ -175,10 +173,9 @@ function Portfolio() {
                         </form>
                     </section>
                 </a>
-            
             </main>
-        
-        <Footer />
+
+            <Footer />
         </>
     );
 }
