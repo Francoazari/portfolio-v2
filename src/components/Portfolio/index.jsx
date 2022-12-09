@@ -91,8 +91,8 @@ function Portfolio() {
                         <h2>Experience</h2>
                         <ul className={styles.experienceList}>
                             <li>
-                                <span>Experience 1</span>
-                                <span>Enero 2022 - Diciembre 2022</span>
+                                <span class={styles.heading}>Experience 1</span>
+                                <span class={styles.period}>Enero 2022 - Diciembre 2022</span>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non
                                     consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!
@@ -105,8 +105,8 @@ function Portfolio() {
                                 </ul>
                             </li>
                             <li>
-                                <span>Experience 2</span>
-                                <span>Enero 2022 - Diciembre 2022</span>
+                                <span class={styles.heading}>Experience 2</span>
+                                <span class={styles.period}>Enero 2022 - Diciembre 2022</span>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non
                                     consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!
@@ -119,22 +119,8 @@ function Portfolio() {
                                 </ul>
                             </li>
                             <li>
-                                <span>Experience 3</span>
-                                <span>Enero 2022 - Diciembre 2022</span>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non
-                                    consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!
-                                </p>
-                                <ul className={styles.experienceSkill}>
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>Javascript</li>
-                                    <li>React</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span>Experience 4</span>
-                                <span>Enero 2022 - Diciembre 2022</span>
+                                <span class={styles.heading}>Experience 3</span>
+                                <span class={styles.period}>Enero 2022 - Diciembre 2022</span>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non
                                     consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!
