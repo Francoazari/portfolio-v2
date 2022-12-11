@@ -64,18 +64,13 @@ function Portfolio() {
     return (
         <>
             <Navbar />
+
             <main>
-                <section className={styles.firstScreen} id="home">
-                    <a href="/#" name="home">
-                        {" "}
-                    </a>
+                <section id="home" className={styles.firstScreen}>
                     <h1>{nombre.toUpperCase()}</h1>
                 </section>
 
-                <section className={styles.aboutMe}>
-                    <a href="/#" name="about-me">
-                        {" "}
-                    </a>
+                <section id="aboutme" className={styles.aboutMe}>
                     <h2>ABOUT ME</h2>
                     <div className={styles.information}>
                         <div className={styles.image}>{/* <img src={} alt={} /> */}</div>
@@ -137,10 +132,7 @@ function Portfolio() {
                 </section>
 
                 {projects && projects.length > 0 && (
-                    <section className={styles.works} id="projects">
-                        <a href="/#" name="projects">
-                            {" "}
-                        </a>
+                    <section id="projects" className={styles.works}>
                         <h2>PROJECTS</h2>
                         {projects.map((project, index) => {
                             return <ProjectCard key={index} projectInformation={project} />;
@@ -148,10 +140,7 @@ function Portfolio() {
                     </section>
                 )}
 
-                <section className={styles.contact}>
-                    <a href="/#" name="get-in-touch">
-                        {" "}
-                    </a>
+                <section id="getintouch" className={styles.getInTouch}>
                     <h2>GET IN TOUCH</h2>
                     <form>
                         <input name="name" type="text" placeholder="Name"></input>

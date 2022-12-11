@@ -13,7 +13,7 @@
 }
 
 section {
-    padding: 0 20vw;
+    padding: 80px 20vw 0 20vw;
     margin-bottom: 20vh;
     h2 {
         color: #2b4775;
@@ -126,8 +126,9 @@ section {
     gap: 50px;
 }
 
-.contact {
-    padding: 0 20vw 10vh;
+.getInTouch {
+    padding-left: 20vw;
+    padding-bottom: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -9,7 +9,7 @@ function Navbar() {
         },
         {
             label: "About me",
-            url: "#about-me"
+            url: "#aboutme"
         },
         {
             label: "Projects",
@@ -17,7 +17,7 @@ function Navbar() {
         },
         {
             label: "Contact",
-            url: "#get-in-touch"
+            url: "#getintouch"
         }
     ];
 
@@ -41,4 +41,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
