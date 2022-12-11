@@ -65,11 +65,12 @@ function Portfolio() {
         <>
             <Navbar />
             <main>
-                <a href="/#" name="home">
-                    <section className={styles.firstScreen} id="home">
-                        <h1>{nombre.toUpperCase()}</h1>
-                    </section>
-                </a>
+                <section className={styles.firstScreen} id="home">
+                    <a href="/#" name="home">
+                        {" "}
+                    </a>
+                    <h1>{nombre.toUpperCase()}</h1>
+                </section>
 
                 <section className={styles.aboutMe}>
                     <a href="/#" name="about-me">
