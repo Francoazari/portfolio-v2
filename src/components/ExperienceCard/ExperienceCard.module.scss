@@ -7,6 +7,19 @@ li.experienceCard {
     gap: 15px;
     border-radius: 10px;
     line-height: 1.2;
+    position: relative;
+
+    &:not(:first-child) {
+        &:before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: 100px;
+            max-width: 2px;
+            height: 50px;
+            background-color: #fff;
+        }
+    }
 
     .heading {
         font-size: 2rem;
