@@ -1,3 +1,4 @@
+import ExperienceCard from "../ExperienceCard";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import ProjectCard from "../ProjectCard";
@@ -6,6 +7,30 @@ import styles from "./Portfolio.module.scss";
 
 function Portfolio() {
     let nombre = "Franco Azari";
+
+    const experiences = [
+        {
+            heading: "Experience 1",
+            period: "Enero 2022 - Present",
+            paragraph:
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
+            skills: ["HTML", "CSS", "React"]
+        },
+        {
+            heading: "Experience 2",
+            period: "Junio 2020 - Diciembre 2022",
+            paragraph:
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
+            skills: ["HTML", "CSS", "SASS", "React"]
+        },
+        {
+            heading: "Experience 3",
+            period: "Abril 2019 - Mayo 2020",
+            paragraph:
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
+            skills: ["HTML", "CSS", "SASS", "React"]
+        }
+    ];
 
     const projects = [
         {
@@ -83,53 +108,16 @@ function Portfolio() {
                     </div>
                 </section>
 
-                <section className={styles.experience}>
-                    <h2>EXPERIENCE</h2>
-                    <ul className={styles.experienceList}>
-                        <li>
-                            <span className={styles.heading}>Experience 1</span>
-                            <span className={styles.period}>Enero 2022 - Diciembre 2022</span>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non
-                                consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!
-                            </p>
-                            <ul className={styles.experienceSkill}>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Javascript</li>
-                                <li>React</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span className={styles.heading}>Experience 2</span>
-                            <span className={styles.period}>Enero 2022 - Diciembre 2022</span>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non
-                                consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!
-                            </p>
-                            <ul className={styles.experienceSkill}>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Javascript</li>
-                                <li>React</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span className={styles.heading}>Experience 3</span>
-                            <span className={styles.period}>Enero 2022 - Diciembre 2022</span>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non
-                                consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!
-                            </p>
-                            <ul className={styles.experienceSkill}>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Javascript</li>
-                                <li>React</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </section>
+                {experiences && (
+                    <section className={styles.experience}>
+                        <h2>EXPERIENCE</h2>
+                        <ul className={styles.experienceList}>
+                            {experiences.map((experience, index) => {
+                                return <ExperienceCard key={index} experienceInformation={experience} />;
+                            })}
+                        </ul>
+                    </section>
+                )}
 
                 {projects && projects.length > 0 && (
                     <section id="projects" className={styles.works}>

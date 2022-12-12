@@ -1,0 +1,53 @@
+li.experienceCard {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    gap: 15px;
+    border-radius: 10px;
+    line-height: 1.2;
+
+    .heading {
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 0.8;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    ul {
+        &.experienceSkill {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+
+            li {
+                min-width: 70px;
+                padding: 5px 10px;
+                border: 0;
+                background-color: #2b4775;
+                font-size: 0.7rem;
+                border-radius: 5px;
+                text-align: center;
+                line-height: 1.2;
+                list-style: none;
+            }
+        }
+    }
+
+    &:before {
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+
+        margin: -30px;
+    }
+
+    &:after {
+        &:not(:last-child) {
+        }
+    }
+}
