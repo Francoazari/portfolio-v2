@@ -108,8 +108,8 @@ function Portfolio() {
                     </div>
                 </section>
 
-                {experiences && (
-                    <section className={styles.experience}>
+                {experiences && ( 
+                    <section id="experience" className={styles.experience}>
                         <h2>EXPERIENCE</h2>
                         <ul className={styles.experienceList}>
                             {experiences.map((experience, index) => {

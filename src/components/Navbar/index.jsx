@@ -18,7 +18,11 @@ function Navbar() {
         {
             label: "Contact",
             url: "#getintouch"
-        }
+        },
+        {
+            label: "Experience",
+            url: "#experience"
+        },
     ];
 
     return (
@@ -41,3 +45,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
