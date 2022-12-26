@@ -50,3 +50,10 @@ nav {
         }
     }
 }
+
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        height: unset;
+    }
+}
