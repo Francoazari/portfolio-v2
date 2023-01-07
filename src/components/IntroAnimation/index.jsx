@@ -1,7 +1,8 @@
 import styles from "./IntroAnimation.module.scss";
 import clsx from "clsx";
-import { useEffect, useState } from "react";
-import Particles from "spark-particles";
+import { useCallback, useState } from "react";
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
 
 function IntroAnimation({ introFinished }) {
     const [introEnd, setIntroEnd] = useState(false);
@@ -14,46 +15,98 @@ function IntroAnimation({ introFinished }) {
         }, 500);
     };
 
-    useEffect(() => {
-        const node = document.getElementById("particles");
-        new Particles(node)
-            .init({
-                // enable debug mode
-                debug: false,
-                // auto resize to fit the screen
-                resize: true,
-                // config particles here
-                particles: {
-                    amount: 250,
-                    moveDirection: "random", // 'random' | 'top'  | 'right'  | 'bottom'  | 'left'
-                    distanceToLink: 150,
-                    linkedParticles: true,
-                    maxVelocity: 0.8,
-                    maxRadius: 4
-                },
-                // rendered configs
-                renderer: {
-                    backgroundColor: "#186cb6",
-                    linearGradient: {
-                        x1: 0,
-                        y1: 0,
-                        x2: 1,
-                        y2: 1,
-                        color1: "#0a192f",
-                        color2: "#0a192f"
-                    },
-                    width: window.innerWidth,
-                    height: window.innerHeight,
-                    dpiMultiplier: 1
-                }
-            })
-            .start();
+    const particlesInit = useCallback(async (engine) => {
+        console.log(engine);
+        // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+        // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+        // starting from v2 you can add only the features you need reducing the bundle size
+        await loadFull(engine);
+    }, []);
+
+    const particlesLoaded = useCallback(async (container) => {
+        await console.log(container);
     }, []);
 
     return (
         <div className={styles.container}>
             <div className={styles.background}>
-                <canvas id="particles" className={clsx({ [styles.hideCanvas]: introEnd })}></canvas>
+                <Particles
+                    id="tsparticles"
+                    init={particlesInit}
+                    loaded={particlesLoaded}
+                    options={{
+                        background: {
+                            color: {
+                                value: "#0a192f"
+                            }
+                        },
+                        fpsLimit: 120,
+                        interactivity: {
+                            events: {
+                                onClick: {
+                                    enable: false,
+                                    mode: "push"
+                                },
+                                onHover: {
+                                    enable: false,
+                                    mode: "repulse"
+                                },
+                                resize: true
+                            },
+                            modes: {
+                                push: {
+                                    quantity: 4
+                                },
+                                repulse: {
+                                    distance: 200,
+                                    duration: 0.4
+                                }
+                            }
+                        },
+                        particles: {
+                            color: {
+                                value: "#ffffff"
+                            },
+                            links: {
+                                color: "#ffffff",
+                                distance: 150,
+                                enable: true,
+                                opacity: 0.5,
+                                width: 1
+                            },
+                            collisions: {
+                                enable: false
+                            },
+                            move: {
+                                direction: "none",
+                                enable: true,
+                                outModes: {
+                                    default: "bounce"
+                                },
+                                random: false,
+                                speed: 3,
+                                straight: false
+                            },
+                            number: {
+                                density: {
+                                    enable: true,
+                                    area: 800
+                                },
+                                value: 80
+                            },
+                            opacity: {
+                                value: 0.5
+                            },
+                            shape: {
+                                type: "circle"
+                            },
+                            size: {
+                                value: { min: 1, max: 5 }
+                            }
+                        },
+                        detectRetina: true
+                    }}
+                />
                 <div className={styles.container}>
                     <div
                         className={clsx({

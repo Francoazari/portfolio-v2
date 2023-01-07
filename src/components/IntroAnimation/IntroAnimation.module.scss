@@ -102,12 +102,14 @@
                     border: 1px solid;
                     overflow: hidden;
                     position: relative;
-                    width: 100px;
+                    width: 200px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     padding: 10px;
                     border-radius: 20px;
+                    background-color: #020b1b;
+                    color: #fff;
 
                     span {
                         font-size: 14px;
@@ -115,7 +117,7 @@
                     }
 
                     &:after {
-                        background: #101d69;
+                        background: #fff;
                         content: "";
                         height: 155px;
                         left: -75px;
@@ -125,7 +127,7 @@
                         transform: rotate(35deg);
                         transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
                         width: 50px;
-                        z-index: -10;
+                        z-index: 1;
                     }
                 }
 
@@ -141,8 +143,8 @@
 }
 
 @media (max-width: 500px) {
-    .background {
-        .container {
+    .container {
+        .background {
             .centralInformation {
                 position: sticky;
                 top: 0;
