@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import ExperienceCard from "../ExperienceCard";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
@@ -86,16 +87,31 @@ function Portfolio() {
         }
     ];
 
+    window.addEventListener("scroll", function () {
+        let elements = document.getElementsByClassName("scroll-content");
+        let screenSize = window.innerHeight;
+
+        for (var i = 0; i < elements.length; i++) {
+            let element = elements[i];
+
+            if (element.getBoundingClientRect().top < screenSize) {
+                element.classList.add(styles.visible);
+            } else {
+                element.classList.remove(styles.visible);
+            }
+        }
+    });
+
     return (
         <>
             <Navbar />
 
             <main>
-                <section id="home" className={styles.firstScreen}>
+                <section id="home" className={clsx(styles.firstScreen)}>
                     <h1>{nombre.toUpperCase()}</h1>
                 </section>
 
-                <section id="aboutme" className={styles.aboutMe}>
+                <section id="aboutme" className={clsx(styles.aboutMe, "scroll-content", styles.fadeLeft)}>
                     <h2>ABOUT ME</h2>
                     <div className={styles.information}>
                         <div className={styles.image}>{/* <img src={} alt={} /> */}</div>
@@ -109,7 +125,7 @@ function Portfolio() {
                 </section>
 
                 {experiences && (
-                    <section className={styles.experience}>
+                    <section className={clsx(styles.experience, "scroll-content", styles.fadeRight)}>
                         <h2>EXPERIENCE</h2>
                         <ul className={styles.experienceList}>
                             {experiences.map((experience, index) => {
@@ -120,7 +136,7 @@ function Portfolio() {
                 )}
 
                 {projects && projects.length > 0 && (
-                    <section id="projects" className={styles.works}>
+                    <section id="projects" className={clsx(styles.works, "scroll-content", styles.fadeLeft)}>
                         <h2>PROJECTS</h2>
                         {projects.map((project, index) => {
                             return <ProjectCard key={index} projectInformation={project} />;
@@ -128,7 +144,7 @@ function Portfolio() {
                     </section>
                 )}
 
-                <section id="getintouch" className={styles.getInTouch}>
+                <section id="getintouch" className={clsx(styles.getInTouch, "scroll-content", styles.fadeRight)}>
                     <h2>GET IN TOUCH</h2>
                     <form>
                         <input name="name" type="text" placeholder="Name"></input>
