@@ -1,9 +1,14 @@
+import clsx from "clsx";
 import styles from "./ExperienceCard.module.scss";
 
-function ExperienceCard({ experienceInformation }) {
+function ExperienceCard({ experienceInformation, order }) {
     return (
         experienceInformation && (
-            <li className={styles.experienceCard}>
+            <li
+                className={clsx(styles.experienceCard, {
+                    [styles.left]: order % 2 !== 0
+                })}
+            >
                 <span className={styles.heading}>{experienceInformation.heading}</span>
                 <span className={styles.period}>{experienceInformation.period}</span>
                 <p>{experienceInformation.paragraph}</p>

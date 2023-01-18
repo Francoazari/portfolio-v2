@@ -14,13 +14,23 @@
 
 section {
     padding: 80px 20vw 0 20vw;
-    margin-bottom: 20vh;
+    margin-bottom: 0;
+
     h2 {
-        color: #2b4775;
+        color: #5170a3;
         font-size: 60px;
         align-self: flex-start;
         margin-left: -5vw;
         margin-bottom: 50px;
+
+        &:after {
+            content: "";
+            width: 150px;
+            height: 2px;
+            margin: 10px 0 0 50px;
+            background-color: #fff;
+            z-index: 1;
+        }
     }
 
     &:first-child {
@@ -61,6 +71,7 @@ section {
     ul {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         gap: 50px;
     }
 }

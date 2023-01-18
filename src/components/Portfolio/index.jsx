@@ -42,12 +42,14 @@ function Portfolio() {
                 {
                     url: "http://github.com",
                     image: "./assets/works/github.svg",
-                    alternatiText: "Github Alternative Text"
+                    alternativeText: "Github Alternative Text",
+                    label: "Github"
                 },
                 {
                     url: "http://linkedin.com",
                     image: "./assets/works/linkedin.svg",
-                    alternatiText: "LinkedIn Alternative Text"
+                    alternativeText: "LinkedIn Alternative Text",
+                    label: "Github"
                 }
             ]
         },
@@ -59,12 +61,14 @@ function Portfolio() {
                 {
                     url: "http://github.com",
                     image: "./assets/works/github.svg",
-                    alternatiText: "Github Alternative Text"
+                    alternativeText: "Github Alternative Text",
+                    label: "Github"
                 },
                 {
                     url: "http://twitter.com",
                     image: "./assets/works/twitter.svg",
-                    alternatiText: "Twitter Alternative Text"
+                    alternativeText: "Twitter Alternative Text",
+                    label: "Github"
                 }
             ]
         },
@@ -76,12 +80,14 @@ function Portfolio() {
                 {
                     url: "http://github.com",
                     image: "./assets/works/github.svg",
-                    alternatiText: "Github Alternative Text"
+                    alternativeText: "Github Alternative Text",
+                    label: "Github"
                 },
                 {
                     url: "http://twitter.com",
                     image: "./assets/works/twitter.svg",
-                    alternatiText: "Twitter Alternative Text"
+                    alternativeText: "Twitter Alternative Text",
+                    label: "Github"
                 }
             ]
         }
@@ -129,7 +135,7 @@ function Portfolio() {
                         <h2>EXPERIENCE</h2>
                         <ul className={styles.experienceList}>
                             {experiences.map((experience, index) => {
-                                return <ExperienceCard key={index} experienceInformation={experience} />;
+                                return <ExperienceCard key={index} order={index} experienceInformation={experience} />;
                             })}
                         </ul>
                     </section>

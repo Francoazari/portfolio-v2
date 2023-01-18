@@ -28,6 +28,7 @@ function ProjectCard({ projectInformation }) {
                                     return (
                                         <a key={index} href={workLink.url}>
                                             <img src={workLink.image} alt={workLink.alternativeText} />
+                                            <p>{workLink.label}</p>
                                         </a>
                                     );
                                 })}
