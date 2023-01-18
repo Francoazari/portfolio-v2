@@ -11,6 +11,12 @@ li {
         line-height: 1.2;
         position: relative;
         overflow: hidden;
+        transition: transform 600ms, background-color 300ms;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            transform: translate(10px, 0);
+        }
 
         &:not(:first-child) {
             &:before {
@@ -87,6 +93,10 @@ li {
         &.experienceCard {
             width: 100%;
             max-width: unset;
+
+            &:hover {
+                transform: unset;
+            }
 
             ul {
                 &.experienceSkill {

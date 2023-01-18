@@ -2,6 +2,11 @@
     width: 60vw;
     height: 300px;
     position: relative;
+    transition: all 600ms;
+
+    &:hover {
+        transform: scale(1.02);
+    }
 
     .cardContainer {
         position: relative;
