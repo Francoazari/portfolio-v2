@@ -45,6 +45,7 @@ li {
                 display: flex;
                 flex-direction: row;
                 gap: 5px;
+                flex-wrap: wrap;
 
                 li {
                     min-width: 70px;
@@ -96,12 +97,6 @@ li {
 
             &:hover {
                 transform: unset;
-            }
-
-            ul {
-                &.experienceSkill {
-                    flex-wrap: wrap;
-                }
             }
         }
     }

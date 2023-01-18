@@ -9,19 +9,21 @@ function ProjectCard({ projectInformation }) {
                         <img src={"./assets/works/example.jpg"} alt={"asd"} />
                     </div>
                     <div className={styles.cardInfo}>
-                        <h3>{projectInformation.title}</h3>
-                        <div className={styles.paragraph}>
-                            <p>{projectInformation.paragraph}</p>
-                        </div>
-                        {projectInformation.skillTags && (
-                            <div className={styles.skillTags}>
-                                <ul>
-                                    {projectInformation.skillTags.map((skill, index) => {
-                                        return <li key={index}>{skill.toUpperCase()}</li>;
-                                    })}
-                                </ul>
+                        <div className={styles.information}>
+                            <h3>{projectInformation.title}</h3>
+                            <div className={styles.paragraph}>
+                                <p>{projectInformation.paragraph}</p>
                             </div>
-                        )}
+                            {projectInformation.skillTags && (
+                                <div className={styles.skillTags}>
+                                    <ul>
+                                        {projectInformation.skillTags.map((skill, index) => {
+                                            return <li key={index}>{skill.toUpperCase()}</li>;
+                                        })}
+                                    </ul>
+                                </div>
+                            )}
+                        </div>
                         {projectInformation.worksLinks && (
                             <div className={styles.worksLinks}>
                                 {projectInformation.worksLinks.map((workLink, index) => {

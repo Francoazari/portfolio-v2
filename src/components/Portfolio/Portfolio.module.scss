@@ -193,19 +193,19 @@ section {
 .fadeTop {
     opacity: 0;
     transform: translate(0, 10vh);
-    transition: all 1s;
+    transition: opacity 1s, transform 1s;
 }
 
 .fadeRight {
     opacity: 0;
     transform: translate(10vh, 0vh);
-    transition: all 1s;
+    transition: opacity 1s, transform 1s;
 }
 
 .fadeLeft {
     opacity: 0;
     transform: translate(-10vh, 0vh);
-    transition: all 1s;
+    transition: opacity 1s, transform 1s;
 }
 
 .visible {
