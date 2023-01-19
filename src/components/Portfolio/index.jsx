@@ -1,10 +1,10 @@
 import clsx from "clsx";
+import { useState, useEffect } from "react";
 import ExperienceCard from "../ExperienceCard";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
 import ProjectCard from "../ProjectCard";
 import styles from "./Portfolio.module.scss";
-//import imgExample from "./assets/works/example.jpg";
 
 function Portfolio() {
     let nombre = "Franco Azari";
@@ -108,16 +108,34 @@ function Portfolio() {
         }
     });
 
+    const [width, setWidth] = useState(window.innerWidth);
+
+    function handleWindowSizeChange() {
+        setWidth(window.innerWidth);
+    }
+    useEffect(() => {
+        window.addEventListener("resize", handleWindowSizeChange);
+        return () => {
+            window.removeEventListener("resize", handleWindowSizeChange);
+        };
+    }, []);
+
+    const isMobile = width <= 768;
+
     return (
         <>
             <Navbar />
 
             <main>
                 <section id="home" className={clsx(styles.firstScreen)}>
+                    <img src={!isMobile ? "./assets/background.jpg" : "./assets/background-mobile.jpg"} alt="Background section" />
                     <h1>{nombre.toUpperCase()}</h1>
+                    <svg className={styles.arrow} data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M3.81 4.38 8 8.57l4.19-4.19 1.52 1.53L8 11.62 2.29 5.91l1.52-1.53z" />
+                    </svg>
                 </section>
 
-                <section id="aboutme" className={clsx(styles.aboutMe, "scroll-content", styles.fadeLeft)}>
+                <section id="aboutme" className={clsx(styles.aboutMe, "scroll-content", styles.fadeTop)}>
                     <h2>ABOUT ME</h2>
                     <div className={styles.information}>
                         <div className={styles.image}>{/* <img src={} alt={} /> */}</div>
@@ -131,7 +149,7 @@ function Portfolio() {
                 </section>
 
                 {experiences && (
-                    <section className={clsx(styles.experience, "scroll-content", styles.fadeRight)}>
+                    <section className={clsx(styles.experience, "scroll-content", styles.fadeTop)}>
                         <h2>EXPERIENCE</h2>
                         <ul className={styles.experienceList}>
                             {experiences.map((experience, index) => {
@@ -142,7 +160,7 @@ function Portfolio() {
                 )}
 
                 {projects && projects.length > 0 && (
-                    <section id="projects" className={clsx(styles.works, "scroll-content", styles.fadeLeft)}>
+                    <section id="projects" className={clsx(styles.works, "scroll-content", styles.fadeTop)}>
                         <h2>PROJECTS</h2>
                         {projects.map((project, index) => {
                             return <ProjectCard key={index} projectInformation={project} />;
@@ -150,7 +168,7 @@ function Portfolio() {
                     </section>
                 )}
 
-                <section id="getintouch" className={clsx(styles.getInTouch, "scroll-content", styles.fadeRight)}>
+                <section id="getintouch" className={clsx(styles.getInTouch, "scroll-content", styles.fadeTop)}>
                     <h2>GET IN TOUCH</h2>
                     <form>
                         <input name="name" type="text" placeholder="Name"></input>
