@@ -4,7 +4,6 @@
     align-items: center;
     width: 100%;
     height: calc(100vh - 60px);
-    border-bottom: 2px solid #fff;
     margin-bottom: 0;
     overflow: hidden;
 
@@ -197,6 +196,10 @@ section {
                 width: 300px;
                 height: 300px;
                 align-self: center;
+            }
+
+            p {
+                text-align: center;
             }
         }
     }
