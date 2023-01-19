@@ -30,6 +30,20 @@ function Navbar() {
         setMenuOpen(!menuOpen);
     };
 
+    let lastScroll = 0;
+    window.addEventListener("scroll", () => {
+        let nav = document.querySelector("nav");
+        console.log(window.pageYOffset);
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > lastScroll) {
+            nav.classList.remove(styles.visible);
+        } else if (currentScroll < lastScroll) {
+            nav.classList.add(styles.visible);
+        }
+        lastScroll = currentScroll;
+    });
+
     return (
         <nav>
             <p>{title.toUpperCase()}</p>
