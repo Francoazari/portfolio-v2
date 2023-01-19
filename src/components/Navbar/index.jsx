@@ -26,14 +26,12 @@ function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleClick = () => {
-        console.log(menuOpen);
         setMenuOpen(!menuOpen);
     };
 
     let lastScroll = 0;
     window.addEventListener("scroll", () => {
         let nav = document.querySelector("nav");
-        console.log(window.pageYOffset);
         const currentScroll = window.pageYOffset;
 
         if (currentScroll > lastScroll) {
