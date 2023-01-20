@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useState } from "react";
+//import { useState } from "react";
 import styles from "./Navbar.module.scss";
 
 function Navbar() {
@@ -23,11 +23,11 @@ function Navbar() {
         }
     ];
 
-    const [menuOpen, setMenuOpen] = useState(false);
+    // const [menuOpen, setMenuOpen] = useState(false);
 
-    const handleClick = () => {
-        setMenuOpen(!menuOpen);
-    };
+    // const handleClick = () => {
+    //     setMenuOpen(!menuOpen);
+    // };
 
     let lastScroll = 0;
     window.addEventListener("scroll", () => {
@@ -48,12 +48,15 @@ function Navbar() {
 
             {menuItem && (
                 <>
-                    <div className={clsx(styles.hamburguerMenu)} onClick={() => handleClick()}>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                    <ul className={clsx(menuOpen && styles.open)}>
+                    <input type="checkbox" id="hamburger-input" class={styles.hamburgerCheckbox} />
+                    <label id="hamburger-menu" for="hamburger-input">
+                        <div className={clsx(styles.hamburgerMenu)}>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </label>
+                    <ul>
                         {menuItem.map((item, index) => {
                             return (
                                 <a key={index} href={item.url}>
