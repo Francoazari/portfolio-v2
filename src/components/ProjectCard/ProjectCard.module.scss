@@ -3,7 +3,7 @@
     height: 300px;
     position: relative;
     transition: all 600ms;
-    margin: 2.5px;
+    margin: 5px;
 
     &:hover {
         transform: scale(1.02);
@@ -111,11 +111,11 @@
 
 @media (max-width: 768px) {
     .card {
-        width: calc(50% - 5px);
+        width: calc(50% - 10px);
         height: unset;
         overflow: hidden;
         background-color: rgba(255, 255, 255, 1);
-        border-radius: 10px;
+        border-radius: 5px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

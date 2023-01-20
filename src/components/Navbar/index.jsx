@@ -23,16 +23,12 @@ function Navbar() {
         }
     ];
 
-    // const [menuOpen, setMenuOpen] = useState(false);
-
-    // const handleClick = () => {
-    //     setMenuOpen(!menuOpen);
-    // };
-
     let lastScroll = 0;
     window.addEventListener("scroll", () => {
-        let nav = document.querySelector("nav");
+        const nav = document.querySelector("nav");
         const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 0) nav.classList.add(styles.visible);
 
         if (currentScroll > lastScroll) {
             nav.classList.remove(styles.visible);
@@ -43,7 +39,7 @@ function Navbar() {
     });
 
     return (
-        <nav>
+        <nav className={styles.visible}>
             <p>{title.toUpperCase()}</p>
 
             {menuItem && (
