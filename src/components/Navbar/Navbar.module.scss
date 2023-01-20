@@ -32,21 +32,39 @@ nav {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: 1px solid #fff;
         border-radius: 5px;
         padding: 5px;
         box-sizing: border-box;
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
 
         div {
-            width: 90%;
+            width: 100%;
             height: 2px;
             background-color: #fff;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
+            transition: all 500ms;
+            transform-origin: left;
+            border-radius: 5px;
 
             &:last-child {
                 margin-bottom: 0;
+            }
+        }
+
+        &:active {
+            > div {
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
             }
         }
     }
@@ -113,6 +131,7 @@ nav {
         flex-direction: row;
         height: var(--height-navbar, 60px);
         padding-right: 25px;
+        backdrop-filter: blur(30px);
 
         .hamburguerMenu {
             display: flex;
@@ -136,9 +155,9 @@ nav {
             overflow-y: hidden;
             opacity: 0;
             padding-top: 50px;
+            transition: opacity 200ms ease-in-out;
 
             &.open {
-                transition: opacity 0.6s ease-in-out;
                 opacity: 1;
             }
 
