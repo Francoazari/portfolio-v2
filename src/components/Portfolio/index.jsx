@@ -162,9 +162,11 @@ function Portfolio() {
                 {projects && projects.length > 0 && (
                     <section id="projects" className={clsx(styles.works, "scroll-content", styles.fadeTop)}>
                         <h2>PROJECTS</h2>
-                        {projects.map((project, index) => {
-                            return <ProjectCard key={index} projectInformation={project} />;
-                        })}
+                        <div className={styles.proyectContainer}>
+                            {projects.map((project, index) => {
+                                return <ProjectCard key={index} projectInformation={project} />;
+                            })}
+                        </div>
                     </section>
                 )}
 

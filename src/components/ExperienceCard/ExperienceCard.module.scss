@@ -6,12 +6,20 @@ li {
         flex-direction: column;
         padding: 20px;
         background-color: rgba(255, 255, 255, 0.3);
-        gap: 15px;
         border-radius: 5px;
         line-height: 1.2;
         position: relative;
         overflow: hidden;
         transition: transform 600ms, background-color 300ms;
+        margin: 15px 0;
+
+        &:first-child {
+            margin: 0 0 15px 0;
+        }
+
+        &:last-child {
+            margin: 15px 0 0 0;
+        }
 
         &:hover {
             background-color: rgba(255, 255, 255, 0.5);
@@ -30,6 +38,15 @@ li {
             }
         }
 
+        > span,
+        > p {
+            margin-bottom: 15px;
+        }
+
+        .period {
+            margin-bottom: 5px;
+        }
+
         .heading {
             font-size: 2rem;
             font-weight: bold;
@@ -44,7 +61,6 @@ li {
             &.experienceSkill {
                 display: flex;
                 flex-direction: row;
-                gap: 5px;
                 flex-wrap: wrap;
 
                 li {
@@ -57,6 +73,7 @@ li {
                     text-align: center;
                     line-height: 1.2;
                     list-style: none;
+                    margin: 2.5px;
                 }
             }
         }
@@ -66,11 +83,6 @@ li {
             height: 50px;
             background-color: #fff;
             margin: -30px;
-        }
-
-        &:after {
-            &:not(:last-child) {
-            }
         }
     }
 
