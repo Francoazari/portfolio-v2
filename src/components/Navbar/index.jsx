@@ -23,6 +23,11 @@ function Navbar() {
         }
     ];
 
+    const handleClick = () => {
+        const hamburgerCheckbox = document.querySelector("#hamburger-input");
+        hamburgerCheckbox.checked = !hamburgerCheckbox.checked;
+    };
+
     let lastScroll = 0;
     window.addEventListener("scroll", () => {
         const nav = document.querySelector("nav");
@@ -44,8 +49,8 @@ function Navbar() {
 
             {menuItem && (
                 <>
-                    <input type="checkbox" id="hamburger-input" class={styles.hamburgerCheckbox} />
-                    <label id="hamburger-menu" for="hamburger-input">
+                    <input type="checkbox" id="hamburger-input" className={styles.hamburgerCheckbox} />
+                    <label id="hamburger-menu" htmlFor="hamburger-input">
                         <div className={clsx(styles.hamburgerMenu)}>
                             <div></div>
                             <div></div>
@@ -55,7 +60,12 @@ function Navbar() {
                     <ul>
                         {menuItem.map((item, index) => {
                             return (
-                                <a key={index} href={item.url} className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}>
+                                <a
+                                    key={index}
+                                    href={item.url}
+                                    className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}
+                                    onClick={() => handleClick()}
+                                >
                                     <li>{item.label}</li>
                                 </a>
                             );
