@@ -118,7 +118,13 @@ function Portfolio() {
             <main>
                 <section id="home" className={clsx(styles.firstScreen)}>
                     <img src={isDesktop ? "./assets/background-desktop.jpg" : "./assets/background-mobile.jpg"} alt="Background section" />
-                    <h1>{nombre.toUpperCase()}</h1>
+
+                    <div className={styles.headingContainer}>
+                        <span>Hello, I'm</span>
+                        <h1>{nombre.toUpperCase()}</h1>
+                        <span>Nice to meet you!</span>
+                    </div>
+
                     <svg className={styles.arrow} data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M3.81 4.38 8 8.57l4.19-4.19 1.52 1.53L8 11.62 2.29 5.91l1.52-1.53z" />
                     </svg>

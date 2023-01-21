@@ -1,5 +1,18 @@
+section {
+    padding: 80px 20vw 0 20vw;
+    margin-bottom: 0;
+
+    h2 {
+        color: #1c4280;
+        font-size: 60px;
+        margin-left: -5vw;
+        margin-bottom: 50px;
+    }
+}
+
 .firstScreen {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -7,6 +20,8 @@
     margin-bottom: 0;
     overflow: hidden;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(10, 25, 47, 1) 95%, rgba(10, 25, 47, 1) 100%);
+    padding-left: 10vw;
+    padding-right: 10vw;
 
     img {
         width: 100vw;
@@ -20,14 +35,30 @@
         right: 0;
     }
 
-    h1 {
-        font-size: 70px;
-        color: rgb(255, 255, 255);
-        letter-spacing: 0.2em;
-        transform: translate(0, -60px);
-        border: 3px solid #fff;
-        padding: 25px;
-        backdrop-filter: blur(5px);
+    .headingContainer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px;
+        margin-top: -150px;
+
+        span {
+            font-size: 50px;
+            color: rgb(255, 255, 255);
+        }
+
+        h1 {
+            font-size: 65px;
+            color: rgb(255, 255, 255);
+            letter-spacing: 0.2em;
+            margin: 25px 0;
+            border: 3px solid #fff;
+            padding: 25px;
+            backdrop-filter: blur(5px);
+            font-weight: bold;
+        }
     }
 
     .arrow {
@@ -42,30 +73,6 @@
         animation-duration: 1000ms;
         animation-iteration-count: infinite;
         animation-timing-function: ease;
-    }
-}
-
-@keyframes arrow-animation {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-    50% {
-        transform: translate3d(0, -20px, 0);
-    }
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-section {
-    padding: 80px 20vw 0 20vw;
-    margin-bottom: 0;
-
-    h2 {
-        color: #1c4280;
-        font-size: 60px;
-        margin-left: -5vw;
-        margin-bottom: 50px;
     }
 }
 
@@ -175,16 +182,28 @@ section {
 
 @media (max-width: 1230px) {
     .firstScreen {
-        h1 {
-            font-size: 55px;
+        .headingContainer {
+            span {
+                font-size: 40px;
+            }
+
+            h1 {
+                font-size: 50px;
+            }
         }
     }
 }
 
 @media (max-width: 1024px) {
     .firstScreen {
-        h1 {
-            font-size: 40px;
+        .headingContainer {
+            span {
+                font-size: 30px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
         }
     }
 
@@ -215,8 +234,16 @@ section {
 
 @media (max-width: 768px) {
     .firstScreen {
-        h1 {
-            font-size: 36px;
+        .headingContainer {
+            span {
+                font-size: 30px;
+            }
+
+            h1 {
+                font-size: 35px;
+                margin: 10px 0;
+                padding: 15px;
+            }
         }
     }
 
@@ -267,16 +294,45 @@ section {
 
 @media (max-width: 600px) {
     .firstScreen {
-        h1 {
-            font-size: 25px;
+        .headingContainer {
+            span {
+                font-size: 25px;
+            }
+
+            h1 {
+                font-size: 30px;
+                padding: 10px;
+            }
         }
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 450px) {
     .firstScreen {
-        h1 {
-            font-size: 18px;
+        .headingContainer {
+            span {
+                font-size: 20px;
+            }
+
+            h1 {
+                font-size: 25px;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .firstScreen {
+        .headingContainer {
+            span {
+                font-size: 20px;
+            }
+
+            h1 {
+                font-size: 20px;
+                padding: 10px;
+            }
         }
     }
 }
@@ -302,4 +358,16 @@ section {
 .visible {
     opacity: 1;
     transform: translate(0, 0);
+}
+
+@keyframes arrow-animation {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, -20px, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
 }
