@@ -9,7 +9,7 @@ import styles from "./Portfolio.module.scss";
 import animatedStyle from "../../styles/animated-element.module.scss";
 
 function Portfolio() {
-    let nombre = "Franco Azari";
+    let name = "Franco Azari";
 
     const experiences = [
         {
@@ -122,7 +122,7 @@ function Portfolio() {
 
                     <div className={styles.headingContainer}>
                         <span className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>Hello, I'm</span>
-                        <h1 className={clsx(animatedStyle.animatedElement, animatedStyle.order3)}>{nombre.toUpperCase()}</h1>
+                        <h1 className={clsx(animatedStyle.animatedElement, animatedStyle.order3)}>{name.toUpperCase()}</h1>
                         <span className={clsx(animatedStyle.animatedElement, animatedStyle.order4)}>Nice to meet you!</span>
                     </div>
 

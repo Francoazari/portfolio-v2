@@ -28,6 +28,12 @@ function Navbar() {
         hamburgerCheckbox.checked = !hamburgerCheckbox.checked;
     };
 
+    const handleClickCheckbox = () => {
+        const body = document.querySelector("body");
+        const hamburgerCheckbox = document.querySelector("#hamburger-input");
+        body.style.overflow = hamburgerCheckbox.checked ? "hidden" : "auto";
+    };
+
     let lastScroll = 0;
     window.addEventListener("scroll", () => {
         const nav = document.querySelector("nav");
@@ -49,7 +55,7 @@ function Navbar() {
 
             {menuItem && (
                 <>
-                    <input type="checkbox" id="hamburger-input" className={styles.hamburgerCheckbox} />
+                    <input type="checkbox" id="hamburger-input" className={styles.hamburgerCheckbox} onClick={() => handleClickCheckbox()} />
                     <label id="hamburger-menu" htmlFor="hamburger-input">
                         <div className={clsx(styles.hamburgerMenu)}>
                             <div></div>
