@@ -23,14 +23,11 @@ function Navbar() {
         }
     ];
 
-    const handleClick = () => {
-        const hamburgerCheckbox = document.querySelector("#hamburger-input");
-        hamburgerCheckbox.checked = !hamburgerCheckbox.checked;
-    };
-
-    const handleClickCheckbox = () => {
+    const handleClick = (event) => {
         const body = document.querySelector("body");
         const hamburgerCheckbox = document.querySelector("#hamburger-input");
+
+        if (event.target.id !== "hamburger-input") hamburgerCheckbox.checked = !hamburgerCheckbox.checked;
         body.style.overflow = hamburgerCheckbox.checked ? "hidden" : "auto";
     };
 
@@ -55,7 +52,7 @@ function Navbar() {
 
             {menuItem && (
                 <>
-                    <input type="checkbox" id="hamburger-input" className={styles.hamburgerCheckbox} onClick={() => handleClickCheckbox()} />
+                    <input type="checkbox" id="hamburger-input" className={styles.hamburgerCheckbox} onClick={(e) => handleClick(e)} />
                     <label id="hamburger-menu" htmlFor="hamburger-input">
                         <div className={clsx(styles.hamburgerMenu)}>
                             <div></div>
@@ -70,7 +67,7 @@ function Navbar() {
                                     key={index}
                                     href={item.url}
                                     className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}
-                                    onClick={() => handleClick()}
+                                    onClick={(e) => handleClick(e)}
                                 >
                                     <li>{item.label}</li>
                                 </a>
