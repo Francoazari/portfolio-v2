@@ -1,0 +1,24 @@
+.animatedElement {
+    animation: fade-in ease-in-out 250ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+    $orderDelay: 120ms;
+    @for $i from 1 to 12 {
+        &.order#{$i} {
+            animation-delay: $orderDelay;
+        }
+
+        $orderDelay: $orderDelay + 120ms;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        transform: translate3d(0, 30px, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
