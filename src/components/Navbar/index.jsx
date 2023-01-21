@@ -1,6 +1,6 @@
 import clsx from "clsx";
-//import { useState } from "react";
 import styles from "./Navbar.module.scss";
+import animatedStyle from "../../styles/animated-element.module.scss";
 
 function Navbar() {
     const title = "Franco Azari";
@@ -55,7 +55,7 @@ function Navbar() {
                     <ul>
                         {menuItem.map((item, index) => {
                             return (
-                                <a key={index} href={item.url}>
+                                <a key={index} href={item.url} className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}>
                                     <li>{item.label}</li>
                                 </a>
                             );

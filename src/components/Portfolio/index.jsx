@@ -121,9 +121,9 @@ function Portfolio() {
                     <img src={isDesktop ? "./assets/background-desktop.jpg" : "./assets/background-mobile.jpg"} alt="Background section" />
 
                     <div className={styles.headingContainer}>
-                        <span className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}>Hello, I'm</span>
-                        <h1 className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>{nombre.toUpperCase()}</h1>
-                        <span className={clsx(animatedStyle.animatedElement, animatedStyle.order3)}>Nice to meet you!</span>
+                        <span className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>Hello, I'm</span>
+                        <h1 className={clsx(animatedStyle.animatedElement, animatedStyle.order3)}>{nombre.toUpperCase()}</h1>
+                        <span className={clsx(animatedStyle.animatedElement, animatedStyle.order4)}>Nice to meet you!</span>
                     </div>
 
                     <svg className={styles.arrow} data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
