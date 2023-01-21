@@ -1,5 +1,6 @@
 import clsx from "clsx";
-import { useState, useEffect } from "react";
+import { useContext } from "react";
+import { MainContext } from "../../contexts";
 import ExperienceCard from "../ExperienceCard";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
@@ -93,6 +94,8 @@ function Portfolio() {
         }
     ];
 
+    const { isDesktop } = useContext(MainContext);
+
     window.addEventListener("scroll", function () {
         let elements = document.getElementsByClassName("scroll-content");
         let screenSize = window.innerHeight;
@@ -108,27 +111,13 @@ function Portfolio() {
         }
     });
 
-    const [width, setWidth] = useState(window.innerWidth);
-
-    function handleWindowSizeChange() {
-        setWidth(window.innerWidth);
-    }
-    useEffect(() => {
-        window.addEventListener("resize", handleWindowSizeChange);
-        return () => {
-            window.removeEventListener("resize", handleWindowSizeChange);
-        };
-    }, []);
-
-    const isMobile = width <= 768;
-
     return (
         <>
             <Navbar />
 
             <main>
                 <section id="home" className={clsx(styles.firstScreen)}>
-                    <img src={!isMobile ? "./assets/background-desktop.jpg" : "./assets/background-mobile.jpg"} alt="Background section" />
+                    <img src={isDesktop ? "./assets/background-desktop.jpg" : "./assets/background-mobile.jpg"} alt="Background section" />
                     <h1>{nombre.toUpperCase()}</h1>
                     <svg className={styles.arrow} data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M3.81 4.38 8 8.57l4.19-4.19 1.52 1.53L8 11.62 2.29 5.91l1.52-1.53z" />
