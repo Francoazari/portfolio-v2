@@ -196,6 +196,20 @@ section {
     }
 }
 
+@media (max-width: 1400px) {
+    .firstScreen {
+        .headingContainer {
+            span {
+                font-size: 25px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
 @media (max-width: 1024px) {
     .firstScreen {
         .headingContainer {
