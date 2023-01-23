@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import styles from "./Navbar.module.scss";
 import animatedStyle from "../../styles/animated-element.module.scss";
+import { useContext } from "react";
+import { MainContext } from "../../contexts";
 
 function Navbar() {
     const title = "Franco Azari";
@@ -23,7 +25,10 @@ function Navbar() {
         }
     ];
 
+    const { isTablet, isDesktop } = useContext(MainContext);
+
     const handleClick = (event) => {
+        if (isDesktop || isTablet) return;
         const body = document.querySelector("body");
         const hamburgerCheckbox = document.querySelector("#hamburger-input");
 

@@ -95,7 +95,7 @@ function Portfolio() {
         }
     ];
 
-    const { isDesktop } = useContext(MainContext);
+    const { isTablet, isDesktop } = useContext(MainContext);
 
     window.addEventListener("scroll", function () {
         let elements = document.getElementsByClassName("scroll-content");
@@ -118,7 +118,7 @@ function Portfolio() {
 
             <main>
                 <section id="home" className={clsx(styles.firstScreen)}>
-                    <img src={isDesktop ? "./assets/background-desktop.jpg" : "./assets/background-mobile.jpg"} alt="Background section" />
+                    <img src={isDesktop || isTablet ? "./assets/background-desktop.jpg" : "./assets/background-mobile.jpg"} alt="Background section" />
 
                     <div className={styles.headingContainer}>
                         <span className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>Hello, I'm</span>
