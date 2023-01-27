@@ -1,9 +1,21 @@
+import clsx from "clsx";
+import { useContext } from "react";
+import { useState } from "react";
+import { MainContext } from "../../contexts";
 import styles from "./ProjectCard.module.scss";
 
 function ProjectCard({ projectInformation }) {
+    const [openModal, setOpenModal] = useState(false);
+    const { isDesktop, isMobile } = useContext(MainContext);
+
     return (
         projectInformation && (
-            <div className={styles.card}>
+            <div
+                className={clsx(styles.card, {
+                    [styles.modal]: openModal
+                })}
+                onClick={() => setOpenModal(!openModal)}
+            >
                 <div className={styles.cardImage}>
                     <img src={"./assets/works/example.jpg"} alt={"asd"} />
                 </div>
@@ -13,7 +25,8 @@ function ProjectCard({ projectInformation }) {
                         <div className={styles.paragraph}>
                             <p>{projectInformation.paragraph}</p>
                         </div>
-                        {projectInformation.skillTags && (
+
+                        {(isDesktop || (isMobile && openModal)) && projectInformation.skillTags && (
                             <div className={styles.skillTags}>
                                 <ul>
                                     {projectInformation.skillTags.map((skill, index) => {
@@ -22,19 +35,20 @@ function ProjectCard({ projectInformation }) {
                                 </ul>
                             </div>
                         )}
+
+                        {(isDesktop || (isMobile && openModal)) && projectInformation.worksLinks && (
+                            <div className={styles.worksLinks}>
+                                {projectInformation.worksLinks.map((workLink, index) => {
+                                    return (
+                                        <a key={index} href={workLink.url}>
+                                            <img src={workLink.image} alt={workLink.alternativeText} />
+                                            <p>{workLink.label}</p>
+                                        </a>
+                                    );
+                                })}
+                            </div>
+                        )}
                     </div>
-                    {projectInformation.worksLinks && (
-                        <div className={styles.worksLinks}>
-                            {projectInformation.worksLinks.map((workLink, index) => {
-                                return (
-                                    <a key={index} href={workLink.url}>
-                                        <img src={workLink.image} alt={workLink.alternativeText} />
-                                        <p>{workLink.label}</p>
-                                    </a>
-                                );
-                            })}
-                        </div>
-                    )}
                 </div>
             </div>
         )
