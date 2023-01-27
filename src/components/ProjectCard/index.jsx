@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { useState } from "react";
 import { MainContext } from "../../contexts";
 import styles from "./ProjectCard.module.scss";
+import animatedStyle from "../../styles/animated-element.module.scss";
 
 function ProjectCard({ projectInformation }) {
     const [openModal, setOpenModal] = useState(false);
@@ -30,7 +31,11 @@ function ProjectCard({ projectInformation }) {
                             <div className={styles.skillTags}>
                                 <ul>
                                     {projectInformation.skillTags.map((skill, index) => {
-                                        return <li key={index}>{skill.toUpperCase()}</li>;
+                                        return (
+                                            <li key={index} className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}>
+                                                {skill.toUpperCase()}
+                                            </li>
+                                        );
                                     })}
                                 </ul>
                             </div>
@@ -40,7 +45,7 @@ function ProjectCard({ projectInformation }) {
                             <div className={styles.worksLinks}>
                                 {projectInformation.worksLinks.map((workLink, index) => {
                                     return (
-                                        <a key={index} href={workLink.url}>
+                                        <a key={index} href={workLink.url} className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>
                                             <img src={workLink.image} alt={workLink.alternativeText} />
                                             <p>{workLink.label}</p>
                                         </a>
