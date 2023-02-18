@@ -1,22 +1,20 @@
 import clsx from "clsx";
 import { useContext } from "react";
-import { useState } from "react";
 import { MainContext } from "../../contexts";
 import styles from "./ProjectCard.module.scss";
 import animatedStyle from "../../styles/animated-element.module.scss";
 
 function ProjectCard({ projectInformation }) {
-    const [openModal, setOpenModal] = useState(false);
-    const { isDesktop, isMobile } = useContext(MainContext);
+    const { isDesktop, setModalContent, modalContent } = useContext(MainContext);
+
+    const openModal = () => {
+        if (isDesktop) return;
+        if (!modalContent) setModalContent(projectInformation);
+    };
 
     return (
         projectInformation && (
-            <div
-                className={clsx(styles.card, {
-                    [styles.modal]: openModal
-                })}
-                onClick={() => setOpenModal(!openModal)}
-            >
+            <div className={clsx(styles.card)} onClick={openModal}>
                 <div className={styles.cardImage}>
                     <img src={"./assets/works/example.jpg"} alt={"asd"} />
                 </div>
@@ -27,7 +25,7 @@ function ProjectCard({ projectInformation }) {
                             <p>{projectInformation.paragraph}</p>
                         </div>
 
-                        {(isDesktop || (isMobile && openModal)) && projectInformation.skillTags && (
+                        {isDesktop && projectInformation.skillTags && (
                             <div className={styles.skillTags}>
                                 <ul>
                                     {projectInformation.skillTags.map((skill, index) => {
@@ -41,7 +39,7 @@ function ProjectCard({ projectInformation }) {
                             </div>
                         )}
 
-                        {(isDesktop || (isMobile && openModal)) && projectInformation.worksLinks && (
+                        {isDesktop && projectInformation.worksLinks && (
                             <div className={styles.worksLinks}>
                                 {projectInformation.worksLinks.map((workLink, index) => {
                                     return (

@@ -119,6 +119,10 @@
             height: 100%;
             transition: all 1s;
 
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+
             .cardImage {
                 width: 100%;
                 max-width: 100px;
@@ -172,7 +176,7 @@
         justify-content: space-between;
 
         &:hover {
-            background-color: rgba(255, 255, 255, 0.5);
+            transform: scale(1);
         }
 
         .cardImage {

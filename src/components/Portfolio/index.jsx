@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { MainContext } from "../../contexts";
 import ExperienceCard from "../ExperienceCard";
 import Footer from "../Footer";
@@ -7,6 +7,7 @@ import Navbar from "../Navbar";
 import ProjectCard from "../ProjectCard";
 import styles from "./Portfolio.module.scss";
 import animatedStyle from "../../styles/animated-element.module.scss";
+import Modal from "../Modal";
 
 function Portfolio() {
     let name = "Franco Azari";
@@ -95,7 +96,7 @@ function Portfolio() {
         }
     ];
 
-    const { isTablet, isDesktop } = useContext(MainContext);
+    const { isTablet, isDesktop, modalContent } = useContext(MainContext);
 
     window.addEventListener("scroll", function () {
         let elements = document.getElementsByClassName("scroll-content");
@@ -111,6 +112,10 @@ function Portfolio() {
             }
         }
     });
+
+    useEffect(() => {
+        document.body.style.overflowY = modalContent ? "hidden" : "auto";
+    }, [modalContent]);
 
     return (
         <>
@@ -181,6 +186,8 @@ function Portfolio() {
             </main>
 
             <Footer />
+
+            {modalContent && <Modal />}
         </>
     );
 }

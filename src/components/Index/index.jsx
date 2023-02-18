@@ -4,6 +4,7 @@ import Portfolio from "../Portfolio";
 
 function Index() {
     const [width, setWidth] = useState(window.innerWidth);
+    const [modalContent, setModalContent] = useState();
 
     function handleWindowSizeChange() {
         setWidth(window.innerWidth);
@@ -22,7 +23,9 @@ function Index() {
     const contextValue = {
         isMobile,
         isTablet,
-        isDesktop
+        isDesktop,
+        modalContent,
+        setModalContent
     };
 
     return (
