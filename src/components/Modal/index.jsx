@@ -4,6 +4,8 @@ import FocusLock from "react-focus-lock";
 import { MainContext } from "../../contexts";
 import useEventListener from "../../hooks/useEventListener";
 import styles from "./Modal.module.scss";
+import animatedStyle from "../../styles/animated-element.module.scss";
+import TagList from "../TagList";
 
 function Modal() {
     const { modalContent, setModalContent } = useContext(MainContext);
@@ -45,7 +47,23 @@ function Modal() {
                     </div>
                     <img src={"./assets/works/example.jpg"} alt={"asd"} />
                     <div className={styles.information}>
-                        <h2>{modalContent.title}</h2>
+                        <h2 className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}>{modalContent.title}</h2>
+                        <p>{modalContent.paragraph}</p>
+
+                        {modalContent.skillTags && <TagList list={modalContent.skillTags} backgroundColor={"#2b4775"} fontColor={"#fff"} />}
+
+                        {modalContent.worksLinks && (
+                            <div className={styles.worksLinks}>
+                                {modalContent.worksLinks.map((workLink, index) => {
+                                    return (
+                                        <a key={index} href={workLink.url} className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>
+                                            <img src={workLink.image} alt={workLink.alternativeText} />
+                                            <p>{workLink.label}</p>
+                                        </a>
+                                    );
+                                })}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
