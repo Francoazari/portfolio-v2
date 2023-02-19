@@ -48,15 +48,19 @@ function Modal() {
                     <img src={"./assets/works/example.jpg"} alt={"asd"} />
                     <div className={styles.information}>
                         <h2 className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}>{modalContent.title}</h2>
-                        <p>{modalContent.paragraph}</p>
+                        <p className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>{modalContent.paragraph}</p>
 
-                        {modalContent.skillTags && <TagList list={modalContent.skillTags} backgroundColor={"#2b4775"} fontColor={"#fff"} />}
+                        {modalContent.skillTags && (
+                            <div className={clsx(animatedStyle.animatedElement, animatedStyle.order3)}>
+                                <TagList list={modalContent.skillTags} backgroundColor={"#2b4775"} fontColor={"#fff"} />
+                            </div>
+                        )}
 
                         {modalContent.worksLinks && (
-                            <div className={styles.worksLinks}>
+                            <div className={clsx(styles.worksLinks, animatedStyle.animatedElement, animatedStyle.order4)}>
                                 {modalContent.worksLinks.map((workLink, index) => {
                                     return (
-                                        <a key={index} href={workLink.url} className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>
+                                        <a key={index} href={workLink.url}>
                                             <img src={workLink.image} alt={workLink.alternativeText} />
                                             <p>{workLink.label}</p>
                                         </a>
