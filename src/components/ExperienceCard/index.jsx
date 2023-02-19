@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import TagList from "../TagList";
 import styles from "./ExperienceCard.module.scss";
 
 function ExperienceCard({ experienceInformation, order }) {
@@ -12,13 +13,7 @@ function ExperienceCard({ experienceInformation, order }) {
                 <span className={styles.heading}>{experienceInformation.heading}</span>
                 <span className={styles.period}>{experienceInformation.period}</span>
                 <p>{experienceInformation.paragraph}</p>
-                {experienceInformation.skills && (
-                    <ul className={styles.experienceSkill}>
-                        {experienceInformation.skills.map((skill, index) => {
-                            return <li key={index}>{skill}</li>;
-                        })}
-                    </ul>
-                )}
+                {experienceInformation.skills && <TagList list={experienceInformation.skills} backgroundColor={"#2b4775"} fontColor={"#fff"} />}
             </li>
         )
     );

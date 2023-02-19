@@ -12,6 +12,7 @@ li {
         overflow: hidden;
         transition: transform 600ms, background-color 300ms;
         margin: 15px 0;
+        text-align: left;
 
         &:first-child {
             margin: 0 0 15px 0;
@@ -55,27 +56,6 @@ li {
 
         p {
             font-size: 1rem;
-        }
-
-        ul {
-            &.experienceSkill {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-
-                li {
-                    min-width: 70px;
-                    padding: 5px 10px;
-                    border: 0;
-                    background-color: #2b4775;
-                    font-size: 0.7rem;
-                    border-radius: 5px;
-                    text-align: center;
-                    line-height: 1.2;
-                    list-style: none;
-                    margin: 2.5px;
-                }
-            }
         }
 
         &:before {

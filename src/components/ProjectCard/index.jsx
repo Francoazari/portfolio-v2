@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { MainContext } from "../../contexts";
 import styles from "./ProjectCard.module.scss";
 import animatedStyle from "../../styles/animated-element.module.scss";
+import TagList from "../TagList";
 
 function ProjectCard({ projectInformation }) {
     const { isDesktop, setModalContent, modalContent } = useContext(MainContext);
@@ -26,17 +27,7 @@ function ProjectCard({ projectInformation }) {
                         </div>
 
                         {isDesktop && projectInformation.skillTags && (
-                            <div className={styles.skillTags}>
-                                <ul>
-                                    {projectInformation.skillTags.map((skill, index) => {
-                                        return (
-                                            <li key={index} className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}>
-                                                {skill.toUpperCase()}
-                                            </li>
-                                        );
-                                    })}
-                                </ul>
-                            </div>
+                            <TagList list={projectInformation.skillTags} backgroundColor={"#2b4775"} align={"right"} />
                         )}
 
                         {isDesktop && projectInformation.worksLinks && (
