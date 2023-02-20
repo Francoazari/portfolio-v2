@@ -16,4 +16,11 @@ footer {
         background-color: #cfcfcf;
         color: #000;
     }
+
+    @media (max-width: 768px) {
+        .bottom {
+            height: 30px;
+            font-size: 14px;
+        }
+    }
 }

@@ -6,10 +6,10 @@ import animatedStyle from "../../styles/animated-element.module.scss";
 import TagList from "../TagList";
 
 function ProjectCard({ projectInformation }) {
-    const { isDesktop, setModalContent, modalContent } = useContext(MainContext);
+    const { isMobile, setModalContent, modalContent } = useContext(MainContext);
 
     const openModal = () => {
-        if (isDesktop) return;
+        if (!isMobile) return;
         if (!modalContent) setModalContent(projectInformation);
     };
 
@@ -26,11 +26,11 @@ function ProjectCard({ projectInformation }) {
                             <p>{projectInformation.paragraph}</p>
                         </div>
 
-                        {isDesktop && projectInformation.skillTags && (
+                        {!isMobile && projectInformation.skillTags && (
                             <TagList list={projectInformation.skillTags} backgroundColor={"#2b4775"} align={"right"} />
                         )}
 
-                        {isDesktop && projectInformation.worksLinks && (
+                        {!isMobile && projectInformation.worksLinks && (
                             <div className={styles.worksLinks}>
                                 {projectInformation.worksLinks.map((workLink, index) => {
                                     return (
