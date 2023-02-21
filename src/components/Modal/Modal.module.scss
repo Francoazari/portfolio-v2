@@ -66,6 +66,16 @@
 
             p {
                 margin-bottom: 15px;
+                font-size: 13px;
+            }
+
+            .tags {
+                ul {
+                    li {
+                        min-width: 50px;
+                        font-size: 10px;
+                    }
+                }
             }
 
             .worksLinks {

@@ -50,11 +50,11 @@ function Modal() {
                         <img src={"./assets/works/example.jpg"} alt={"asd"} />
                     </div>
                     <div className={styles.information}>
-                        <h2 className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}>{modalContent?.title}</h2>
+                        <h3 className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}>{modalContent?.title}</h3>
                         <p className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>{modalContent?.paragraph}</p>
 
                         {modalContent?.skillTags && (
-                            <div className={clsx(animatedStyle.animatedElement, animatedStyle.order3)}>
+                            <div className={clsx(styles.tags, animatedStyle.animatedElement, animatedStyle.order3)}>
                                 <TagList list={modalContent?.skillTags} backgroundColor={"#2b4775"} fontColor={"#fff"} />
                             </div>
                         )}
