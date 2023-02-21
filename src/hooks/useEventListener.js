@@ -19,7 +19,7 @@ const useEventListener = (event, callback, target = window, options) => {
 
         if (!supportsEventListener) return;
 
-        const eventListener = event => savedCallback.current(event);
+        const eventListener = (event) => savedCallback.current(event);
         target.addEventListener(event, eventListener, options);
         return () => target.removeEventListener(event, eventListener, options);
     }, [event, target, options]);

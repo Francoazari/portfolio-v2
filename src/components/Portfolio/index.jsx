@@ -8,6 +8,7 @@ import ProjectCard from "../ProjectCard";
 import styles from "./Portfolio.module.scss";
 import animatedStyle from "../../styles/animated-element.module.scss";
 import Modal from "../Modal";
+import useMountTransition from "../../hooks/useMountTransition";
 
 function Portfolio() {
     let name = "Franco Azari";
@@ -97,6 +98,7 @@ function Portfolio() {
     ];
 
     const { isTablet, isDesktop, modalContent } = useContext(MainContext);
+    const hasTransitionedIn = useMountTransition(!!modalContent, 250);
 
     window.addEventListener("scroll", function () {
         let elements = document.getElementsByClassName("scroll-content");
@@ -187,7 +189,7 @@ function Portfolio() {
 
             <Footer />
 
-            {modalContent && <Modal />}
+            {(modalContent || hasTransitionedIn) && <Modal />}
         </>
     );
 }

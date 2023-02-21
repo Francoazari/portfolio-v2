@@ -12,10 +12,12 @@ function Modal() {
     const [contentMounted, setContentMounted] = useState(true);
     const background = useRef();
 
-    console.log("modalContent:", modalContent);
     const closeModal = () => {
-        setModalContent(null);
         setContentMounted(false);
+        setTimeout(() => {
+            setModalContent(null);
+            console.log("me ejecute");
+        }, 100);
     };
 
     const handleKeyDown = ({ keyCode }) => {
@@ -33,7 +35,7 @@ function Modal() {
 
     return (
         <FocusLock>
-            <div className={styles.container} ref={background}>
+            <div className={clsx(styles.container)} ref={background}>
                 <div
                     className={clsx(styles.modal, {
                         [styles.fadeIn]: contentMounted,
@@ -49,18 +51,18 @@ function Modal() {
                         <img src={"./assets/works/example.jpg"} alt={"asd"} />
                     </div>
                     <div className={styles.information}>
-                        <h2 className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}>{modalContent.title}</h2>
-                        <p className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>{modalContent.paragraph}</p>
+                        <h2 className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}>{modalContent?.title}</h2>
+                        <p className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>{modalContent?.paragraph}</p>
 
-                        {modalContent.skillTags && (
+                        {modalContent?.skillTags && (
                             <div className={clsx(animatedStyle.animatedElement, animatedStyle.order3)}>
-                                <TagList list={modalContent.skillTags} backgroundColor={"#2b4775"} fontColor={"#fff"} />
+                                <TagList list={modalContent?.skillTags} backgroundColor={"#2b4775"} fontColor={"#fff"} />
                             </div>
                         )}
 
-                        {modalContent.worksLinks && (
+                        {modalContent?.worksLinks && (
                             <div className={clsx(styles.worksLinks, animatedStyle.animatedElement, animatedStyle.order4)}>
-                                {modalContent.worksLinks.map((workLink, index) => {
+                                {modalContent?.worksLinks.map((workLink, index) => {
                                     return (
                                         <a key={index} href={workLink.url}>
                                             <img src={workLink.image} alt={workLink.alternativeText} />
