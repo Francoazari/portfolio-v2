@@ -16,7 +16,6 @@ function Modal() {
         setContentMounted(false);
         setTimeout(() => {
             setModalContent(null);
-            console.log("me ejecute");
         }, 100);
     };
 
