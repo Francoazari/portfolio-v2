@@ -34,7 +34,13 @@ function ProjectCard({ projectInformation }) {
                             <div className={styles.worksLinks}>
                                 {projectInformation.worksLinks.map((workLink, index) => {
                                     return (
-                                        <a key={index} href={workLink.url} className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>
+                                        <a
+                                            key={index}
+                                            href={workLink.url}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}
+                                        >
                                             <img src={workLink.image} alt={workLink.alternativeText} />
                                             <p>{workLink.label}</p>
                                         </a>

@@ -63,7 +63,7 @@ function Modal() {
                             <div className={clsx(styles.worksLinks, animatedStyle.animatedElement, animatedStyle.order4)}>
                                 {modalContent?.worksLinks.map((workLink, index) => {
                                     return (
-                                        <a key={index} href={workLink.url}>
+                                        <a key={index} target="_blank" rel="noreferrer" href={workLink.url}>
                                             <img src={workLink.image} alt={workLink.alternativeText} />
                                             <p>{workLink.label}</p>
                                         </a>
