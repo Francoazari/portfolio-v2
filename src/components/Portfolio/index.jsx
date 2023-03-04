@@ -117,7 +117,8 @@ function Portfolio() {
             url: "https://www.tiktok.com/francoazari"
         },
         codepen: "https://www.codepen.io",
-        linkedin: "https://www.linkedin.com/francoazari"
+        linkedin: "https://www.linkedin.com/francoazari",
+        github: "https://www.github.com"
     };
 
     const { isTablet, isDesktop, modalContent } = useContext(MainContext);
