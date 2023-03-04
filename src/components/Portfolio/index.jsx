@@ -97,6 +97,29 @@ function Portfolio() {
         }
     ];
 
+    const footer = {
+        name: "Franco Azari",
+        email: "francoazari@gmail.com",
+        whatsapp: {
+            number: "3364260853",
+            url: "https://api.whatsapp.com/send?phone=543364260853"
+        },
+        twitter: {
+            usuario: "francoazari",
+            url: "http://twitter.com/francoazari"
+        },
+        instagram: {
+            usuario: "francoazari",
+            url: "http://instagram.com/francoazari"
+        },
+        tiktok: {
+            usuario: "francoazari",
+            url: "https://www.tiktok.com/francoazari"
+        },
+        codepen: "https://www.codepen.io",
+        linkedin: "https://www.linkedin.com/francoazari"
+    };
+
     const { isTablet, isDesktop, modalContent } = useContext(MainContext);
     const hasTransitionedIn = useMountTransition(!!modalContent, 250);
 
@@ -187,7 +210,7 @@ function Portfolio() {
                 </section>
             </main>
 
-            <Footer />
+            <Footer information={footer} />
 
             {(modalContent || hasTransitionedIn) && <Modal />}
         </>
