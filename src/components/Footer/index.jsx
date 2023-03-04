@@ -77,6 +77,7 @@ function Footer({ information }) {
                             </a>
                         </div>
                     )}
+
                     {information.codepen && (
                         <div>
                             <a href={information.codepen} target="_blank" rel="noreferrer">
