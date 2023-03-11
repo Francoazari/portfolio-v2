@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MainContext } from "../../contexts";
 import ExperienceCard from "../ExperienceCard";
 import Footer from "../Footer";
@@ -9,8 +9,11 @@ import styles from "./Portfolio.module.scss";
 import animatedStyle from "../../styles/animated-element.module.scss";
 import Modal from "../Modal";
 import useMountTransition from "../../hooks/useMountTransition";
+import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 
 function Portfolio() {
+    const [captchaResponse, setCaptchaResponse] = useState(null);
     let name = "Franco Azari";
 
     const experiences = [
@@ -121,6 +124,35 @@ function Portfolio() {
         github: "https://www.github.com"
     };
 
+    function enviarCorreo(event) {
+        event.preventDefault();
+
+        if (captchaResponse) {
+            const form = document.getElementById("contact-form");
+            const formData = new FormData(form);
+
+            const templateParams = {
+                name: formData.get("name"),
+                email: formData.get("email"),
+                phone: formData.get("phone"),
+                message: formData.get("message")
+            };
+
+            emailjs
+                .send(process.env.REACT_APP_EMAILJS_SERVICEID, process.env.REACT_APP_EMAILJS_TEMPLATEID, templateParams, process.env.REACT_APP_EMAILJS_USERID)
+                .then(
+                    (result) => {
+                        console.log(result.text);
+                    },
+                    (error) => {
+                        console.log(error.text);
+                    }
+                );
+        } else {
+            console.error("Captcha no validado");
+        }
+    }
+
     const { isTablet, isDesktop, modalContent } = useContext(MainContext);
     const hasTransitionedIn = useMountTransition(!!modalContent, 250);
 
@@ -152,7 +184,7 @@ function Portfolio() {
                     <img src={isDesktop || isTablet ? "./assets/background-desktop.jpg" : "./assets/background-mobile.jpg"} alt="Background section" />
 
                     <div className={styles.headingContainer}>
-                        <span className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>Hello, I'm</span>
+                        <span className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>Hello, my name is</span>
                         <h1 className={clsx(animatedStyle.animatedElement, animatedStyle.order3)}>{name.toUpperCase()}</h1>
                         <span className={clsx(animatedStyle.animatedElement, animatedStyle.order4)}>Nice to meet you!</span>
                     </div>
@@ -199,12 +231,13 @@ function Portfolio() {
 
                 <section id="getintouch" className={clsx(styles.getInTouch, "scroll-content", styles.fadeTop)}>
                     <h2>GET IN TOUCH</h2>
-                    <form>
+                    <form id="contact-form">
                         <input name="name" type="text" placeholder="Name"></input>
                         <input name="email" type="email" placeholder="Email"></input>
                         <input name="phone" placeholder="Phone number"></input>
                         <textarea name="message" placeholder="Message"></textarea>
-                        <button type="submit" value="">
+                        <ReCAPTCHA sitekey="6Lds-uskAAAAAHBMpFN-73U1-XBzwALnoQbCuDCX" onChange={setCaptchaResponse} />
+                        <button type="submit" value="" onClick={(e) => enviarCorreo(e)}>
                             Send message
                         </button>
                     </form>
