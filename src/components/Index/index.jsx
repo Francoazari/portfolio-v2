@@ -19,11 +19,13 @@ function Index() {
     const isMobile = width < 600;
     const isTablet = width >= 600 && width < 768;
     const isDesktop = width >= 768;
+    const isLocalhost = window.location.hostname.includes("localhost") || window.location.hostname.includes("127.0.0.1");
 
     const contextValue = {
         isMobile,
         isTablet,
         isDesktop,
+        isLocalhost,
         modalContent,
         setModalContent
     };
