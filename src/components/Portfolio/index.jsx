@@ -10,10 +10,10 @@ import animatedStyle from "../../styles/animated-element.module.scss";
 import Modal from "../Modal";
 import useMountTransition from "../../hooks/useMountTransition";
 import emailjs from "emailjs-com";
-import ReCAPTCHA from "react-google-recaptcha";
+import { HCaptcha } from "react-hcaptcha";
 
 function Portfolio() {
-    const [captchaResponse, setCaptchaResponse] = useState(null);
+    const [captchaToken, setCaptchaToken] = useState("");
     let name = "Franco Azari";
 
     const experiences = [
@@ -127,7 +127,7 @@ function Portfolio() {
     function enviarCorreo(event) {
         event.preventDefault();
 
-        if (captchaResponse) {
+        if (captchaToken) {
             const form = document.getElementById("contact-form");
             const formData = new FormData(form);
 
@@ -236,8 +236,8 @@ function Portfolio() {
                         <input name="email" type="email" placeholder="Email"></input>
                         <input name="phone" placeholder="Phone number"></input>
                         <textarea name="message" placeholder="Message"></textarea>
-                        <ReCAPTCHA sitekey="6Lds-uskAAAAAHBMpFN-73U1-XBzwALnoQbCuDCX" onChange={setCaptchaResponse} />
-                        <button type="submit" value="" onClick={(e) => enviarCorreo(e)}>
+                        <HCaptcha sitekey="d204fc9c-34d4-4d37-b31d-9e6fcb7b7356" onVerify={(token) => setCaptchaToken(token)} />
+                        <button type="submit" onClick={(e) => enviarCorreo(e)} disabled={!captchaToken}>
                             Send message
                         </button>
                     </form>
