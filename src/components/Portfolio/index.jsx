@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { MainContext } from "../../contexts";
 import ExperienceCard from "../ExperienceCard";
 import Footer from "../Footer";
@@ -9,13 +9,9 @@ import styles from "./Portfolio.module.scss";
 import animatedStyle from "../../styles/animated-element.module.scss";
 import Modal from "../Modal";
 import useMountTransition from "../../hooks/useMountTransition";
-import emailjs from "emailjs-com";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
+import ContactForm from "../ContactForm";
 
 function Portfolio() {
-    const [captchaToken, setCaptchaToken] = useState(false);
-    const siteKey = process.env.REACT_APP_HCAPTCHA_SITEKEY;
-
     let name = "Franco Azari";
 
     const experiences = [
@@ -126,35 +122,6 @@ function Portfolio() {
         github: "https://www.github.com"
     };
 
-    function sendEmail(event) {
-        event.preventDefault();
-
-        if (captchaToken) {
-            const form = document.getElementById("contact-form");
-            const formData = new FormData(form);
-
-            const templateParams = {
-                name: formData.get("name"),
-                email: formData.get("email"),
-                phone: formData.get("phone"),
-                message: formData.get("message")
-            };
-
-            emailjs
-                .send(process.env.REACT_APP_EMAILJS_SERVICEID, process.env.REACT_APP_EMAILJS_TEMPLATEID, templateParams, process.env.REACT_APP_EMAILJS_USERID)
-                .then(
-                    (result) => {
-                        console.log(result.text);
-                    },
-                    (error) => {
-                        console.log(error.text);
-                    }
-                );
-        } else {
-            console.error("Captcha no validado");
-        }
-    }
-
     const { isTablet, isDesktop, modalContent } = useContext(MainContext);
     const hasTransitionedIn = useMountTransition(!!modalContent, 250);
 
@@ -233,16 +200,7 @@ function Portfolio() {
 
                 <section id="getintouch" className={clsx(styles.getInTouch, "scroll-content", styles.fadeTop)}>
                     <h2>GET IN TOUCH</h2>
-                    <form id="contact-form">
-                        <input name="name" type="text" placeholder="Name"></input>
-                        <input name="email" type="email" placeholder="Email"></input>
-                        <input name="phone" placeholder="Phone number"></input>
-                        <textarea name="message" placeholder="Message"></textarea>
-                        {siteKey && <HCaptcha sitekey={siteKey} onVerify={(token) => setCaptchaToken(token)} />}
-                        <button type="submit" onClick={(e) => sendEmail(e)} disabled={!captchaToken}>
-                            Send message
-                        </button>
-                    </form>
+                    <ContactForm />
                 </section>
             </main>
 
