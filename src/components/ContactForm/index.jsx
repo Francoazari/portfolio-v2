@@ -44,17 +44,23 @@ function ContactForm() {
 
     return (
         <form id="contact-form" onSubmit={handleSubmit(sendEmail)}>
-            <input name="name" type="text" className={clsx({ [styles.error]: errors.name })} placeholder="Name" {...register("name", { required: true })} />
-            {errors.name && <span className={styles.error}>This field is required</span>}
+            <input
+                name="name"
+                type="text"
+                className={clsx({ [styles.error]: errors.name })}
+                placeholder="Name"
+                {...register("name", { required: { value: true, message: "This field is required" }, maxLength: { value: 50, message: "Name too long" } })}
+            />
+            {errors?.name && <span className={styles.error}>{errors?.name?.message}</span>}
 
             <input
                 name="email"
                 type="email"
                 placeholder="Email"
                 className={clsx({ [styles.error]: errors.email })}
-                {...register("email", { required: true })}
+                {...register("email", { required: { value: true, message: "This field is required" }, maxLength: { value: 100, message: "Email too long" } })}
             />
-            {errors.email && <span className={styles.error}>This field is required</span>}
+            {errors?.email && <span className={styles.error}>{errors?.email?.message}</span>}
 
             <input name="phone" placeholder="Phone number" {...register("phone")} />
 
@@ -62,14 +68,17 @@ function ContactForm() {
                 name="message"
                 placeholder="Message"
                 className={clsx({ [styles.error]: errors.message })}
-                {...register("message", { required: true })}
+                {...register("message", {
+                    required: { value: true, message: "This field is required" },
+                    maxLength: { value: 500, message: "Description too long" }
+                })}
             ></textarea>
-            {errors.message && <span className={styles.error}>This field is required</span>}
+            {errors?.message && <span className={styles.error}>{errors?.message?.message}</span>}
 
             {siteKey && (
                 <>
                     <HCaptcha sitekey={siteKey} onVerify={(token) => setCaptchaToken(token)} />
-                    {captchaError && <span>Captcha is required</span>}
+                    {captchaError && <span>{styles.error.message}</span>}
                 </>
             )}
 
