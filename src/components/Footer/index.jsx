@@ -113,7 +113,7 @@ function Footer({ information }) {
             </div>
 
             <div className={styles.bottom}>
-                <p>Pagina web desarrollada por Franco Azari</p>
+                <p>Website developed by Franco Azari</p>
             </div>
         </footer>
     );
