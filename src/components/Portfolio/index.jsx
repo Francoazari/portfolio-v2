@@ -11,117 +11,7 @@ import Modal from "../Modal";
 import useMountTransition from "../../hooks/useMountTransition";
 import ContactForm from "../ContactForm";
 
-function Portfolio() {
-    let name = "Franco Azari";
-
-    const experiences = [
-        {
-            heading: "Experience 1",
-            period: "Enero 2022 - Present",
-            paragraph:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
-            skills: ["HTML", "CSS", "React"]
-        },
-        {
-            heading: "Experience 2",
-            period: "Junio 2020 - Diciembre 2022",
-            paragraph:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
-            skills: ["HTML", "CSS", "SASS", "React"]
-        },
-        {
-            heading: "Experience 3",
-            period: "Abril 2019 - Mayo 2020",
-            paragraph:
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
-            skills: ["HTML", "CSS", "SASS", "React"]
-        }
-    ];
-
-    const projects = [
-        {
-            title: "Project 1",
-            paragraph: "Paragraph paragraph  paragraph paragraph paragraph",
-            skillTags: ["HTML", "CSS", "JAVASCRIPT"],
-            worksLinks: [
-                {
-                    url: "http://github.com",
-                    image: "./assets/works/github.svg",
-                    alternativeText: "Github Alternative Text",
-                    label: "Github"
-                },
-                {
-                    url: "http://linkedin.com",
-                    image: "./assets/works/linkedin.svg",
-                    alternativeText: "LinkedIn Alternative Text",
-                    label: "Github"
-                }
-            ]
-        },
-        {
-            title: "Project 2",
-            paragraph: "Paragraph paragraph  paragraph paragraph paragraph",
-            skillTags: ["HTML", "CSS", "JAVASCRIPT", "REACT"],
-            worksLinks: [
-                {
-                    url: "http://github.com",
-                    image: "./assets/works/github.svg",
-                    alternativeText: "Github Alternative Text",
-                    label: "Github"
-                },
-                {
-                    url: "http://twitter.com",
-                    image: "./assets/works/twitter.svg",
-                    alternativeText: "Twitter Alternative Text",
-                    label: "Github"
-                }
-            ]
-        },
-        {
-            title: "Project 3",
-            paragraph: "Paragraph paragraph  paragraph paragraph paragraph",
-            skillTags: ["HTML", "CSS", "JAVASCRIPT", "REACT"],
-            worksLinks: [
-                {
-                    url: "http://github.com",
-                    image: "./assets/works/github.svg",
-                    alternativeText: "Github Alternative Text",
-                    label: "Github"
-                },
-                {
-                    url: "http://twitter.com",
-                    image: "./assets/works/twitter.svg",
-                    alternativeText: "Twitter Alternative Text",
-                    label: "Github"
-                }
-            ]
-        }
-    ];
-
-    const footer = {
-        name: "Franco Azari",
-        email: "francoazari@gmail.com",
-        whatsapp: {
-            number: "3364260853",
-            url: "https://api.whatsapp.com/send?phone=543364260853"
-        },
-        twitter: {
-            usuario: "francoazari",
-            url: "http://twitter.com/francoazari"
-        },
-        instagram: {
-            usuario: "francoazari",
-            url: "http://instagram.com/francoazari"
-        },
-        tiktok: {
-            usuario: "francoazari",
-            url: "https://www.tiktok.com/francoazari"
-        },
-        codepen: "https://www.codepen.io",
-        linkedin: "https://www.linkedin.com/francoazari",
-        github: "https://www.github.com"
-    };
-
+function Portfolio({ model }) {
     const { isTablet, isDesktop, modalContent } = useContext(MainContext);
     const hasTransitionedIn = useMountTransition(!!modalContent, 250);
 
@@ -154,7 +44,7 @@ function Portfolio() {
 
                     <div className={styles.headingContainer}>
                         <span className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>Hello, my name is</span>
-                        <h1 className={clsx(animatedStyle.animatedElement, animatedStyle.order3)}>{name.toUpperCase()}</h1>
+                        <h1 className={clsx(animatedStyle.animatedElement, animatedStyle.order3)}>{model?.name.toUpperCase()}</h1>
                         <span className={clsx(animatedStyle.animatedElement, animatedStyle.order4)}>Nice to meet you!</span>
                     </div>
 
@@ -176,22 +66,22 @@ function Portfolio() {
                     </div>
                 </section>
 
-                {experiences && (
+                {model?.experiences && (
                     <section className={clsx(styles.experience, "scroll-content", styles.fadeTop)}>
                         <h2>EXPERIENCE</h2>
                         <ul className={styles.experienceList}>
-                            {experiences.map((experience, index) => {
+                            {model?.experiences.map((experience, index) => {
                                 return <ExperienceCard key={index} order={index} experienceInformation={experience} />;
                             })}
                         </ul>
                     </section>
                 )}
 
-                {projects && projects.length > 0 && (
+                {model?.projects && model?.projects.length > 0 && (
                     <section id="projects" className={clsx(styles.works, "scroll-content", styles.fadeTop)}>
                         <h2>PROJECTS</h2>
                         <div className={styles.projectContainer}>
-                            {projects.map((project, index) => {
+                            {model?.projects.map((project, index) => {
                                 return <ProjectCard key={index} projectInformation={project} />;
                             })}
                         </div>
@@ -204,7 +94,7 @@ function Portfolio() {
                 </section>
             </main>
 
-            <Footer information={footer} />
+            <Footer information={model?.footer} />
 
             {(modalContent || hasTransitionedIn) && <Modal />}
         </>

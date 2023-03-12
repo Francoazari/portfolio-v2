@@ -1,0 +1,133 @@
+{
+    "name": "Franco Azari",
+    "experiences": [
+      {
+        "heading": "Experience 1",
+        "period": "Enero 2022 - Present",
+        "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
+        "skills": [
+          "HTML",
+          "CSS",
+          "React"
+        ]
+      },
+      {
+        "heading": "Experience 2",
+        "period": "Junio 2020 - Diciembre 2022",
+        "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
+        "skills": [
+          "HTML",
+          "CSS",
+          "SASS",
+          "React"
+        ]
+      },
+      {
+        "heading": "Experience 3",
+        "period": "Abril 2019 - Mayo 2020",
+        "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
+        "skills": [
+          "HTML",
+          "CSS",
+          "SASS",
+          "React"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "title": "Project 1",
+        "paragraph": "Paragraph paragraph  paragraph paragraph paragraph",
+        "skillTags": [
+          "HTML",
+          "CSS",
+          "JAVASCRIPT"
+        ],
+        "worksLinks": [
+          {
+            "url": "http://github.com",
+            "image": "./assets/works/github.svg",
+            "alternativeText": "Github Alternative Text",
+            "label": "Github"
+          },
+          {
+            "url": "http://linkedin.com",
+            "image": "./assets/works/linkedin.svg",
+            "alternativeText": "LinkedIn Alternative Text",
+            "label": "Github"
+          }
+        ]
+      },
+      {
+        "title": "Project 2",
+        "paragraph": "Paragraph paragraph  paragraph paragraph paragraph",
+        "skillTags": [
+          "HTML",
+          "CSS",
+          "JAVASCRIPT",
+          "REACT"
+        ],
+        "worksLinks": [
+          {
+            "url": "http://github.com",
+            "image": "./assets/works/github.svg",
+            "alternativeText": "Github Alternative Text",
+            "label": "Github"
+          },
+          {
+            "url": "http://twitter.com",
+            "image": "./assets/works/twitter.svg",
+            "alternativeText": "Twitter Alternative Text",
+            "label": "Github"
+          }
+        ]
+      },
+      {
+        "title": "Project 3",
+        "paragraph": "Paragraph paragraph  paragraph paragraph paragraph",
+        "skillTags": [
+          "HTML",
+          "CSS",
+          "JAVASCRIPT",
+          "REACT"
+        ],
+        "worksLinks": [
+          {
+            "url": "http://github.com",
+            "image": "./assets/works/github.svg",
+            "alternativeText": "Github Alternative Text",
+            "label": "Github"
+          },
+          {
+            "url": "http://twitter.com",
+            "image": "./assets/works/twitter.svg",
+            "alternativeText": "Twitter Alternative Text",
+            "label": "Github"
+          }
+        ]
+      }
+    ],
+    "footer": {
+      "name": "Franco Azari",
+      "email": "francoazari@gmail.com",
+      "whatsapp": {
+        "number": "3364260853",
+        "url": "https://api.whatsapp.com/send?phone=543364260853"
+      },
+      "twitter": {
+        "usuario": "francoazari",
+        "url": "http://twitter.com/francoazari"
+      },
+      "instagram": {
+        "usuario": "francoazari",
+        "url": "http://instagram.com/francoazari"
+      },
+      "tiktok": {
+        "usuario": "francoazari",
+        "url": "https://www.tiktok.com/francoazari"
+      },
+      "codepen": "https://www.codepen.io",
+      "linkedin": "https://www.linkedin.com/francoazari",
+      "github": "https://www.github.com"
+    }
+}

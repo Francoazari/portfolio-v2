@@ -3,8 +3,9 @@ import { MainContext } from "../../contexts";
 import Portfolio from "../Portfolio";
 
 function Index() {
-    const [width, setWidth] = useState(window.innerWidth);
+    const [width, setWidth] = useState(window?.innerWidth);
     const [modalContent, setModalContent] = useState();
+    const [model, setModel] = useState();
 
     function handleWindowSizeChange() {
         setWidth(window.innerWidth);
@@ -21,20 +22,21 @@ function Index() {
     const isDesktop = width >= 768;
     const isLocalhost = window.location.hostname.includes("localhost") || window.location.hostname.includes("127.0.0.1");
 
-    const contextValue = {
-        isMobile,
-        isTablet,
-        isDesktop,
-        isLocalhost,
-        modalContent,
-        setModalContent
-    };
+    const contextValue = { isMobile, isTablet, isDesktop, isLocalhost, modalContent, setModalContent };
 
-    return (
-        <MainContext.Provider value={contextValue}>
-            <Portfolio />
-        </MainContext.Provider>
-    );
+    useEffect(() => {
+        try {
+            fetch("./models/model.json")
+                .then((res) => res.json())
+                .then((model) => {
+                    setModel(model);
+                });
+        } catch (error) {
+            console.error(error);
+        }
+    }, []);
+
+    return <MainContext.Provider value={contextValue}>{model && <Portfolio model={model} />}</MainContext.Provider>;
 }
 
 export default Index;
