@@ -41,11 +41,9 @@ function Navbar() {
         const nav = document.querySelector("nav");
         const currentScroll = window.pageYOffset;
 
-        if (currentScroll <= 0) nav.classList.add(styles.visible);
-
-        if (currentScroll > lastScroll) {
+        if (currentScroll > lastScroll && lastScroll > 0 && currentScroll > 0) {
             nav.classList.remove(styles.visible);
-        } else if (currentScroll < lastScroll) {
+        } else if (currentScroll < lastScroll || lastScroll === 0 || currentScroll === 0) {
             nav.classList.add(styles.visible);
         }
         lastScroll = currentScroll;
