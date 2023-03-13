@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MainContext } from "../../contexts";
+import Error from "../Error";
 import Portfolio from "../Portfolio";
 
 function Index() {
@@ -36,7 +37,12 @@ function Index() {
         }
     }, []);
 
-    return <MainContext.Provider value={contextValue}>{model && <Portfolio model={model} />}</MainContext.Provider>;
+    return (
+        <MainContext.Provider value={contextValue}>
+            {model && <Portfolio model={model} />}
+            {!model && <Error />}
+        </MainContext.Provider>
+    );
 }
 
 export default Index;
