@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { MainContext } from "../../contexts";
 import Error from "../Error";
+import Loading from "../Loading";
 import Portfolio from "../Portfolio";
 
 function Index() {
     const [width, setWidth] = useState(window?.innerWidth);
     const [modalContent, setModalContent] = useState();
     const [model, setModel] = useState();
+    const [loading, setLoading] = useState(true);
 
     function handleWindowSizeChange() {
         setWidth(window.innerWidth);
@@ -30,7 +32,10 @@ function Index() {
             fetch("./models/model.json")
                 .then((res) => res.json())
                 .then((model) => {
-                    setModel(model);
+                    setTimeout(() => {
+                        setModel(model);
+                        setLoading(false);
+                    }, 1000);
                 });
         } catch (error) {
             console.error(error);
@@ -40,7 +45,8 @@ function Index() {
     return (
         <MainContext.Provider value={contextValue}>
             {model && <Portfolio model={model} />}
-            {!model && <Error />}
+            {!model && loading && <Loading />}
+            {!model && !loading && <Error />}
         </MainContext.Provider>
     );
 }

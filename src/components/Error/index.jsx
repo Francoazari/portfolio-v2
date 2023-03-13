@@ -2,7 +2,7 @@ import styles from "./Error.module.scss";
 
 function Error() {
     return (
-        <div>
+        <div className={styles.container}>
             <div className={styles.title}>
                 <h2>FRANCO AZARI</h2>
             </div>
