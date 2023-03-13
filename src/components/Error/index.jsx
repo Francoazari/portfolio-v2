@@ -7,7 +7,7 @@ function Error() {
                 <h2>FRANCO AZARI</h2>
             </div>
             <div className={styles.errorContainer}>
-                <span>Lo sentimos ha ocurrido un error. Por favor contactese con el administrador del sitio.</span>
+                <span>Sorry, an error has occurred. Please contact the site administrator.</span>
             </div>
         </div>
     );
