@@ -1,0 +1,33 @@
+{
+    "title": "Franco Azari", 
+    "menu": [
+        {
+            "label": "Home",
+            "url": "#home"
+        },
+        {
+            "label": "About me",
+            "url": "#aboutme"
+        },
+        {
+            "label": "Projects",
+            "url": "#projects"
+        },
+        {
+            "label": "Contact",
+            "url": "#getintouch"
+        }
+    ],
+    "languages": {
+        "spanish": {
+            "modelId": "",
+            "label": "Spanish",
+            "icon": ""
+        },
+        "english": {
+            "modelId": "",
+            "label": "English",
+            "icon": ""
+        }
+    }
+}

@@ -7,6 +7,7 @@ import Portfolio from "../Portfolio";
 function Index() {
     const [width, setWidth] = useState(window?.innerWidth);
     const [modalContent, setModalContent] = useState();
+    const [languageActive, setLanguageActive] = useState("spanish");
     const [model, setModel] = useState();
     const [loading, setLoading] = useState(true);
 
@@ -25,7 +26,7 @@ function Index() {
     const isDesktop = width >= 768;
     const isLocalhost = window.location.hostname.includes("localhost") || window.location.hostname.includes("127.0.0.1");
 
-    const contextValue = { isMobile, isTablet, isDesktop, isLocalhost, modalContent, setModalContent };
+    const contextValue = { isMobile, isTablet, isDesktop, isLocalhost, modalContent, setModalContent, languageActive, setLanguageActive };
 
     useEffect(() => {
         try {

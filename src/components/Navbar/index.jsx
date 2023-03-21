@@ -25,7 +25,21 @@ function Navbar() {
         }
     ];
 
-    const { isTablet, isDesktop } = useContext(MainContext);
+    const languages = [
+        {
+            modelId: "spanish",
+            label: "Spanish",
+            icon: "",
+            default: true
+        },
+        {
+            modelId: "english",
+            label: "English",
+            icon: ""
+        }
+    ];
+
+    const { isTablet, isDesktop, languageActive, setLanguageActive } = useContext(MainContext);
 
     const handleClick = (event) => {
         if (isDesktop || isTablet) return;
@@ -76,6 +90,23 @@ function Navbar() {
                                 </a>
                             );
                         })}
+                        {languages && (
+                            <li>
+                                <input type="checkbox" id="language-checkbox" className={styles.languageCheckbox} />
+                                <label for="language-checkbox" className={styles.languageLabel}>
+                                    {languages.find((lang) => lang.modelId === languageActive)?.label ?? languages[0].label}
+                                </label>
+                                <ul className={styles.languages}>
+                                    {languages.map((language, key) => {
+                                        return (
+                                            <li key={key} onClick={() => setLanguageActive(language.modelId)}>
+                                                <span>{language.label}</span>
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            </li>
+                        )}
                     </ul>
                 </>
             )}
