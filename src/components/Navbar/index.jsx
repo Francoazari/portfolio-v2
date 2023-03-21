@@ -91,10 +91,12 @@ function Navbar() {
                             );
                         })}
                         {languages && (
-                            <li>
+                            <li className={styles.languages}>
                                 <input type="checkbox" id="language-checkbox" className={styles.languageCheckbox} />
                                 <label for="language-checkbox" className={styles.languageLabel}>
-                                    {languages.find((lang) => lang.modelId === languageActive)?.label ?? languages[0].label}
+                                    {languages.find((lang) => lang.modelId === languageActive)?.label ??
+                                        languages.find((lang) => lang.default)?.label ??
+                                        languages[0].label}
                                 </label>
                                 <ul className={styles.languages}>
                                     {languages.map((language, key) => {
