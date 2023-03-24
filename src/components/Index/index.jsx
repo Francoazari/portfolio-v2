@@ -9,7 +9,7 @@ function Index() {
     const [modalContent, setModalContent] = useState();
     const [languageActive, setLanguageActive] = useState("english");
     const [model, setModel] = useState();
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState();
 
     function handleWindowSizeChange() {
         setWidth(window.innerWidth);
@@ -28,11 +28,16 @@ function Index() {
 
     const contextValue = { isMobile, isTablet, isDesktop, isLocalhost, modalContent, setModalContent, languageActive, setLanguageActive };
 
-    useEffect(() => {
-        const modelName = languageActive && model?.nav && model.nav.languages.find((lang) => lang.id === languageActive).modelId;
+    const getModel = async (modelName) => {
+        if (!modelName) return;
+        return await fetch(modelName);
+    };
 
+    useEffect(() => {
+        setLoading(true);
+        const modelName = languageActive && model?.nav && model?.nav.languages.find((lang) => lang.id === languageActive).modelId;
         try {
-            fetch(`./models/${modelName ?? "english-model"}.json`)
+            getModel(`./models/${modelName ?? "english-model"}.json`)
                 .then((res) => res.json())
                 .then((model) => {
                     setTimeout(() => {
@@ -47,8 +52,8 @@ function Index() {
 
     return (
         <MainContext.Provider value={contextValue}>
-            {model && <Portfolio model={model} />}
-            {!model && loading && <Loading />}
+            {model && !loading && <Portfolio model={model} />}
+            {loading && <Loading />}
             {!model && !loading && <Error />}
         </MainContext.Provider>
     );
