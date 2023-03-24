@@ -61,6 +61,29 @@ nav {
                 }
             }
         }
+
+        li {
+            &.languages {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+
+                .languageCheckbox {
+                    display: none;
+                }
+
+                ul {
+                    display: none;
+                    transition: opacity 250ms;
+                    z-index: 1;
+                }
+
+                .languageCheckbox:checked ~ ul {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
     }
 }
 

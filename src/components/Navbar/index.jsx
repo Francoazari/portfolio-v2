@@ -65,7 +65,7 @@ function Navbar({ information }) {
                                         information.languages.find((lang) => lang.default)?.label ??
                                         information.languages[0].label}
                                 </label>
-                                <ul className={styles.languages}>
+                                <ul className={styles.languagesDropdown}>
                                     {information.languages.map((language, key) => {
                                         return (
                                             <li key={key} onClick={() => setLanguageActive(language.id)}>

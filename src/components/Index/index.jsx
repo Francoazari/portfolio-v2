@@ -7,7 +7,7 @@ import Portfolio from "../Portfolio";
 function Index() {
     const [width, setWidth] = useState(window?.innerWidth);
     const [modalContent, setModalContent] = useState();
-    const [languageActive, setLanguageActive] = useState("spanish");
+    const [languageActive, setLanguageActive] = useState("english");
     const [model, setModel] = useState();
     const [loading, setLoading] = useState(true);
 
@@ -29,8 +29,10 @@ function Index() {
     const contextValue = { isMobile, isTablet, isDesktop, isLocalhost, modalContent, setModalContent, languageActive, setLanguageActive };
 
     useEffect(() => {
+        const modelName = languageActive && model?.nav && model.nav.languages.find((lang) => lang.id === languageActive).modelId;
+
         try {
-            fetch("./models/model.json")
+            fetch(`./models/${modelName ?? "english-model"}.json`)
                 .then((res) => res.json())
                 .then((model) => {
                     setTimeout(() => {
@@ -41,7 +43,7 @@ function Index() {
         } catch (error) {
             console.error(error);
         }
-    }, []);
+    }, [languageActive]);
 
     return (
         <MainContext.Provider value={contextValue}>

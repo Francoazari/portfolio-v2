@@ -3,33 +3,33 @@
     "nav": {
       "title": "Franco Azari", 
       "menu": [
-          {
-              "label": "Home",
-              "url": "#home"
-          },
-          {
-              "label": "About me",
-              "url": "#aboutme"
-          },
-          {
-              "label": "Projects",
-              "url": "#projects"
-          },
-          {
-              "label": "Contact",
-              "url": "#getintouch"
-          }
+        {
+          "label": "Inicio",
+          "url": "#home"
+        },
+        {
+            "label": "Sobre mi",
+            "url": "#aboutme"
+        },
+        {
+            "label": "Proyectos",
+            "url": "#projects"
+        },
+        {
+            "label": "Contacto",
+            "url": "#getintouch"
+        }
       ],
       "languages": [
         {
             "id": "spanish",
-            "modelId": "",
+            "modelId": "spanish-model",
             "label": "Spanish",
             "icon": ""
         },
         {
             "id": "english",
-            "modelId": "",
+            "modelId": "english-model",
             "label": "English",
             "icon": ""
         }
