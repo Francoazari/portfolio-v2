@@ -1,24 +1,26 @@
 ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    &.taglist {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 
-    &.alignRight {
-        justify-content: flex-end;
-    }
+        &.alignRight {
+            justify-content: flex-end;
+        }
 
-    > li {
-        min-width: 70px;
-        padding: 5px 10px;
-        border: 0;
-        color: var(--font-color, #000);
-        background-color: var(--background-color, #c7c7c7);
-        font-size: 0.7rem;
-        border-radius: 5px;
-        text-align: center;
-        line-height: 1.2;
-        list-style: none;
-        margin: 2.5px;
-        transition: background-color 250ms, color 250ms;
+        > li {
+            min-width: 70px;
+            padding: 5px 10px;
+            border: 0;
+            color: var(--font-color, #000);
+            background-color: var(--background-color, #c7c7c7);
+            font-size: 0.7rem;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 1.2;
+            list-style: none;
+            margin: 2.5px;
+            transition: background-color 250ms, color 250ms;
+        }
     }
 }
