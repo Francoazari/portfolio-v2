@@ -1,11 +1,12 @@
 import clsx from "clsx";
 import styles from "./Navbar.module.scss";
 import animatedStyle from "../../styles/animated-element.module.scss";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { MainContext } from "../../contexts";
 
 function Navbar({ information }) {
     const { isTablet, isDesktop, languageActive, setLanguageActive } = useContext(MainContext);
+    const languageRef = useRef();
 
     const handleClick = (event) => {
         if (isDesktop || isTablet) return;
@@ -23,6 +24,7 @@ function Navbar({ information }) {
 
         if (currentScroll > lastScroll && lastScroll > 0 && currentScroll > 0) {
             nav.classList.remove(styles.visible);
+            if (languageRef?.current && languageRef.current.checked) languageRef.current.checked = false;
         } else if (currentScroll < lastScroll || lastScroll === 0 || currentScroll === 0) {
             nav.classList.add(styles.visible);
         }
@@ -59,7 +61,7 @@ function Navbar({ information }) {
 
                         {information.languages && (
                             <li className={clsx(styles.languages, animatedStyle.animatedElement, animatedStyle.order1)}>
-                                <input type="checkbox" id="language-checkbox" className={styles.languageCheckbox} />
+                                <input type="checkbox" id="language-checkbox" className={styles.languageCheckbox} ref={languageRef} />
                                 <label htmlFor="language-checkbox" className={styles.languageLabel}>
                                     {information.languages.find((lang) => lang.id === languageActive)?.symbol ??
                                         information.languages.find((lang) => lang.default)?.symbol ??
