@@ -36,7 +36,7 @@ function Portfolio({ model }) {
 
     return (
         <>
-            <Navbar />
+            <Navbar information={model.nav} />
 
             <main>
                 <section id="home" className={clsx(styles.firstScreen)}>

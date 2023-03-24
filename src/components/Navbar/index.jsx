@@ -4,41 +4,7 @@ import animatedStyle from "../../styles/animated-element.module.scss";
 import { useContext } from "react";
 import { MainContext } from "../../contexts";
 
-function Navbar() {
-    const title = "Franco Azari";
-    const menuItem = [
-        {
-            label: "Home",
-            url: "#home"
-        },
-        {
-            label: "About me",
-            url: "#aboutme"
-        },
-        {
-            label: "Projects",
-            url: "#projects"
-        },
-        {
-            label: "Contact",
-            url: "#getintouch"
-        }
-    ];
-
-    const languages = [
-        {
-            modelId: "spanish",
-            label: "Spanish",
-            icon: "",
-            default: true
-        },
-        {
-            modelId: "english",
-            label: "English",
-            icon: ""
-        }
-    ];
-
+function Navbar({ information }) {
     const { isTablet, isDesktop, languageActive, setLanguageActive } = useContext(MainContext);
 
     const handleClick = (event) => {
@@ -65,9 +31,9 @@ function Navbar() {
 
     return (
         <nav className={styles.visible}>
-            <p>{title.toUpperCase()}</p>
+            {information.title && <p>{information.title.toUpperCase()}</p>}
 
-            {menuItem && (
+            {information.menu && (
                 <>
                     <input type="checkbox" id="hamburger-input" className={styles.hamburgerCheckbox} onClick={(e) => handleClick(e)} />
                     <label id="hamburger-menu" htmlFor="hamburger-input">
@@ -78,7 +44,7 @@ function Navbar() {
                         </div>
                     </label>
                     <ul>
-                        {menuItem.map((item, index) => {
+                        {information.menu.map((item, index) => {
                             return (
                                 <a
                                     key={index}
@@ -90,18 +56,19 @@ function Navbar() {
                                 </a>
                             );
                         })}
-                        {languages && (
+
+                        {information.languages && (
                             <li className={styles.languages}>
                                 <input type="checkbox" id="language-checkbox" className={styles.languageCheckbox} />
-                                <label for="language-checkbox" className={styles.languageLabel}>
-                                    {languages.find((lang) => lang.modelId === languageActive)?.label ??
-                                        languages.find((lang) => lang.default)?.label ??
-                                        languages[0].label}
+                                <label htmlFor="language-checkbox" className={styles.languageLabel}>
+                                    {information.languages.find((lang) => lang.id === languageActive)?.label ??
+                                        information.languages.find((lang) => lang.default)?.label ??
+                                        information.languages[0].label}
                                 </label>
                                 <ul className={styles.languages}>
-                                    {languages.map((language, key) => {
+                                    {information.languages.map((language, key) => {
                                         return (
-                                            <li key={key} onClick={() => setLanguageActive(language.modelId)}>
+                                            <li key={key} onClick={() => setLanguageActive(language.id)}>
                                                 <span>{language.label}</span>
                                             </li>
                                         );

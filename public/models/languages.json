@@ -1,0 +1,16 @@
+{
+    "languages": [
+        {
+            "id": "spanish",
+            "modelId": "",
+            "label": "Spanish",
+            "icon": ""
+        },
+        {
+            "id": "english",
+            "modelId": "",
+            "label": "English",
+            "icon": ""
+        }
+    ]
+}

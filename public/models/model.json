@@ -1,5 +1,40 @@
 {
     "name": "Franco Azari",
+    "nav": {
+      "title": "Franco Azari", 
+      "menu": [
+          {
+              "label": "Home",
+              "url": "#home"
+          },
+          {
+              "label": "About me",
+              "url": "#aboutme"
+          },
+          {
+              "label": "Projects",
+              "url": "#projects"
+          },
+          {
+              "label": "Contact",
+              "url": "#getintouch"
+          }
+      ],
+      "languages": [
+        {
+            "id": "spanish",
+            "modelId": "",
+            "label": "Spanish",
+            "icon": ""
+        },
+        {
+            "id": "english",
+            "modelId": "",
+            "label": "English",
+            "icon": ""
+        }
+    ]
+  },
     "experiences": [
       {
         "heading": "Experience 1",
