@@ -64,23 +64,47 @@ nav {
 
         li {
             &.languages {
+                padding: 10px 15px;
+                font-weight: 200;
                 position: relative;
                 display: flex;
                 flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 5px 5px 0 0;
 
                 .languageCheckbox {
                     display: none;
                 }
 
                 ul {
-                    display: none;
-                    transition: opacity 250ms;
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    display: flex;
+                    flex-direction: column;
+                    visibility: hidden;
+
                     z-index: 1;
+                    height: auto;
+                    overflow: hidden;
+                    backdrop-filter: blur(30px);
+                    background-color: rgba(0, 0, 0, 0.5);
+                    border-radius: 10px 0 10px 10px;
+
+                    li {
+                        list-style: none;
+                        padding: 10px 30px;
+                        font-weight: 200;
+                        min-width: 150px;
+
+                        &:hover {
+                            font-weight: 400;
+                        }
+                    }
                 }
 
                 .languageCheckbox:checked ~ ul {
-                    display: flex;
-                    flex-direction: column;
+                    visibility: visible;
                 }
             }
         }
@@ -103,6 +127,12 @@ nav {
         ul {
             a {
                 li {
+                    padding: 10px 15px;
+                }
+            }
+
+            li {
+                &.languages {
                     padding: 10px 15px;
                 }
             }

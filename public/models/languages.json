@@ -4,12 +4,14 @@
             "id": "spanish",
             "modelId": "",
             "label": "Spanish",
+            "symbol": "ES",
             "icon": ""
         },
         {
             "id": "english",
             "modelId": "",
             "label": "English",
+            "symbol": "EN",
             "icon": ""
         }
     ]

@@ -58,12 +58,12 @@ function Navbar({ information }) {
                         })}
 
                         {information.languages && (
-                            <li className={styles.languages}>
+                            <li className={clsx(styles.languages, animatedStyle.animatedElement, animatedStyle.order1)}>
                                 <input type="checkbox" id="language-checkbox" className={styles.languageCheckbox} />
                                 <label htmlFor="language-checkbox" className={styles.languageLabel}>
-                                    {information.languages.find((lang) => lang.id === languageActive)?.label ??
-                                        information.languages.find((lang) => lang.default)?.label ??
-                                        information.languages[0].label}
+                                    {information.languages.find((lang) => lang.id === languageActive)?.symbol ??
+                                        information.languages.find((lang) => lang.default)?.symbol ??
+                                        information.languages[0].symbol}
                                 </label>
                                 <ul className={styles.languagesDropdown}>
                                     {information.languages.map((language, key) => {
