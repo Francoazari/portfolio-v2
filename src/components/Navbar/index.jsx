@@ -71,7 +71,7 @@ function Navbar({ information }) {
                                     {information.languages.map((language, key) => {
                                         return (
                                             <li key={key} onClick={() => setLanguageActive(language.id)}>
-                                                <span>{language.label}</span>
+                                                <span className={clsx({ [styles.active]: language.id === languageActive })}>{language.label}</span>
                                             </li>
                                         );
                                     })}
