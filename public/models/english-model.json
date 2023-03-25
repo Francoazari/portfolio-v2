@@ -22,18 +22,19 @@
       ],
       "languages": [
         {
-            "id": "spanish",
-            "modelId": "spanish-model",
-            "label": "Spanish",
-            "symbol": "ES",
-            "icon": ""
+          "id": "english",
+          "modelId": "english-model",
+          "label": "English",
+          "symbol": "EN",
+          "icon": "",
+          "default": true
         },
         {
-            "id": "english",
-            "modelId": "english-model",
-            "label": "English",
-            "symbol": "EN",
-            "icon": ""
+          "id": "spanish",
+          "modelId": "spanish-model",
+          "label": "Spanish",
+          "symbol": "ES",
+          "icon": ""
         }
     ]
   },

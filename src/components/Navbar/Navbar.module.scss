@@ -106,9 +106,9 @@ nav {
                         text-align: center;
                         backdrop-filter: blur(30px);
 
-                        span {
-                            &.active {
-                                background-color: rgba(0, 0, 0, 0.5);
+                        &.active {
+                            background-color: rgba(0, 0, 0, 0.5);
+                            span {
                                 font-weight: 400;
                             }
                         }
@@ -247,12 +247,11 @@ nav {
                         li {
                             width: 50%;
 
-                            span {
+                            &.active {
+                                background-color: rgba(0, 0, 0, 0);
                                 padding: 0 10px;
-                                font-size: 1.2em;
-
-                                &.active {
-                                    background-color: rgba(0, 0, 0, 0);
+                                span {
+                                    font-size: 1.2em;
                                 }
                             }
 

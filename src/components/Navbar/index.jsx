@@ -70,8 +70,12 @@ function Navbar({ information }) {
                                 <ul className={styles.languagesDropdown}>
                                     {information.languages.map((language, key) => {
                                         return (
-                                            <li key={key} onClick={() => setLanguageActive(language.id)}>
-                                                <span className={clsx({ [styles.active]: language.id === languageActive })}>{language.label}</span>
+                                            <li
+                                                className={clsx({ [styles.active]: language.id === languageActive })}
+                                                key={key}
+                                                onClick={() => setLanguageActive(language.id)}
+                                            >
+                                                <span>{language.label}</span>
                                             </li>
                                         );
                                     })}
