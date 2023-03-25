@@ -63,6 +63,7 @@ nav {
 
         li {
             &.languages {
+                margin-left: 15px;
                 padding: 5px 10px;
                 font-weight: 200;
                 position: relative;
@@ -87,11 +88,12 @@ nav {
                     display: flex;
                     flex-direction: column;
                     visibility: hidden;
-
+                    opacity: 0;
+                    margin-top: -15px;
+                    transition: visibility 150ms, margin-top 150ms ease 100ms, opacity 150ms ease 100ms;
                     z-index: 1;
                     height: auto;
                     overflow: hidden;
-
                     background-color: rgba(0, 0, 0, 0.5);
                     border-radius: 10px;
 
@@ -112,6 +114,8 @@ nav {
 
                 .languageCheckbox:checked ~ ul {
                     visibility: visible;
+                    opacity: 1;
+                    margin-top: 0;
                 }
             }
         }

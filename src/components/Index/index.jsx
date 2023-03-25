@@ -43,7 +43,7 @@ function Index() {
                     setTimeout(() => {
                         setModel(model);
                         setLoading(false);
-                    }, 1000);
+                    }, 500);
                 });
         } catch (error) {
             console.error(error);
