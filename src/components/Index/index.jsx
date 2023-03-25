@@ -48,6 +48,7 @@ function Index() {
         } catch (error) {
             console.error(error);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [languageActive]);
 
     return (
