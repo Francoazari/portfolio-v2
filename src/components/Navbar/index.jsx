@@ -22,11 +22,11 @@ function Navbar({ information }) {
         const nav = document.querySelector("nav");
         const currentScroll = window.pageYOffset;
 
-        if (currentScroll > lastScroll && lastScroll > 0 && currentScroll > 0) {
-            nav.classList.remove(styles.visible);
+        if (currentScroll > lastScroll && lastScroll > 0 && currentScroll > 0 && nav?.classList?.contains(styles.visible)) {
+            nav?.classList?.remove(styles.visible);
             if (languageRef?.current && languageRef.current.checked) languageRef.current.checked = false;
-        } else if (currentScroll < lastScroll || lastScroll === 0 || currentScroll === 0) {
-            nav.classList.add(styles.visible);
+        } else if (!nav?.classList?.contains(styles.visible) && (currentScroll < lastScroll || lastScroll === 0 || currentScroll === 0)) {
+            nav?.classList?.add(styles.visible);
         }
         lastScroll = currentScroll;
     });
