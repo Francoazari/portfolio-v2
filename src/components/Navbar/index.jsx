@@ -22,7 +22,7 @@ function Navbar({ information }) {
         const nav = document.querySelector("nav");
         const currentScroll = window.pageYOffset;
 
-        if (currentScroll > lastScroll && lastScroll > 0 && currentScroll > 0 && nav?.classList?.contains(styles.visible)) {
+        if (nav?.classList?.contains(styles.visible) && currentScroll > lastScroll && lastScroll > 0 && currentScroll > 0) {
             nav?.classList?.remove(styles.visible);
             if (languageRef?.current && languageRef.current.checked) languageRef.current.checked = false;
         } else if (!nav?.classList?.contains(styles.visible) && (currentScroll < lastScroll || lastScroll === 0 || currentScroll === 0)) {
