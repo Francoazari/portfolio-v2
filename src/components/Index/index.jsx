@@ -33,9 +33,10 @@ function Index() {
         return await fetch(modelName);
     };
 
+    const modelName = languageActive && model?.nav && model?.nav.languages.find((lang) => lang.id === languageActive).modelId;
+
     useEffect(() => {
         setLoading(true);
-        const modelName = languageActive && model?.nav && model?.nav.languages.find((lang) => lang.id === languageActive).modelId;
         try {
             getModel(`./models/${modelName ?? "english-model"}.json`)
                 .then((res) => res.json())
@@ -48,8 +49,7 @@ function Index() {
         } catch (error) {
             console.error(error);
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [languageActive]);
+    }, [languageActive, modelName]);
 
     return (
         <MainContext.Provider value={contextValue}>
