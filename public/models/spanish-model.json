@@ -72,6 +72,20 @@
         ]
       }
     ],
+    "certificates": [
+      {
+        "url": "./assets/certificates/coderhouse-desarrolloweb.png",
+        "alternativeText": "Web developement certificate"
+      },
+      {
+        "url": "./assets/certificates/coderhouse-javascript.png",
+        "alternativeText": "Javascript certificate"
+      },
+      {
+        "url": "./assets/certificates/coderhouse-reactjs.png",
+        "alternativeText": "React certificate"
+      }
+    ],
     "projects": [
       {
         "title": "Project 1",

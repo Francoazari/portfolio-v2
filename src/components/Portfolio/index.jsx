@@ -10,6 +10,8 @@ import animatedStyle from "../../styles/animated-element.module.scss";
 import Modal from "../Modal";
 import useMountTransition from "../../hooks/useMountTransition";
 import ContactForm from "../ContactForm";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
 
 function Portfolio({ model }) {
     const { isTablet, isDesktop, modalContent } = useContext(MainContext);
@@ -74,6 +76,28 @@ function Portfolio({ model }) {
                                 return <ExperienceCard key={index} order={index} experienceInformation={experience} />;
                             })}
                         </ul>
+                    </section>
+                )}
+
+                {model?.certificates && (
+                    <section className={styles.certificate}>
+                        <h2>CERTIFICATES</h2>
+                        <Splide
+                            options={{
+                                rewind: true,
+                                type: "fade"
+                            }}
+                            aria-label="Certificates"
+                        >
+                            {model?.certificates.map((certificate, key) => {
+                                if (!certificate.url) return false;
+                                return (
+                                    <SplideSlide key={key}>
+                                        <img src={certificate.url} alt={certificate.alternativeText ?? ""} />
+                                    </SplideSlide>
+                                );
+                            })}
+                        </Splide>
                     </section>
                 )}
 
