@@ -122,9 +122,18 @@ section {
 }
 
 .certificate {
-    img {
-        width: 100%;
-        height: auto;
+    display: flex;
+    flex-direction: column;
+    .slider {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+
+        img {
+            margin: auto;
+            width: 85%;
+            height: auto;
+        }
     }
 }
 
@@ -174,6 +183,18 @@ section {
 
             h1 {
                 font-size: 50px;
+            }
+        }
+    }
+
+    .certificate {
+        .slider {
+            width: 100%;
+
+            img {
+                margin: auto;
+                width: 100%;
+                height: auto;
             }
         }
     }

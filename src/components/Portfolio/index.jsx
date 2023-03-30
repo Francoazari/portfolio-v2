@@ -82,22 +82,24 @@ function Portfolio({ model }) {
                 {model?.certificates && (
                     <section className={styles.certificate}>
                         <h2>CERTIFICATES</h2>
-                        <Splide
-                            options={{
-                                rewind: true,
-                                type: "fade"
-                            }}
-                            aria-label="Certificates"
-                        >
-                            {model?.certificates.map((certificate, key) => {
-                                if (!certificate.url) return false;
-                                return (
-                                    <SplideSlide key={key}>
-                                        <img src={certificate.url} alt={certificate.alternativeText ?? ""} />
-                                    </SplideSlide>
-                                );
-                            })}
-                        </Splide>
+                        <div className={styles.slider}>
+                            <Splide
+                                options={{
+                                    rewind: true,
+                                    type: "fade"
+                                }}
+                                aria-label="Certificates"
+                            >
+                                {model?.certificates.map((certificate, key) => {
+                                    if (!certificate.url) return false;
+                                    return (
+                                        <SplideSlide key={key}>
+                                            <img src={certificate.url} alt={certificate.alternativeText ?? ""} />
+                                        </SplideSlide>
+                                    );
+                                })}
+                            </Splide>
+                        </div>
                     </section>
                 )}
 
