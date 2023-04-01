@@ -44,44 +44,49 @@ function Portfolio({ model }) {
                 <section id="home" className={clsx(styles.firstScreen)}>
                     <img src={isDesktop || isTablet ? "./assets/background-desktop.jpg" : "./assets/background-mobile.jpg"} alt="Background section" />
 
-                    <div className={styles.headingContainer}>
-                        <span className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>Hello, my name is</span>
-                        <h1 className={clsx(animatedStyle.animatedElement, animatedStyle.order3)}>{model?.name.toUpperCase()}</h1>
-                        <span className={clsx(animatedStyle.animatedElement, animatedStyle.order4)}>Nice to meet you!</span>
-                    </div>
+                    {model?.main && (
+                        <div className={styles.headingContainer}>
+                            {model.main.firstLine && <span className={clsx(animatedStyle.animatedElement, animatedStyle.order2)}>{model.main.firstLine}</span>}
+                            {model.main.secondLine && (
+                                <h1 className={clsx(animatedStyle.animatedElement, animatedStyle.order3)}>{model.main.secondLine.toUpperCase()}</h1>
+                            )}
+                            {model.main.thirdLine && <span className={clsx(animatedStyle.animatedElement, animatedStyle.order4)}>{model.main.thirdLine}</span>}
+                        </div>
+                    )}
 
                     <svg className={styles.arrow} data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M3.81 4.38 8 8.57l4.19-4.19 1.52 1.53L8 11.62 2.29 5.91l1.52-1.53z" />
                     </svg>
                 </section>
 
-                <section id="aboutme" className={clsx(styles.aboutMe, "scroll-content", styles.fadeTop)}>
-                    <h2>ABOUT ME</h2>
-                    <div className={styles.information}>
-                        <div className={styles.image}>{/* <img src={} alt={} /> */}</div>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi enim laboriosam optio velit earum! Rem ipsa repudiandae corrupti,
-                            debitis iste sequi quam similique necessitatibus ullam distinctio repellat? Laboriosam, nemo ipsum. Lorem ipsum, dolor sit amet
-                            consectetur adipisicing elit. Dignissimos esse nihil ratione quis odit doloremque aspernatur! Provident asperiores, qui inventore,
-                            rerum assumenda cumque reprehenderit voluptate alias, distinctio corporis nam numquam!
-                        </p>
-                    </div>
-                </section>
+                {model?.aboutMe && (
+                    <section id="aboutme" className={clsx(styles.aboutMe, "scroll-content", styles.fadeTop)}>
+                        <h2>{model.aboutMe.title ?? "ABOUT ME"}</h2>
+                        <div className={styles.information}>
+                            {model.aboutMe.image?.url && (
+                                <div>
+                                    <img className={styles.image} src={model.aboutMe.image.url} alt={model.aboutMe.image.alternativeText} />
+                                </div>
+                            )}
+                            {model.aboutMe.paragraph && <p>{model.aboutMe.paragraph}</p>}
+                        </div>
+                    </section>
+                )}
 
-                {model?.experiences && (
-                    <section className={clsx(styles.experience, "scroll-content", styles.fadeTop)}>
-                        <h2>EXPERIENCE</h2>
+                {model?.experiences?.experience && (
+                    <section id="experience" className={clsx(styles.experience, "scroll-content", styles.fadeTop)}>
+                        <h2>{model.experiences.title ?? "EXPERIENCE"}</h2>
                         <ul className={styles.experienceList}>
-                            {model?.experiences.map((experience, index) => {
+                            {model.experiences.experience.map((experience, index) => {
                                 return <ExperienceCard key={index} order={index} experienceInformation={experience} />;
                             })}
                         </ul>
                     </section>
                 )}
 
-                {model?.certificates && (
-                    <section className={styles.certificate}>
-                        <h2>CERTIFICATES</h2>
+                {model?.certificates?.images && (
+                    <section id="certificates" className={styles.certificate}>
+                        <h2>{model.certificates.title ?? "CERTIFICATES"}</h2>
                         <div className={styles.slider}>
                             <Splide
                                 options={{
@@ -90,7 +95,7 @@ function Portfolio({ model }) {
                                 }}
                                 aria-label="Certificates"
                             >
-                                {model?.certificates.map((certificate, key) => {
+                                {model.certificates.images.map((certificate, key) => {
                                     if (!certificate.url) return false;
                                     return (
                                         <SplideSlide key={key}>
@@ -103,11 +108,11 @@ function Portfolio({ model }) {
                     </section>
                 )}
 
-                {model?.projects && model?.projects.length > 0 && (
+                {model?.projects?.project && model?.projects?.project.length > 0 && (
                     <section id="projects" className={clsx(styles.works, "scroll-content", styles.fadeTop)}>
-                        <h2>PROJECTS</h2>
+                        <h2>{model.projects.title ?? "PROJECTS"}</h2>
                         <div className={styles.projectContainer}>
-                            {model?.projects.map((project, index) => {
+                            {model?.projects?.project.map((project, index) => {
                                 return <ProjectCard key={index} projectInformation={project} />;
                             })}
                         </div>
@@ -115,7 +120,7 @@ function Portfolio({ model }) {
                 )}
 
                 <section id="getintouch" className={clsx(styles.getInTouch, "scroll-content", styles.fadeTop)}>
-                    <h2>GET IN TOUCH</h2>
+                    <h2>{model.getInTouch.title ?? "GET IN TOUCH"}</h2>
                     <ContactForm />
                 </section>
             </main>

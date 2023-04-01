@@ -1,44 +1,67 @@
 {
-    "name": "Franco Azari",
-    "nav": {
-      "title": "Franco Azari", 
-      "menu": [
-          {
-              "label": "Home",
-              "url": "#home"
-          },
-          {
-              "label": "About me",
-              "url": "#aboutme"
-          },
-          {
-              "label": "Projects",
-              "url": "#projects"
-          },
-          {
-              "label": "Contact",
-              "url": "#getintouch"
-          }
-      ],
-      "languages": [
-        {
-          "id": "english",
-          "modelId": "english-model",
-          "label": "English",
-          "symbol": "EN",
-          "icon": "",
-          "default": true
-        },
-        {
+  "name": "Franco Azari",
+  "nav": {
+    "title": "Franco Azari", 
+    "menu": [
+      {
+        "label": "Home",
+        "url": "#home"
+      },
+      {
+          "label": "About me",
+          "url": "#aboutme"
+      },
+      {
+        "label": "Experience",
+        "url": "#experience"
+      },
+      {
+        "label": "Certificates",
+        "url": "#certificates"
+      },
+      {
+          "label": "Projects",
+          "url": "#projects"
+      },
+      {
+          "label": "Contact",
+          "url": "#getintouch"
+      }
+    ],
+    "languages": [
+      {
+        "id": "english",
+        "modelId": "english-model",
+        "label": "English",
+        "symbol": "EN",
+        "icon": "",
+        "default": true
+      },
+      {
           "id": "spanish",
           "modelId": "spanish-model",
           "label": "Spanish",
           "symbol": "ES",
           "icon": ""
-        }
+      }
     ]
   },
-    "experiences": [
+  "main": {
+    "firstLine": "Hello, my name is",
+    "secondLine": "FRANCO AZARI",
+    "thirdLine": "Nice to meet you!"
+  },
+  "aboutMe": {
+    "title": "Sobre mí",
+    "image": {
+      "url": "./assets/about-me/image-about-me.jpg",
+      "alternativeText": "Franco Azari"
+    },
+    "paragraph": "Franco Azari parrafo texto textotextotextotexto"
+  },
+  "experiences": {
+    "title": "EXPERIENCIA",
+    "experience": [
       {
         "heading": "Experience 1",
         "period": "Enero 2022 - Present",
@@ -71,22 +94,28 @@
           "React"
         ]
       }
-    ],
-    "certificates": [
+    ]
+  },
+  "certificates": {
+    "title": "CERTIFICADOS", 
+    "images": [
       {
         "url": "./assets/certificates/coderhouse-desarrolloweb.png",
-        "alternativeText": "Web developement certificate"
+        "alternativeText": "Certificado desarrollo web"
       },
       {
         "url": "./assets/certificates/coderhouse-javascript.png",
-        "alternativeText": "Javascript certificate"
+        "alternativeText": "Certificado Javascript"
       },
       {
         "url": "./assets/certificates/coderhouse-reactjs.png",
-        "alternativeText": "React certificate"
+        "alternativeText": "Certificado React"
       }
-    ],
-    "projects": [
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "project": [
       {
         "title": "Project 1",
         "paragraph": "Paragraph paragraph  paragraph paragraph paragraph",
@@ -158,28 +187,32 @@
           }
         ]
       }
-    ],
-    "footer": {
-      "name": "Franco Azari",
-      "email": "francoazari@gmail.com",
-      "whatsapp": {
-        "number": "3364260853",
-        "url": "https://api.whatsapp.com/send?phone=543364260853"
-      },
-      "twitter": {
-        "usuario": "francoazari",
-        "url": "http://twitter.com/francoazari"
-      },
-      "instagram": {
-        "usuario": "francoazari",
-        "url": "http://instagram.com/francoazari"
-      },
-      "tiktok": {
-        "usuario": "francoazari",
-        "url": "https://www.tiktok.com/francoazari"
-      },
-      "codepen": "https://www.codepen.io",
-      "linkedin": "https://www.linkedin.com/francoazari",
-      "github": "https://www.github.com"
-    }
+    ]
+  },
+  "getInTouch": {
+    "title": "Contacto"
+  },
+  "footer": {
+    "name": "Franco Azari",
+    "email": "francoazari@gmail.com",
+    "whatsapp": {
+      "number": "3364260853",
+      "url": "https://api.whatsapp.com/send?phone=543364260853"
+    },
+    "twitter": {
+      "usuario": "francoazari",
+      "url": "http://twitter.com/francoazari"
+    },
+    "instagram": {
+      "usuario": "francoazari",
+      "url": "http://instagram.com/francoazari"
+    },
+    "tiktok": {
+      "usuario": "francoazari",
+      "url": "https://www.tiktok.com/francoazari"
+    },
+    "codepen": "https://www.codepen.io",
+    "linkedin": "https://www.linkedin.com/francoazari",
+    "github": "https://www.github.com"
+  }
 }
