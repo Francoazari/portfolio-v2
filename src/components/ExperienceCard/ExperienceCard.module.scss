@@ -5,14 +5,16 @@ li {
         display: flex;
         flex-direction: column;
         padding: 20px;
-        background-color: rgba(255, 255, 255, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 20px;
         line-height: 1.2;
         position: relative;
         overflow: hidden;
-        transition: transform 600ms, background-color 300ms;
+        transition: transform 600ms, background-color 300ms, transform 250ms;
         margin: 15px 0;
         text-align: left;
+        color: #1b1b1b;
+        backdrop-filter: blur(5px);
 
         &:first-child {
             margin: 0 0 15px 0;
@@ -23,8 +25,9 @@ li {
         }
 
         &:hover {
-            background-color: rgba(255, 255, 255, 0.5);
-            transform: translate(10px, 0);
+            background-color: rgba(255, 255, 255, 0.8);
+            // transform: translate(10px, 0);
+            transform: scale(1.03);
         }
 
         &:not(:first-child) {

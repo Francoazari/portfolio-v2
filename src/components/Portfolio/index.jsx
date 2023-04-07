@@ -85,7 +85,7 @@ function Portfolio({ model }) {
                 )}
 
                 {model?.certificates?.images && (
-                    <section id="certificates" className={styles.certificate}>
+                    <section id="certificates" className={clsx(styles.certificate, "scroll-content", styles.fadeTop)}>
                         <h2>{model.certificates.title ?? "CERTIFICATES"}</h2>
                         <div className={styles.slider}>
                             <Splide

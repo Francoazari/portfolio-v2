@@ -1,5 +1,5 @@
 section {
-    padding: 80px 20vw 0 20vw;
+    padding: 40px 20vw 40px 20vw;
     margin-bottom: 0;
 
     h2 {
@@ -19,7 +19,7 @@ section {
     height: calc(100vh - 60px);
     margin-bottom: 0;
     overflow: hidden;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(10, 25, 47, 1) 95%, rgba(10, 25, 47, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgb(12, 46, 85) 95%, rgb(12, 46, 85) 100%);
     padding-left: 10vw;
     padding-right: 10vw;
 
@@ -87,6 +87,16 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        padding: 30px;
+        backdrop-filter: blur(5px);
+        transition: background-color 250ms, transform 250ms;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            transform: scale(1.03);
+        }
 
         .image {
             width: 300px;
@@ -105,6 +115,7 @@ section {
             font-size: 1.3rem;
             line-height: 1.7;
             text-align: center;
+            color: #1b1b1b;
         }
     }
 }
@@ -114,16 +125,13 @@ section {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
-        > li {
-            color: #fff;
-        }
     }
 }
 
 .certificate {
     display: flex;
     flex-direction: column;
+
     .slider {
         width: 90%;
         margin: auto;
