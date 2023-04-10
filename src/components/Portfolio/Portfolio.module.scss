@@ -20,7 +20,8 @@ section {
     height: calc(100vh - 60px);
     margin-bottom: 0;
     overflow: hidden;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgb(12, 46, 85) 95%, rgb(12, 46, 85) 100%);
+    // background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgb(12, 46, 85) 95%, rgb(12, 46, 85) 100%);
+    mask-image: linear-gradient(black 70%, transparent 100%);
     padding-left: 10vw;
     padding-right: 10vw;
 
