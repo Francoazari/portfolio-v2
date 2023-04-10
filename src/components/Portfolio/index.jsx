@@ -119,10 +119,15 @@ function Portfolio({ model }) {
                     </section>
                 )}
 
-                <section id="getintouch" className={clsx(styles.getInTouch, "scroll-content", styles.fadeTop)}>
-                    <h2>{model.getInTouch.title ?? "GET IN TOUCH"}</h2>
-                    <ContactForm />
-                </section>
+                {model?.getInTouch && (
+                    <section id="getintouch" className={clsx(styles.getInTouch, "scroll-content", styles.fadeTop)}>
+                        <h2>{model.getInTouch.title ?? "GET IN TOUCH"}</h2>
+                        <div className={styles.container}>
+                            {model.getInTouch.paragraph && <p>{model.getInTouch.paragraph}</p>}
+                            <ContactForm />
+                        </div>
+                    </section>
+                )}
             </main>
 
             <Footer information={model?.footer} />

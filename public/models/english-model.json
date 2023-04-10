@@ -52,7 +52,7 @@
     "thirdLine": "Nice to meet you!"
   },
   "aboutMe": {
-    "title": "Sobre mí",
+    "title": "ABOUT ME",
     "image": {
       "url": "./assets/about-me/image-about-me.jpg",
       "alternativeText": "Franco Azari"
@@ -60,7 +60,7 @@
     "paragraph": "Franco Azari parrafo texto textotextotextotexto"
   },
   "experiences": {
-    "title": "EXPERIENCIA",
+    "title": "EXPERIENCE",
     "experience": [
       {
         "heading": "Experience 1",
@@ -97,7 +97,7 @@
     ]
   },
   "certificates": {
-    "title": "CERTIFICADOS", 
+    "title": "CERTIFICATES", 
     "images": [
       {
         "url": "./assets/certificates/coderhouse-desarrolloweb.png",
@@ -114,7 +114,7 @@
     ]
   },
   "projects": {
-    "title": "Proyectos",
+    "title": "PROJECTS",
     "project": [
       {
         "title": "Project 1",
@@ -190,7 +190,8 @@
     ]
   },
   "getInTouch": {
-    "title": "Contacto"
+    "title": "GET IN TOUCH",
+    "paragraph": "If you have an idea or you want to tell me about some you can write to me with this form."
   },
   "footer": {
     "name": "Franco Azari",

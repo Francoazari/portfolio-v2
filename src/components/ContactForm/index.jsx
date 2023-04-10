@@ -57,85 +57,83 @@ function ContactForm() {
     }
 
     return (
-        <>
-            <form id="contact-form" className={clsx({ [styles.hideForm]: formState === formStates.submitted })} onSubmit={handleSubmit(sendEmail)}>
-                <input
-                    name="name"
-                    type="text"
-                    className={clsx({ [styles.error]: errors?.name })}
-                    placeholder="Name"
-                    disabled={formState !== formStates.init}
-                    {...register("name", { required: { value: true, message: "This field is required" }, maxLength: { value: 50, message: "Name too long" } })}
-                />
-                {errors?.name && <span className={styles.error}>{errors?.name?.message}</span>}
+        <form id="contact-form" className={clsx({ [styles.hideForm]: formState === formStates.submitted })} onSubmit={handleSubmit(sendEmail)}>
+            <input
+                name="name"
+                type="text"
+                className={clsx({ [styles.error]: errors?.name })}
+                placeholder="Name"
+                disabled={formState !== formStates.init}
+                {...register("name", { required: { value: true, message: "This field is required" }, maxLength: { value: 50, message: "Name too long" } })}
+            />
+            {errors?.name && <span className={styles.error}>{errors?.name?.message}</span>}
 
-                <input
-                    name="email"
-                    placeholder="Email"
-                    disabled={formState !== formStates.init}
-                    className={clsx({ [styles.error]: errors?.email })}
-                    {...register("email", {
-                        required: { value: true, message: "This field is required" },
-                        maxLength: { value: 100, message: "Email too long" },
-                        pattern: {
-                            value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                            message: "Invalid email"
-                        }
-                    })}
-                />
-                {errors?.email && <span className={styles.error}>{errors?.email?.message}</span>}
+            <input
+                name="email"
+                placeholder="Email"
+                disabled={formState !== formStates.init}
+                className={clsx({ [styles.error]: errors?.email })}
+                {...register("email", {
+                    required: { value: true, message: "This field is required" },
+                    maxLength: { value: 100, message: "Email too long" },
+                    pattern: {
+                        value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                        message: "Invalid email"
+                    }
+                })}
+            />
+            {errors?.email && <span className={styles.error}>{errors?.email?.message}</span>}
 
-                <input
-                    name="phone"
-                    placeholder="Phone number"
-                    disabled={formState !== formStates.init}
-                    className={clsx({ [styles.error]: errors?.phone })}
-                    {...register("phone", {
-                        pattern: {
-                            value: /^(0|[1-9]\d*)$/,
-                            message: "Only numbers"
-                        }
-                    })}
-                />
+            <input
+                name="phone"
+                placeholder="Phone number"
+                disabled={formState !== formStates.init}
+                className={clsx({ [styles.error]: errors?.phone })}
+                {...register("phone", {
+                    pattern: {
+                        value: /^(0|[1-9]\d*)$/,
+                        message: "Only numbers"
+                    }
+                })}
+            />
 
-                {errors?.phone && <span className={styles.error}>{errors?.phone?.message}</span>}
+            {errors?.phone && <span className={styles.error}>{errors?.phone?.message}</span>}
 
-                <textarea
-                    name="message"
-                    placeholder="Message"
-                    className={clsx({ [styles.error]: errors?.message })}
-                    disabled={formState !== formStates.init}
-                    {...register("message", {
-                        required: { value: true, message: "This field is required" },
-                        maxLength: { value: 500, message: "Description too long" }
-                    })}
-                ></textarea>
-                {errors?.message && <span className={styles.error}>{errors?.message?.message}</span>}
+            <textarea
+                name="message"
+                placeholder="Message"
+                className={clsx({ [styles.error]: errors?.message })}
+                disabled={formState !== formStates.init}
+                {...register("message", {
+                    required: { value: true, message: "This field is required" },
+                    maxLength: { value: 500, message: "Description too long" }
+                })}
+            ></textarea>
+            {errors?.message && <span className={styles.error}>{errors?.message?.message}</span>}
 
-                {!isLocalhost && siteKey && (
-                    <>
-                        <HCaptcha sitekey={siteKey} onVerify={(token) => setCaptchaToken(token)} />
-                        {captchaError && <span>{styles.error.message}</span>}
-                    </>
-                )}
+            {!isLocalhost && siteKey && (
+                <>
+                    <HCaptcha sitekey={siteKey} onVerify={(token) => setCaptchaToken(token)} />
+                    {captchaError && <span>{styles.error.message}</span>}
+                </>
+            )}
 
-                <button
-                    className={clsx(styles.button, {
-                        [styles.loading]: formState === formStates.loading,
-                        [styles.submitted]: formState === formStates.submitted
-                    })}
-                    type="submit"
-                    value="Send message"
-                    disabled={formState !== formStates.init}
-                >
-                    <span className={clsx({ [styles.showMessage]: formState === formStates.init })}>Send message</span>
-                    <div className={clsx({ [styles.showSpinner]: formState === formStates.loading })}>
-                        <BeatLoader color="#ffffff" loading margin={2} size={9} speedMultiplier={1} />
-                    </div>
-                    <span className={clsx(styles.successMessage, { [styles.showSuccess]: formState === formStates.submitted })}>Form submitted. Thanks!</span>
-                </button>
-            </form>
-        </>
+            <button
+                className={clsx(styles.button, {
+                    [styles.loading]: formState === formStates.loading,
+                    [styles.submitted]: formState === formStates.submitted
+                })}
+                type="submit"
+                value="Send message"
+                disabled={formState !== formStates.init}
+            >
+                <span className={clsx({ [styles.showMessage]: formState === formStates.init })}>Send message</span>
+                <div className={clsx({ [styles.showSpinner]: formState === formStates.loading })}>
+                    <BeatLoader color="#ffffff" loading margin={2} size={9} speedMultiplier={1} />
+                </div>
+                <span className={clsx(styles.successMessage, { [styles.showSuccess]: formState === formStates.submitted })}>Form submitted. Thanks!</span>
+            </button>
+        </form>
     );
 }
 

@@ -44,9 +44,9 @@
     "thirdLine": "¡Encantado de conocerte!"
   },
   "aboutMe": {
-    "title": "Sobre mí",
+    "title": "SOBRE MÍ",
     "image": {
-      "url": "./about-me/image-about-me.jpg",
+      "url": "./assets/about-me/image-about-me.jpg",
       "alternativeText": "Franco Azari"
     },
     "paragraph": "Franco Azari parrafo texto textotextotextotexto"
@@ -106,7 +106,7 @@
     ]
   },
   "projects": {
-    "title": "Proyectos",
+    "title": "PROYECTOS",
     "project": [
       {
         "title": "Project 1",
@@ -182,7 +182,8 @@
     ]
   },
   "getInTouch": {
-    "title": "Contacto"
+    "title": "CONTACTO",
+    "paragraph": "Si tenes una idea o queres contame algo, podes escribirme con este formulario."
   },
   "footer": {
     "name": "Franco Azari",
