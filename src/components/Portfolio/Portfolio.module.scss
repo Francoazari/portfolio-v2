@@ -323,6 +323,16 @@ section {
         }
     }
 
+    .experience {
+        ul.experienceList {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-y: hidden;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+    }
+
     .getInTouch {
         .container {
             flex-direction: column;
