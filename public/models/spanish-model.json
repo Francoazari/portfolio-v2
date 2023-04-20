@@ -12,6 +12,14 @@
           "url": "#aboutme"
       },
       {
+        "label": "Experiencia",
+        "url": "#experience"
+      },
+      {
+        "label": "Certificados",
+        "url": "#certificates"
+      },
+      {
           "label": "Proyectos",
           "url": "#projects"
       },
@@ -49,7 +57,10 @@
       "url": "./assets/about-me/image-about-me.jpg",
       "alternativeText": "Franco Azari"
     },
-    "paragraph": "Franco Azari parrafo texto textotextotextotexto"
+    "paragraph":[
+      "Soy una persona tranquila, responsable y comprometida con mi trabajo. Me apasiona el aprendizaje continuo y disfruto descubriendo cosas nuevas. Tengo facilidad para aprender de forma autodidacta y me siento cómodo trabajando tanto en equipo como de forma individual.",
+      "Soy proactivo y perseverante, siempre dispuesto a asumir nuevos desafíos y a superar las expectativas. Creo en el valor del esfuerzo y la dedicación para alcanzar mis metas y objetivos profesionales, y mantengo una actitud positiva ante los desafíos y las adversidades. Me enorgullece decir que soy una persona comprometida y orientada a los resultados, y estoy listo para enfrentar cualquier reto que se me presente en mi carrera profesional."
+    ]
   },
   "experiences": {
     "title": "EXPERIENCIA",
@@ -109,49 +120,49 @@
     "title": "PROYECTOS",
     "project": [
       {
-        "title": "Project 1",
-        "paragraph": "Paragraph paragraph  paragraph paragraph paragraph",
-        "skillTags": [
-          "HTML",
-          "CSS",
-          "JAVASCRIPT"
-        ],
-        "worksLinks": [
-          {
-            "url": "http://github.com",
-            "image": "./assets/works/github.svg",
-            "alternativeText": "Github Alternative Text",
-            "label": "Github"
-          },
-          {
-            "url": "http://linkedin.com",
-            "image": "./assets/works/linkedin.svg",
-            "alternativeText": "LinkedIn Alternative Text",
-            "label": "Github"
-          }
-        ]
-      },
-      {
-        "title": "Project 2",
-        "paragraph": "Paragraph paragraph  paragraph paragraph paragraph",
+        "title": "Porfolio v2",
+        "paragraph": "Este proyecto se concibió con el propósito de presentar a un individuo, destacando sus virtudes, objetivos, proyectos y experiencias. El código de este portafolio es el resultado concreto de dicha iniciativa.",
         "skillTags": [
           "HTML",
           "CSS",
           "JAVASCRIPT",
-          "REACT"
+          "REACT",
+          "SASS"
         ],
         "worksLinks": [
           {
-            "url": "http://github.com",
+            "url": "https://github.com/Francoazari/portfolio-v2",
             "image": "./assets/works/github.svg",
             "alternativeText": "Github Alternative Text",
             "label": "Github"
           },
           {
-            "url": "http://twitter.com",
-            "image": "./assets/works/twitter.svg",
-            "alternativeText": "Twitter Alternative Text",
+            "url": "http://www.francoazari.dev",
+            "image": "./assets/works/enter.svg",
+            "alternativeText": "Entrar al sitio web",
+            "label": "Ver proyecto"
+          }
+        ]
+      },
+      {
+        "title": "Fenox Tech - Coderhouse",
+        "paragraph": "Página web creada para un cliente proveido por Coderhouse. Luego de la cursada de Desarrollo Web, por quedar en el TOP10 de los alumnos del cursado, Coderhouse te provee un cliente real para hacerle la página web según sus necesidades. Las tecnologias a utilizar eran limitadas a las que se dieron en el curso.",
+        "skillTags": [
+          "HTML",
+          "CSS"
+        ],
+        "worksLinks": [
+          {
+            "url": "https://github.com/Francoazari/proyecto-fenox",
+            "image": "./assets/works/github.svg",
+            "alternativeText": "Github Alternative Text",
             "label": "Github"
+          },
+          {
+            "url": "http://www.fenoxtech.com",
+            "image": "./assets/works/enter.svg",
+            "alternativeText": "Entrar al sitio web",
+            "label": "Ver proyecto"
           }
         ]
       },
@@ -192,17 +203,9 @@
       "number": "3364260853",
       "url": "https://api.whatsapp.com/send?phone=543364260853"
     },
-    "twitter": {
-      "usuario": "francoazari",
-      "url": "http://twitter.com/francoazari"
-    },
     "instagram": {
       "usuario": "francoazari",
       "url": "http://instagram.com/francoazari"
-    },
-    "tiktok": {
-      "usuario": "francoazari",
-      "url": "https://www.tiktok.com/francoazari"
     },
     "codepen": "https://www.codepen.io",
     "linkedin": "https://www.linkedin.com/francoazari",

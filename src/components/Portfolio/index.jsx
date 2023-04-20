@@ -68,7 +68,10 @@ function Portfolio({ model }) {
                                     <img className={styles.image} src={model.aboutMe.image.url} alt={model.aboutMe.image.alternativeText} />
                                 </div>
                             )}
-                            {model.aboutMe.paragraph && <p>{model.aboutMe.paragraph}</p>}
+                            {model.aboutMe.paragraph && typeof model.aboutMe.paragraph === "string" && <p>{model.aboutMe.paragraph}</p>}
+                            {model.aboutMe.paragraph &&
+                                typeof model.aboutMe.paragraph != "string" &&
+                                model.aboutMe.paragraph.map((text, key) => <p key={key}>{text}</p>)}
                         </div>
                     </section>
                 )}
