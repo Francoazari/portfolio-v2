@@ -11,13 +11,10 @@ function Index() {
     const [model, setModel] = useState();
     const [loading, setLoading] = useState();
 
-    function handleWindowSizeChange() {
-        setWidth(window.innerWidth);
-    }
     useEffect(() => {
-        window.addEventListener("resize", handleWindowSizeChange);
+        window.addEventListener("resize", () => setWidth(window.innerWidth));
         return () => {
-            window.removeEventListener("resize", handleWindowSizeChange);
+            window.removeEventListener("resize", () => setWidth(window.innerWidth));
         };
     }, []);
 
