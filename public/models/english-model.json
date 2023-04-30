@@ -1,223 +1,194 @@
 {
-  "name": "Franco Azari",
-  "nav": {
-    "title": "Franco Azari", 
-    "menu": [
-      {
-        "label": "Home",
-        "url": "#home"
-      },
-      {
-          "label": "About me",
-          "url": "#aboutme"
-      },
-      {
-        "label": "Experience",
-        "url": "#experience"
-      },
-      {
-        "label": "Certificates",
-        "url": "#certificates"
-      },
-      {
-          "label": "Projects",
-          "url": "#projects"
-      },
-      {
-          "label": "Contact",
-          "url": "#getintouch"
-      }
-    ],
-    "languages": [
-      {
-        "id": "english",
-        "modelId": "english-model",
-        "label": "English",
-        "symbol": "EN",
-        "icon": "",
-        "default": true
-      },
-      {
-          "id": "spanish",
-          "modelId": "spanish-model",
-          "label": "Spanish",
-          "symbol": "ES",
-          "icon": ""
-      }
-    ]
-  },
-  "main": {
-    "firstLine": "Hello, my name is",
-    "secondLine": "FRANCO AZARI",
-    "thirdLine": "Nice to meet you!"
-  },
-  "aboutMe": {
-    "title": "ABOUT ME",
-    "image": {
-      "url": "./assets/about-me/image-about-me.jpg",
-      "alternativeText": "Franco Azari"
-    },
-    "paragraph": [
-      "I am a calm, responsible, and committed person in my work. I am passionate about continuous learning and enjoy discovering new things. I have a facility for self-taught learning and feel comfortable working both as part of a team and independently.",
-      "I am proactive and perseverant, always willing to take on new challenges and exceed expectations. I believe in the value of effort and dedication to achieve my professional goals and objectives, and maintain a positive attitude towards challenges and adversity. I am proud to say that I am a results-oriented and committed person, and I am ready to face any challenge that comes my way in my professional career."]
-  },
-  "experiences": {
-    "title": "EXPERIENCE",
-    "experience": [
-      {
-        "heading": "Experience 1",
-        "period": "Enero 2022 - Present",
-        "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
-        "skills": [
-          "HTML",
-          "CSS",
-          "React"
-        ]
-      },
-      {
-        "heading": "Experience 2",
-        "period": "Junio 2020 - Diciembre 2022",
-        "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
-        "skills": [
-          "HTML",
-          "CSS",
-          "SASS",
-          "React"
-        ]
-      },
-      {
-        "heading": "Experience 3",
-        "period": "Abril 2019 - Mayo 2020",
-        "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
-        "skills": [
-          "HTML",
-          "CSS",
-          "SASS",
-          "React"
-        ]
-      }
-    ]
-  },
-  "certificates": {
-    "title": "CERTIFICATES", 
-    "images": [
-      {
-        "url": "./assets/certificates/coderhouse-desarrolloweb.png",
-        "alternativeText": "Certificado desarrollo web"
-      },
-      {
-        "url": "./assets/certificates/coderhouse-javascript.png",
-        "alternativeText": "Certificado Javascript"
-      },
-      {
-        "url": "./assets/certificates/coderhouse-reactjs.png",
-        "alternativeText": "Certificado React"
-      }
-    ]
-  },
-  "projects": {
-    "title": "PROJECTS",
-    "project": [
-      {
-        "title": "Porfolio v2",
-        "paragraph": "This project was conceived with the purpose of presenting an individual, highlighting their virtues, goals, projects, and experiences. The code of this portfolio is the concrete result of that initiative.",
-        "skillTags": [
-          "HTML",
-          "CSS",
-          "JAVASCRIPT",
-          "REACT",
-          "SASS"
-        ],
-        "worksLinks": [
-          {
-            "url": "https://github.com/Francoazari/portfolio-v2",
-            "image": "./assets/works/github.svg",
-            "alternativeText": "Github Alternative Text",
-            "label": "Github"
-          },
-          {
-            "url": "http://linkedin.com",
-            "image": "./assets/works/linkedin.svg",
-            "alternativeText": "LinkedIn Alternative Text",
-            "label": "Github"
-          }
-        ]
-      },
-      {
-        "title": "Project 2",
-        "paragraph": "Paragraph paragraph  paragraph paragraph paragraph",
-        "skillTags": [
-          "HTML",
-          "CSS",
-          "JAVASCRIPT",
-          "REACT"
-        ],
-        "worksLinks": [
-          {
-            "url": "http://github.com",
-            "image": "./assets/works/github.svg",
-            "alternativeText": "Github Alternative Text",
-            "label": "Github"
-          },
-          {
-            "url": "http://twitter.com",
-            "image": "./assets/works/twitter.svg",
-            "alternativeText": "Twitter Alternative Text",
-            "label": "Github"
-          }
-        ]
-      },
-      {
-        "title": "Project 3",
-        "paragraph": "Paragraph paragraph  paragraph paragraph paragraph",
-        "skillTags": [
-          "HTML",
-          "CSS",
-          "JAVASCRIPT",
-          "REACT"
-        ],
-        "worksLinks": [
-          {
-            "url": "http://github.com",
-            "image": "./assets/works/github.svg",
-            "alternativeText": "Github Alternative Text",
-            "label": "Github"
-          },
-          {
-            "url": "http://twitter.com",
-            "image": "./assets/works/twitter.svg",
-            "alternativeText": "Twitter Alternative Text",
-            "label": "Github"
-          }
-        ]
-      }
-    ]
-  },
-  "getInTouch": {
-    "title": "GET IN TOUCH",
-    "paragraph": "If you have an idea or you want to tell me about some you can write to me with this form."
-  },
-  "footer": {
     "name": "Franco Azari",
-    "email": "francoazari@gmail.com",
-    "whatsapp": {
-      "number": "3364260853",
-      "url": "https://api.whatsapp.com/send?phone=543364260853"
+    "nav": {
+        "title": "Franco Azari",
+        "menu": [
+            {
+                "label": "Home",
+                "url": "#home"
+            },
+            {
+                "label": "About me",
+                "url": "#aboutme"
+            },
+            {
+                "label": "Experience",
+                "url": "#experience"
+            },
+            {
+                "label": "Certificates",
+                "url": "#certificates"
+            },
+            {
+                "label": "Projects",
+                "url": "#projects"
+            },
+            {
+                "label": "Contact",
+                "url": "#getintouch"
+            }
+        ],
+        "languages": [
+            {
+                "id": "english",
+                "modelId": "english-model",
+                "label": "English",
+                "symbol": "EN",
+                "icon": "",
+                "default": true
+            },
+            {
+                "id": "spanish",
+                "modelId": "spanish-model",
+                "label": "Spanish",
+                "symbol": "ES",
+                "icon": ""
+            }
+        ]
     },
-    "twitter": {
-      "usuario": "francoazari",
-      "url": "http://twitter.com/francoazari"
+    "main": {
+        "firstLine": "Hello, my name is",
+        "secondLine": "FRANCO AZARI",
+        "thirdLine": "Nice to meet you!"
     },
-    "instagram": {
-      "usuario": "francoazari",
-      "url": "http://instagram.com/francoazari"
+    "aboutMe": {
+        "title": "ABOUT ME",
+        "image": {
+            "url": "./assets/about-me/image-about-me.jpg",
+            "alternativeText": "Franco Azari"
+        },
+        "paragraph": [
+            "I am a calm, responsible, and committed person in my work. I am passionate about continuous learning and enjoy discovering new things. I have a facility for self-taught learning and feel comfortable working both as part of a team and independently.",
+            "I am proactive and perseverant, always willing to take on new challenges and exceed expectations. I believe in the value of effort and dedication to achieve my professional goals and objectives, and maintain a positive attitude towards challenges and adversity. I am proud to say that I am a results-oriented and committed person, and I am ready to face any challenge that comes my way in my professional career."
+        ]
     },
-    "tiktok": {
-      "usuario": "francoazari",
-      "url": "https://www.tiktok.com/francoazari"
+    "experiences": {
+        "title": "EXPERIENCE",
+        "experience": [
+            {
+                "heading": "Experience 1",
+                "period": "Enero 2022 - Present",
+                "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
+                "skills": ["HTML", "CSS", "React"]
+            },
+            {
+                "heading": "Experience 2",
+                "period": "Junio 2020 - Diciembre 2022",
+                "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
+                "skills": ["HTML", "CSS", "SASS", "React"]
+            },
+            {
+                "heading": "Experience 3",
+                "period": "Abril 2019 - Mayo 2020",
+                "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
+                "skills": ["HTML", "CSS", "SASS", "React"]
+            }
+        ]
     },
-    "codepen": "https://www.codepen.io",
-    "linkedin": "https://www.linkedin.com/francoazari",
-    "github": "https://www.github.com"
-  }
+    "certificates": {
+        "title": "CERTIFICATES",
+        "images": [
+            {
+                "url": "./assets/certificates/coderhouse-desarrolloweb.png",
+                "alternativeText": "Certificado desarrollo web"
+            },
+            {
+                "url": "./assets/certificates/coderhouse-javascript.png",
+                "alternativeText": "Certificado Javascript"
+            },
+            {
+                "url": "./assets/certificates/coderhouse-reactjs.png",
+                "alternativeText": "Certificado React"
+            }
+        ]
+    },
+    "projects": {
+        "title": "PROJECTS",
+        "project": [
+            {
+                "title": "Portfolio v2",
+                "paragraph": "This project was conceived with the purpose of presenting an individual, highlighting their virtues, goals, projects, and experiences. The code of this portfolio is the concrete result of that initiative.",
+                "skillTags": ["HTML", "CSS", "JAVASCRIPT", "REACT", "SASS"],
+                "worksLinks": [
+                    {
+                        "url": "https://github.com/Francoazari/portfolio-v2",
+                        "image": "./assets/works/github.svg",
+                        "alternativeText": "Github Alternative Text",
+                        "label": "Github"
+                    },
+                    {
+                        "url": "http://linkedin.com",
+                        "image": "./assets/works/linkedin.svg",
+                        "alternativeText": "LinkedIn Alternative Text",
+                        "label": "Github"
+                    }
+                ]
+            },
+            {
+                "title": "Project 2",
+                "paragraph": "Paragraph paragraph  paragraph paragraph paragraph",
+                "skillTags": ["HTML", "CSS", "JAVASCRIPT", "REACT"],
+                "worksLinks": [
+                    {
+                        "url": "http://github.com",
+                        "image": "./assets/works/github.svg",
+                        "alternativeText": "Github Alternative Text",
+                        "label": "Github"
+                    },
+                    {
+                        "url": "http://twitter.com",
+                        "image": "./assets/works/twitter.svg",
+                        "alternativeText": "Twitter Alternative Text",
+                        "label": "Github"
+                    }
+                ]
+            },
+            {
+                "title": "Project 3",
+                "paragraph": "Paragraph paragraph  paragraph paragraph paragraph",
+                "skillTags": ["HTML", "CSS", "JAVASCRIPT", "REACT"],
+                "worksLinks": [
+                    {
+                        "url": "http://github.com",
+                        "image": "./assets/works/github.svg",
+                        "alternativeText": "Github Alternative Text",
+                        "label": "Github"
+                    },
+                    {
+                        "url": "http://twitter.com",
+                        "image": "./assets/works/twitter.svg",
+                        "alternativeText": "Twitter Alternative Text",
+                        "label": "Github"
+                    }
+                ]
+            }
+        ]
+    },
+    "getInTouch": {
+        "title": "GET IN TOUCH",
+        "paragraph": "If you have an idea or you want to tell me about some you can write to me with this form."
+    },
+    "footer": {
+        "name": "Franco Azari",
+        "email": "francoazari@gmail.com",
+        "whatsapp": {
+            "number": "3364260853",
+            "url": "https://api.whatsapp.com/send?phone=543364260853"
+        },
+        "twitter": {
+            "usuario": "francoazari",
+            "url": "http://twitter.com/francoazari"
+        },
+        "instagram": {
+            "usuario": "francoazari",
+            "url": "http://instagram.com/francoazari"
+        },
+        "tiktok": {
+            "usuario": "francoazari",
+            "url": "https://www.tiktok.com/francoazari"
+        },
+        "codepen": "https://www.codepen.io",
+        "linkedin": "https://www.linkedin.com/francoazari",
+        "github": "https://www.github.com"
+    }
 }
