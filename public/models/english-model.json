@@ -66,22 +66,22 @@
         "title": "EXPERIENCE",
         "experience": [
             {
-                "heading": "Experience 1",
-                "period": "Enero 2022 - Present",
-                "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
-                "skills": ["HTML", "CSS", "React"]
+                "heading": "Miracle Devs SA",
+                "period": "June 2019 - Currently",
+                "paragraph": "",
+                "skills": ["HTML", "CSS", "SASS", "JAVASCRIPT", "REACT", "GATSBY"]
             },
             {
-                "heading": "Experience 2",
-                "period": "Junio 2020 - Diciembre 2022",
-                "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
-                "skills": ["HTML", "CSS", "SASS", "React"]
+                "heading": "Grupo Unión SA",
+                "period": "March 2018 - May 2019",
+                "paragraph": "",
+                "skills": ["HTML", "CSS", "JAVASCRIPT", "JQuery", "PHP"]
             },
             {
-                "heading": "Experience 3",
-                "period": "Abril 2019 - Mayo 2020",
-                "paragraph": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse mollitia aliquid minus sit iusto architecto recusandae non consectetur doloribus, harum dignissimos, deserunt accusantium? Possimus, explicabo reiciendis illo minima non blanditiis!",
-                "skills": ["HTML", "CSS", "SASS", "React"]
+                "heading": "Técnico superior en desarrollo de software",
+                "period": "April 2017 - March 2020",
+                "paragraph": "Tertiary degree attained at school Nº 49 J.J. DE URQUIZA.",
+                "skills": ["HTML", "CSS", "JAVASCRIPT", "PHP"]
             }
         ]
     },
@@ -90,15 +90,15 @@
         "images": [
             {
                 "url": "./assets/certificates/coderhouse-desarrolloweb.png",
-                "alternativeText": "Certificado desarrollo web"
+                "alternativeText": "Web development certificate"
             },
             {
                 "url": "./assets/certificates/coderhouse-javascript.png",
-                "alternativeText": "Certificado Javascript"
+                "alternativeText": "Javascript Certificate"
             },
             {
                 "url": "./assets/certificates/coderhouse-reactjs.png",
-                "alternativeText": "Certificado React"
+                "alternativeText": "React Certificate"
             }
         ]
     },
@@ -106,59 +106,116 @@
         "title": "PROJECTS",
         "project": [
             {
-                "title": "Portfolio v2",
-                "paragraph": "This project was conceived with the purpose of presenting an individual, highlighting their virtues, goals, projects, and experiences. The code of this portfolio is the concrete result of that initiative.",
+                "title": "Portfolio V2",
+                "paragraph": "This project was carried out with the purpose of presenting an individual, highlighting his virtues, objectives, projects and experiences. The code of this portfolio is the concrete result of this initiative.",
                 "skillTags": ["HTML", "CSS", "JAVASCRIPT", "REACT", "SASS"],
                 "worksLinks": [
                     {
                         "url": "https://github.com/Francoazari/portfolio-v2",
                         "image": "./assets/works/github.svg",
-                        "alternativeText": "Github Alternative Text",
+                        "alternativeText": "View code on Github",
                         "label": "Github"
                     },
                     {
-                        "url": "http://linkedin.com",
-                        "image": "./assets/works/linkedin.svg",
-                        "alternativeText": "LinkedIn Alternative Text",
-                        "label": "Github"
+                        "url": "http://www.francoazari.dev",
+                        "image": "./assets/works/enter.svg",
+                        "alternativeText": "Enter the website",
+                        "label": "See project"
                     }
                 ]
             },
             {
-                "title": "Project 2",
-                "paragraph": "Paragraph paragraph  paragraph paragraph paragraph",
-                "skillTags": ["HTML", "CSS", "JAVASCRIPT", "REACT"],
+                "title": "Fenox Tech - Coderhouse",
+                "paragraph": "Website created for a client provided by Coderhouse. After the Web Development course, for being in the TOP10 of the students of the course, Coderhouse provides you with a real client to make the website according to your needs. The technologies to be used were limited to those given in the course.",
+                "skillTags": ["HTML", "CSS"],
                 "worksLinks": [
                     {
-                        "url": "http://github.com",
+                        "url": "https://github.com/Francoazari/proyecto-fenox",
                         "image": "./assets/works/github.svg",
-                        "alternativeText": "Github Alternative Text",
+                        "alternativeText": "View code on Github",
                         "label": "Github"
                     },
                     {
-                        "url": "http://twitter.com",
-                        "image": "./assets/works/twitter.svg",
-                        "alternativeText": "Twitter Alternative Text",
-                        "label": "Github"
+                        "url": "http://www.fenoxtech.com",
+                        "image": "./assets/works/enter.svg",
+                        "alternativeText": "Enter the website",
+                        "label": "See project"
                     }
                 ]
             },
             {
-                "title": "Project 3",
-                "paragraph": "Paragraph paragraph  paragraph paragraph paragraph",
+                "title": "Ecommerce store with React",
+                "paragraph": "Proyecto final del curso de React en Coderhouse. En este caso se desarrolló una tienda ecommerce.",
                 "skillTags": ["HTML", "CSS", "JAVASCRIPT", "REACT"],
                 "worksLinks": [
                     {
-                        "url": "http://github.com",
+                        "url": "https://github.com/Francoazari/azari-ecommerce-react",
                         "image": "./assets/works/github.svg",
-                        "alternativeText": "Github Alternative Text",
+                        "alternativeText": "View code on Github",
                         "label": "Github"
                     },
                     {
-                        "url": "http://twitter.com",
-                        "image": "./assets/works/twitter.svg",
-                        "alternativeText": "Twitter Alternative Text",
+                        "url": "https://ecommerce-react-fa.netlify.app",
+                        "image": "./assets/works/enter.svg",
+                        "alternativeText": "Enter the website",
+                        "label": "See project"
+                    }
+                ]
+            },
+            {
+                "title": "Tienda ecommerce con Javascript",
+                "paragraph": "Final project of the Javascript course at Coderhouse. In this case an ecommerce store was developed.",
+                "skillTags": ["HTML", "CSS", "JAVASCRIPT"],
+                "worksLinks": [
+                    {
+                        "url": "https://github.com/Francoazari/coderhouse-tienda-online",
+                        "image": "./assets/works/github.svg",
+                        "alternativeText": "View code on Github",
                         "label": "Github"
+                    },
+                    {
+                        "url": "https://francoazari.github.io/coderhouse-tienda-online/",
+                        "image": "./assets/works/enter.svg",
+                        "alternativeText": "Enter the website",
+                        "label": "See project"
+                    }
+                ]
+            },
+            {
+                "title": "Timer game",
+                "paragraph": "Timer game is a game that was made in order to practice React. The idea is to set a time and compete with other people who can make more clicks.",
+                "skillTags": ["HTML", "SASS", "JAVASCRIPT", "REACT"],
+                "worksLinks": [
+                    {
+                        "url": "https://github.com/Francoazari/timergame",
+                        "image": "./assets/works/github.svg",
+                        "alternativeText": "View code on Github",
+                        "label": "Github"
+                    },
+                    {
+                        "url": "https://timer-game-fa.netlify.app",
+                        "image": "./assets/works/enter.svg",
+                        "alternativeText": "Enter the website",
+                        "label": "See project"
+                    }
+                ]
+            },
+            {
+                "title": "Portfolio V1",
+                "paragraph": "Final portfolio made in the Coderhouse Web Development course.",
+                "skillTags": ["HTML", "CSS", "SASS"],
+                "worksLinks": [
+                    {
+                        "url": "https://github.com/Francoazari/portfolio",
+                        "image": "./assets/works/github.svg",
+                        "alternativeText": "View code on Github",
+                        "label": "Github"
+                    },
+                    {
+                        "url": "https://francoazari.github.io/portfolio/",
+                        "image": "./assets/works/enter.svg",
+                        "alternativeText": "Enter the website",
+                        "label": "See project"
                     }
                 ]
             }
@@ -166,7 +223,7 @@
     },
     "getInTouch": {
         "title": "GET IN TOUCH",
-        "paragraph": "If you have an idea or you want to tell me about some you can write to me with this form."
+        "paragraph": "If you have an idea or want to tell me something, you can write me in this form."
     },
     "footer": {
         "name": "Franco Azari",

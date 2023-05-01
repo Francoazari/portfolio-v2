@@ -106,8 +106,8 @@
         "title": "PROYECTOS",
         "project": [
             {
-                "title": "Portfolio v2",
-                "paragraph": "Este proyecto se concibió con el propósito de presentar a un individuo, destacando sus virtudes, objetivos, proyectos y experiencias. El código de este portafolio es el resultado concreto de dicha iniciativa.",
+                "title": "Portfolio V2",
+                "paragraph": "Este proyecto se realizó con el propósito de presentar a un individuo, destacando sus virtudes, objetivos, proyectos y experiencias. El código de este portafolio es el resultado concreto de dicha iniciativa.",
                 "skillTags": ["HTML", "CSS", "JAVASCRIPT", "REACT", "SASS"],
                 "worksLinks": [
                     {
