@@ -12,6 +12,7 @@ import useMountTransition from "../../hooks/useMountTransition";
 import ContactForm from "../ContactForm";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import ReadMore from "../ReadMore";
 
 function Portfolio({ model }) {
     const { isTablet, isDesktop, modalContent } = useContext(MainContext);
@@ -68,10 +69,12 @@ function Portfolio({ model }) {
                                     <img className={styles.image} src={model.aboutMe.image.url} alt={model.aboutMe.image.alternativeText} />
                                 </div>
                             )}
-                            {model.aboutMe.paragraph && typeof model.aboutMe.paragraph === "string" && <p>{model.aboutMe.paragraph}</p>}
+                            <ReadMore>{model.aboutMe.paragraph}</ReadMore>
+
+                            {/* {model.aboutMe.paragraph && typeof model.aboutMe.paragraph === "string" && <ReadMore>{model.aboutMe.paragraph}</ReadMore>}
                             {model.aboutMe.paragraph &&
                                 typeof model.aboutMe.paragraph != "string" &&
-                                model.aboutMe.paragraph.map((text, key) => <p key={key}>{text}</p>)}
+                                model.aboutMe.paragraph.map((text, key) => <ReadMore key={key}>{text}</ReadMore>)} */}
                         </div>
                     </section>
                 )}
