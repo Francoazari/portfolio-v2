@@ -233,15 +233,15 @@
             "url": "https://api.whatsapp.com/send?phone=543364260853"
         },
         "twitter": {
-            "usuario": "francoazari",
+            "user": "francoazari",
             "url": "http://twitter.com/francoazari"
         },
         "instagram": {
-            "usuario": "francoazari",
+            "user": "francoazari",
             "url": "http://instagram.com/francoazari"
         },
         "tiktok": {
-            "usuario": "francoazari",
+            "user": "francoazari",
             "url": "https://www.tiktok.com/francoazari"
         },
         "codepen": "https://www.codepen.io",
