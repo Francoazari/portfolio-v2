@@ -11,7 +11,6 @@ function ReadMore({ length = 500, children }) {
 
     useEffect(() => {
         if (!children) return;
-        console.log(children);
 
         if (typeof children === "string") {
             setTypeChildren("string");

@@ -70,11 +70,6 @@ function Portfolio({ model }) {
                                 </div>
                             )}
                             <ReadMore>{model.aboutMe.paragraph}</ReadMore>
-
-                            {/* {model.aboutMe.paragraph && typeof model.aboutMe.paragraph === "string" && <ReadMore>{model.aboutMe.paragraph}</ReadMore>}
-                            {model.aboutMe.paragraph &&
-                                typeof model.aboutMe.paragraph != "string" &&
-                                model.aboutMe.paragraph.map((text, key) => <ReadMore key={key}>{text}</ReadMore>)} */}
                         </div>
                     </section>
                 )}
