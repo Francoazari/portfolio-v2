@@ -19,16 +19,22 @@ function ReadMore({ length = 500, children }) {
 
             setTypeChildren("object");
             children.forEach((child, key) => {
-                if (child.length < length && typeof child === "string") {
-                    lengthTemp += child.length;
-                    if (lengthTemp + child.length >= length) {
-                        setParagraphLetter({ paragraph: key, length: lengthTemp - length });
+                console.log("child:", child.length, "key:", key);
+                if (typeof child === "string") {
+                    if (child.length < length) {
+                        if (lengthTemp + child.length >= length) {
+                            setParagraphLetter({ paragraph: key, length: length - lengthTemp });
+                        }
+                        lengthTemp += child.length;
                     }
                 } else {
                     setTypeChildren("not-valid");
                     console.error("ReadMore: Invalid paragraph");
                 }
             });
+        } else {
+            setTypeChildren("not-valid");
+            console.error("ReadMore: Invalid paragraph");
         }
     }, [children, setTypeChildren, length]);
 
@@ -37,10 +43,11 @@ function ReadMore({ length = 500, children }) {
             {typeChildren === "string" && isShown ? children : String(children).substr(0, length)}
             {typeChildren === "object" &&
                 children.forEach((child, key) => {
-                    if (child.length <= length || isShown) {
-                        return <p>{child}</p>;
-                    } else {
-                        return <p>{child.substr(0, paragraphLetter.length)}</p>;
+                    if (key <= paragraphLetter.paragraph || isShown) {
+                        const paragraph = document.createElement("p");
+                        paragraph.innerHTML =
+                            key !== paragraphLetter.paragraph || isShown ? child : (paragraph.innerHTML = child.substr(0, paragraphLetter.length));
+                        return paragraph;
                     }
                 })}
             {!isShown && <button onClick={toggleButton}> {isShown ? "Show less" : "Read more"}</button>}
