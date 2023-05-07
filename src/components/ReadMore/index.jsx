@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./ReadMore.module.scss";
 
-function ReadMore({ length = 500, children }) {
+function ReadMore({ length = 200, children }) {
     const [isShown, setIsShown] = useState(false);
     const [typeChildren, setTypeChildren] = useState();
     const [paragraphLetter, setParagraphLetter] = useState();
