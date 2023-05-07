@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import styles from "./ReadMore.module.scss";
+import clsx from "clsx";
 
-function ReadMore({ length = 200, children }) {
+function ReadMore({ length = 200, children, customStyles }) {
     const [isShown, setIsShown] = useState(false);
     const [typeChildren, setTypeChildren] = useState();
     const [paragraphLetter, setParagraphLetter] = useState();
@@ -14,6 +15,9 @@ function ReadMore({ length = 200, children }) {
 
         if (typeof children === "string") {
             setTypeChildren("string");
+            if (children.length <= length) {
+                setHideButton(true);
+            }
         } else if (typeof children === "object") {
             let lengthTemp = 0;
             setTypeChildren("object");
@@ -56,8 +60,13 @@ function ReadMore({ length = 200, children }) {
                     }
                 })}
             {!hideButton && (
-                <button className={styles.buttonReadMore} onClick={toggleButton}>
-                    {isShown ? "Show less" : "Read more"}
+                <button
+                    className={clsx(styles.buttonReadMore, {
+                        [customStyles]: customStyles
+                    })}
+                    onClick={toggleButton}
+                >
+                    {isShown ? "Read less" : "Read more"}
                 </button>
             )}
         </>
