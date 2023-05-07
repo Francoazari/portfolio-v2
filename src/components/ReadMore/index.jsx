@@ -39,7 +39,7 @@ function ReadMore({ length = 500, children }) {
 
     return (
         <>
-            {typeChildren === "string" && isShown ? children : String(children).substr(0, length)}
+            {typeChildren === "string" && (isShown ? children : children.substr(0, length))}
             {typeChildren === "object" &&
                 children.map((child, key) => {
                     if (key <= paragraphLetter.paragraph || isShown) {
