@@ -324,12 +324,15 @@ section {
     }
 
     .experience {
-        ul.experienceList {
-            flex-direction: row;
-            flex-wrap: nowrap;
-            overflow-y: hidden;
-            overflow-x: auto;
-            padding-bottom: 10px;
+        ul {
+            &.experienceList {
+                flex-direction: row;
+                align-items: flex-start;
+                flex-wrap: nowrap;
+                overflow-y: hidden;
+                overflow-x: auto;
+                padding-bottom: 10px;
+            }
         }
     }
 
