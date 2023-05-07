@@ -4,6 +4,7 @@ import { MainContext } from "../../contexts";
 import styles from "./ProjectCard.module.scss";
 import animatedStyle from "../../styles/animated-element.module.scss";
 import TagList from "../TagList";
+import ReadMore from "../ReadMore";
 
 function ProjectCard({ projectInformation }) {
     const { isMobile, setModalContent, modalContent } = useContext(MainContext);
@@ -23,12 +24,12 @@ function ProjectCard({ projectInformation }) {
                     <div className={styles.information}>
                         <h3>{projectInformation.title}</h3>
                         <div className={styles.paragraph}>
-                            <p>{projectInformation.paragraph}</p>
+                            <ReadMore length="200" customStyles={styles.readMoreExperience}>
+                                {projectInformation.paragraph}
+                            </ReadMore>
                         </div>
 
-                        {!isMobile && projectInformation.skillTags && (
-                            <TagList list={projectInformation.skillTags} backgroundColor={"#2b4775"} align={"right"} />
-                        )}
+                        {!isMobile && projectInformation.skillTags && <TagList list={projectInformation.skillTags} backgroundColor={"#2b4775"} />}
 
                         {!isMobile && projectInformation.worksLinks && (
                             <div className={styles.worksLinks}>
