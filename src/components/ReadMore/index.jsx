@@ -19,7 +19,6 @@ function ReadMore({ length = 500, children }) {
 
             setTypeChildren("object");
             children.forEach((child, key) => {
-                console.log("child:", child.length, "key:", key);
                 if (typeof child === "string") {
                     if (child.length < length) {
                         if (lengthTemp + child.length >= length) {
@@ -42,12 +41,15 @@ function ReadMore({ length = 500, children }) {
         <>
             {typeChildren === "string" && isShown ? children : String(children).substr(0, length)}
             {typeChildren === "object" &&
-                children.forEach((child, key) => {
+                children.map((child, key) => {
                     if (key <= paragraphLetter.paragraph || isShown) {
-                        const paragraph = document.createElement("p");
-                        paragraph.innerHTML =
-                            key !== paragraphLetter.paragraph || isShown ? child : (paragraph.innerHTML = child.substr(0, paragraphLetter.length));
-                        return paragraph;
+                        if (key !== paragraphLetter.paragraph || isShown) {
+                            return <p key={key}>{child}</p>;
+                        } else {
+                            return <p key={key}>{child.substr(0, paragraphLetter.length)}</p>;
+                        }
+                    } else {
+                        return <p key={key}></p>;
                     }
                 })}
             {!isShown && <button onClick={toggleButton}> {isShown ? "Show less" : "Read more"}</button>}
