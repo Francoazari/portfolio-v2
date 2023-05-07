@@ -30,12 +30,12 @@ function Index() {
         return await fetch(modelName);
     };
 
-    const modelName = languageActive && model?.nav && model?.nav.languages.find((lang) => lang.id === languageActive).modelId;
+    const modelName = model?.nav?.languages?.find((lang) => lang.id === languageActive).modelId || "english-model";
 
     useEffect(() => {
         setLoading(true);
         try {
-            getModel(`./models/${modelName ?? "english-model"}.json`)
+            getModel(`./models/${modelName}.json`)
                 .then((res) => res.json())
                 .then((model) => {
                     setTimeout(() => {
@@ -46,7 +46,7 @@ function Index() {
         } catch (error) {
             console.error(error);
         }
-    }, [languageActive, modelName]);
+    }, [modelName]);
 
     return (
         <MainContext.Provider value={contextValue}>
