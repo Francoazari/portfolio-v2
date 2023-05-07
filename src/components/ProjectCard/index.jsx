@@ -24,7 +24,7 @@ function ProjectCard({ projectInformation }) {
                     <div className={styles.information}>
                         <h3>{projectInformation.title}</h3>
                         <div className={styles.paragraph}>
-                            <ReadMore length="200" customStyles={styles.readMoreExperience}>
+                            <ReadMore length={isMobile ? 150 : 250} customStyles={styles.readMoreExperience}>
                                 {projectInformation.paragraph}
                             </ReadMore>
                         </div>
