@@ -20,7 +20,7 @@ function ReadMore({ length = 500, children }) {
 
             children.forEach((child, key) => {
                 if (typeof child === "string") {
-                    if (lengthTemp < length && child.length + lengthTemp > length) {
+                    if (lengthTemp <= length && child.length + lengthTemp > length) {
                         setParagraphLetter({ paragraph: key, length: length - lengthTemp });
                     }
                     lengthTemp += child.length;
