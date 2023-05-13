@@ -128,9 +128,9 @@ function ContactForm() {
                 disabled={formState !== formStates.init}
             >
                 <span className={clsx({ [styles.showMessage]: formState === formStates.init })}>Send message</span>
-                <div className={clsx({ [styles.showSpinner]: formState === formStates.loading })}>
+                <span className={clsx({ [styles.showSpinner]: formState === formStates.loading })}>
                     <BeatLoader color="#ffffff" loading margin={2} size={9} speedMultiplier={1} />
-                </div>
+                </span>
                 <span className={clsx(styles.successMessage, { [styles.showSuccess]: formState === formStates.submitted })}>Form submitted. Thanks!</span>
             </button>
         </form>
