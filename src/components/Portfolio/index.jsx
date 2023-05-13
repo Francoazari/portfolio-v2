@@ -54,6 +54,10 @@ function Portfolio({ model }) {
                             {model.main.thirdLine && <span className={clsx(animatedStyle.animatedElement, animatedStyle.order4)}>{model.main.thirdLine}</span>}
                         </div>
                     )}
+
+                    <svg className={styles.arrow} data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M3.81 4.38 8 8.57l4.19-4.19 1.52 1.53L8 11.62 2.29 5.91l1.52-1.53z" />
+                    </svg>
                 </section>
 
                 {model?.aboutMe && (
@@ -126,10 +130,6 @@ function Portfolio({ model }) {
                     </section>
                 )}
             </main>
-
-            <svg className={styles.arrow} data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M3.81 4.38 8 8.57l4.19-4.19 1.52 1.53L8 11.62 2.29 5.91l1.52-1.53z" />
-            </svg>
 
             <Footer information={model?.footer} />
 
