@@ -8,7 +8,7 @@
                 "url": "#home"
             },
             {
-                "label": "Sobre mi",
+                "label": "Sobre mí",
                 "url": "#aboutme"
             },
             {
@@ -26,23 +26,6 @@
             {
                 "label": "Contacto",
                 "url": "#getintouch"
-            }
-        ],
-        "languages": [
-            {
-                "id": "english",
-                "modelId": "english-model",
-                "label": "Inglés",
-                "symbol": "EN",
-                "icon": "",
-                "default": true
-            },
-            {
-                "id": "spanish",
-                "modelId": "spanish-model",
-                "label": "Español",
-                "symbol": "ES",
-                "icon": ""
             }
         ]
     },
@@ -107,7 +90,7 @@
         "project": [
             {
                 "title": "Portfolio V2",
-                "paragraph": "Este proyecto se realizó con el propósito de presentar a un individuo, destacando sus virtudes, objetivos, proyectos y experiencias. El código de este portafolio es el resultado concreto de dicha iniciativa.",
+                "paragraph": "Este proyecto se realizó con el propósito de presentar a una persona, destacando sus virtudes, objetivos, proyectos y experiencias. El código de este portafolio es el resultado concreto de dicha iniciativa.",
                 "image": {
                     "url": "./assets/projects/portfolio-v2.png",
                     "alternativeText": "Portfolio V2"
@@ -247,12 +230,12 @@
     },
     "getInTouch": {
         "title": "CONTACTO",
-        "paragraph": "Si tenes una idea o queres contame algo, podes escribirme en este formulario.",
+        "paragraph": "Si tenes una idea o queres contarme algo, podes escribirme en este formulario.",
         "form": {
             "placeholder": {
                 "name": "Nombre",
                 "email": "Correo electrónico",
-                "phone": "Numero de teléfono",
+                "phone": "Número de teléfono",
                 "message": "Mensaje"
             },
             "button": {
@@ -260,9 +243,9 @@
                 "formSubmitted": "Formulario enviado. Gracias."
             },
             "errors": {
-                "onlyNumber": "Solo numeros",
+                "onlyNumber": "Solo números",
                 "required": "Este campo es requerido",
-                "emailInvalid": "Email invalido",
+                "emailInvalid": "Email inválido",
                 "nameTooLong": "Nombre demasiado largo",
                 "emailTooLong": "Email demasiado largo",
                 "descriptionTooLong": "Descripción demasiada larga"
@@ -284,7 +267,26 @@
         "credits": "Sitio web desarrollado por Franco Azari"
     },
     "system": {
-        "readMore": "Leer más",
-        "readLess": "Leer menos"
+        "localization": {
+            "readMore": "Leer más",
+            "readLess": "Leer menos"
+        },
+        "languages": [
+            {
+                "id": "english",
+                "modelId": "english-model",
+                "label": "Inglés",
+                "symbol": "EN",
+                "icon": "",
+                "default": true
+            },
+            {
+                "id": "spanish",
+                "modelId": "spanish-model",
+                "label": "Español",
+                "symbol": "ES",
+                "icon": ""
+            }
+        ]
     }
 }

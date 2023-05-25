@@ -4,7 +4,7 @@ import animatedStyle from "../../styles/animated-element.module.scss";
 import { useContext, useRef } from "react";
 import { MainContext } from "../../contexts";
 
-function Navbar({ information }) {
+function Navbar({ information, languages }) {
     const { isTablet, isDesktop, languageActive, setLanguageActive } = useContext(MainContext);
     const languageRef = useRef();
 
@@ -59,16 +59,16 @@ function Navbar({ information }) {
                             );
                         })}
 
-                        {information.languages && (
+                        {languages && (
                             <li className={clsx(styles.languages, animatedStyle.animatedElement, animatedStyle.order1)}>
                                 <input type="checkbox" id="language-checkbox" className={styles.languageCheckbox} ref={languageRef} />
                                 <label htmlFor="language-checkbox" className={styles.languageLabel}>
-                                    {information.languages.find((lang) => lang.id === languageActive)?.symbol ??
-                                        information.languages.find((lang) => lang.default)?.symbol ??
-                                        information.languages[0].symbol}
+                                    {languages.find((lang) => lang.id === languageActive)?.symbol ??
+                                        languages.find((lang) => lang.default)?.symbol ??
+                                        languages[0].symbol}
                                 </label>
                                 <ul className={styles.languagesDropdown}>
-                                    {information.languages.map((language, key) => {
+                                    {languages.map((language, key) => {
                                         return (
                                             <li
                                                 className={clsx({ [styles.active]: language.id === languageActive })}
