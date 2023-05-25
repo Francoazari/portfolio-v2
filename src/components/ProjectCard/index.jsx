@@ -18,7 +18,7 @@ function ProjectCard({ projectInformation }) {
         projectInformation && (
             <div className={clsx(styles.card)} onClick={openModal}>
                 <div className={styles.cardImage}>
-                    <img src={"./assets/works/example.jpg"} alt={"asd"} />
+                    <img src={projectInformation.image.url} alt={projectInformation.image.alternativeText} />
                 </div>
                 <div className={styles.cardInfo}>
                     <div className={styles.information}>
