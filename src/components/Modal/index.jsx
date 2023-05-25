@@ -12,13 +12,6 @@ function Modal() {
     const [contentMounted, setContentMounted] = useState(true);
     const background = useRef();
 
-    const closeModal = () => {
-        setContentMounted(false);
-        setTimeout(() => {
-            setModalContent(null);
-        }, 100);
-    };
-
     const handleKeyDown = ({ keyCode }) => {
         if (keyCode === 27 || keyCode === 37 || keyCode === 39) {
             closeModal();
@@ -31,6 +24,16 @@ function Modal() {
 
     useEventListener("keydown", handleKeyDown, document);
     useEventListener("pointerdown", handleBackgroundClick, document);
+
+    if (!modalContent) return;
+
+    const closeModal = () => {
+        setContentMounted(false);
+        setTimeout(() => {
+            console.log("entre");
+            setModalContent(null);
+        }, 300);
+    };
 
     return (
         <FocusLock>
@@ -47,7 +50,7 @@ function Modal() {
                         </svg>
                     </div>
                     <div className={styles.assetContainer}>
-                        <img src={"./assets/works/example.jpg"} alt={"asd"} />
+                        {modalContent.image && modalContent.image?.url && <img src={modalContent.image?.url} alt={modalContent.image?.alternativeText} />}
                     </div>
                     <div className={styles.information}>
                         <h3 className={clsx(animatedStyle.animatedElement, animatedStyle.order1)}>{modalContent?.title}</h3>
