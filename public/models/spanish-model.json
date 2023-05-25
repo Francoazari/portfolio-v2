@@ -109,7 +109,7 @@
                 "title": "Portfolio V2",
                 "paragraph": "Este proyecto se realizó con el propósito de presentar a un individuo, destacando sus virtudes, objetivos, proyectos y experiencias. El código de este portafolio es el resultado concreto de dicha iniciativa.",
                 "image": {
-                    "url": "./assets/works/example.jpg",
+                    "url": "./assets/projects/portfolio-v2.png",
                     "alternativeText": "Portfolio V2"
                 },
                 "skillTags": ["HTML", "CSS", "JAVASCRIPT", "REACT", "SASS"],
@@ -132,7 +132,7 @@
                 "title": "Fenox Tech - Coderhouse",
                 "paragraph": "Página web creada para un cliente proveido por Coderhouse. Luego de la cursada de Desarrollo Web, por quedar en el TOP10 de los alumnos del cursado, Coderhouse te provee un cliente real para hacerle la página web según sus necesidades. Las tecnologias a utilizar eran limitadas a las que se dieron en el curso.",
                 "image": {
-                    "url": "./assets/works/example.jpg",
+                    "url": "./assets/projects/fenox-tech.png",
                     "alternativeText": "Fenox Tech - Coderhouse"
                 },
                 "skillTags": ["HTML", "CSS"],
@@ -155,7 +155,7 @@
                 "title": "Tienda ecommerce con React",
                 "paragraph": "Proyecto final del curso de React en Coderhouse. En este caso se desarrolló una tienda ecommerce.",
                 "image": {
-                    "url": "./assets/works/example.jpg",
+                    "url": "./assets/projects/ecommerce-react.png",
                     "alternativeText": "Tienda ecommerce con React"
                 },
                 "skillTags": ["HTML", "CSS", "JAVASCRIPT", "REACT"],
@@ -178,7 +178,7 @@
                 "title": "Tienda ecommerce con Javascript",
                 "paragraph": "Proyecto final del curso de Javascript en Coderhouse. En este caso se desarrolló una tienda ecommerce.",
                 "image": {
-                    "url": "./assets/works/example.jpg",
+                    "url": "./assets/projects/ecommerce-javascript.png",
                     "alternativeText": "Tienda ecommerce con Javascript"
                 },
                 "skillTags": ["HTML", "CSS", "JAVASCRIPT"],
@@ -201,7 +201,7 @@
                 "title": "Timer game",
                 "paragraph": "Timer game es un juego que se realizó con el fin de practicar React. La idea es setear un tiempo y competir con otras personas quien puede hacer más clicks.",
                 "image": {
-                    "url": "./assets/works/example.jpg",
+                    "url": "./assets/projects/timer-game.png",
                     "alternativeText": "Timer game"
                 },
                 "skillTags": ["HTML", "SASS", "JAVASCRIPT", "REACT"],
@@ -224,7 +224,7 @@
                 "title": "Portfolio V1",
                 "paragraph": "Porfolio realizado en el curso de Desarrollo Web de Coderhouse.",
                 "image": {
-                    "url": "./assets/works/example.jpg",
+                    "url": "./assets/projects/portfolio-v1.png",
                     "alternativeText": "Portfolio V1"
                 },
                 "skillTags": ["HTML", "CSS", "SASS"],
