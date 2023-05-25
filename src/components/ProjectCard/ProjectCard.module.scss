@@ -12,7 +12,6 @@
 
     &:hover {
         background-color: rgba(255, 255, 255, 0.8);
-        transform: scale(1.02);
     }
 
     .cardImage {
@@ -145,10 +144,6 @@
         transition: background-color 50ms;
         margin: 10px 0;
         padding: 10px;
-
-        &:hover {
-            transform: scale(1);
-        }
 
         &.modal {
             height: 100%;
