@@ -32,7 +32,7 @@
             {
                 "id": "english",
                 "modelId": "english-model",
-                "label": "English",
+                "label": "Inglés",
                 "symbol": "EN",
                 "icon": "",
                 "default": true
@@ -40,7 +40,7 @@
             {
                 "id": "spanish",
                 "modelId": "spanish-model",
-                "label": "Spanish",
+                "label": "Español",
                 "symbol": "ES",
                 "icon": ""
             }
