@@ -256,20 +256,10 @@
             "number": "3364260853",
             "url": "https://api.whatsapp.com/send?phone=543364260853"
         },
-        "twitter": {
-            "user": "francoazari",
-            "url": "http://twitter.com/francoazari"
-        },
         "instagram": {
             "user": "francoazari",
             "url": "http://instagram.com/francoazari"
         },
-        "tiktok": {
-            "user": "francoazari",
-            "url": "https://www.tiktok.com/francoazari"
-        },
-        "codepen": "https://www.codepen.io",
-        "linkedin": "https://www.linkedin.com/francoazari",
-        "github": "https://www.github.com"
+        "linkedin": "https://www.linkedin.com/francoazari"
     }
 }
