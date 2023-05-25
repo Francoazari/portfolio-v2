@@ -9,7 +9,7 @@ import BeatLoader from "react-spinners/BeatLoader";
 
 const formStates = Object.freeze({ init: 0, loading: 1, submitted: 2 });
 
-function ContactForm() {
+function ContactForm({ localization }) {
     const [captchaToken, setCaptchaToken] = useState(false);
     const [captchaError, setCaptchaError] = useState(false);
     const [formState, setFormState] = useState(formStates.init);
@@ -62,23 +62,26 @@ function ContactForm() {
                 name="name"
                 type="text"
                 className={clsx({ [styles.error]: errors?.name })}
-                placeholder="Name"
+                placeholder={localization?.placeholder?.name ?? "Name"}
                 disabled={formState !== formStates.init}
-                {...register("name", { required: { value: true, message: "This field is required" }, maxLength: { value: 50, message: "Name too long" } })}
+                {...register("name", {
+                    required: { value: true, message: localization?.errors.required ?? "This field is required" },
+                    maxLength: { value: 50, message: localization?.errors.nameTooLong ?? "Name too long" }
+                })}
             />
             {errors?.name && <span className={styles.error}>{errors?.name?.message}</span>}
 
             <input
                 name="email"
-                placeholder="Email"
+                placeholder={localization?.placeholder?.email ?? "Email"}
                 disabled={formState !== formStates.init}
                 className={clsx({ [styles.error]: errors?.email })}
                 {...register("email", {
-                    required: { value: true, message: "This field is required" },
-                    maxLength: { value: 100, message: "Email too long" },
+                    required: { value: true, message: localization?.errors.required ?? "This field is required" },
+                    maxLength: { value: 100, message: localization?.errors.emailTooLong ?? "Email too long" },
                     pattern: {
                         value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                        message: "Invalid email"
+                        message: localization?.errors.emailInvalid ?? "Email invalid"
                     }
                 })}
             />
@@ -86,13 +89,13 @@ function ContactForm() {
 
             <input
                 name="phone"
-                placeholder="Phone number"
+                placeholder={localization?.placeholder?.phone ?? "Phone number"}
                 disabled={formState !== formStates.init}
                 className={clsx({ [styles.error]: errors?.phone })}
                 {...register("phone", {
                     pattern: {
                         value: /^(0|[1-9]\d*)$/,
-                        message: "Only numbers"
+                        message: localization?.errors.onlyNumbers ?? "Only numbers"
                     }
                 })}
             />
@@ -101,12 +104,12 @@ function ContactForm() {
 
             <textarea
                 name="message"
-                placeholder="Message"
+                placeholder={localization?.placeholder?.message ?? "Message"}
                 className={clsx({ [styles.error]: errors?.message })}
                 disabled={formState !== formStates.init}
                 {...register("message", {
-                    required: { value: true, message: "This field is required" },
-                    maxLength: { value: 500, message: "Description too long" }
+                    required: { value: true, message: localization?.errors.required ?? "This field is required" },
+                    maxLength: { value: 500, message: localization?.errors.descriptionTooLong ?? "Description too long" }
                 })}
             ></textarea>
             {errors?.message && <span className={styles.error}>{errors?.message?.message}</span>}
@@ -124,14 +127,16 @@ function ContactForm() {
                     [styles.submitted]: formState === formStates.submitted
                 })}
                 type="submit"
-                value="Send message"
+                value={localization?.button?.sendMessage ?? "Send message"}
                 disabled={formState !== formStates.init}
             >
-                <span className={clsx({ [styles.showMessage]: formState === formStates.init })}>Send message</span>
+                <span className={clsx({ [styles.showMessage]: formState === formStates.init })}>{localization?.button?.sendMessage ?? "Send message"}</span>
                 <span className={clsx({ [styles.showSpinner]: formState === formStates.loading })}>
                     <BeatLoader color="#ffffff" loading margin={2} size={9} speedMultiplier={1} />
                 </span>
-                <span className={clsx(styles.successMessage, { [styles.showSuccess]: formState === formStates.submitted })}>Form submitted. Thanks!</span>
+                <span className={clsx(styles.successMessage, { [styles.showSuccess]: formState === formStates.submitted })}>
+                    {localization?.button?.formSubmitted ?? "Form submitted. Thanks!"}
+                </span>
             </button>
         </form>
     );

@@ -247,7 +247,27 @@
     },
     "getInTouch": {
         "title": "GET IN TOUCH",
-        "paragraph": "If you have an idea or want to tell me something, you can write me in this form."
+        "paragraph": "If you have an idea or want to tell me something, you can write me in this form.",
+        "form": {
+            "placeholder": {
+                "name": "Name",
+                "email": "Email",
+                "phone": "Phone number",
+                "message": "Message"
+            },
+            "button": {
+                "sendMessage": "Send message",
+                "formSubmitted": "Form submitted. Thanks."
+            },
+            "errors": {
+                "required": "This field is required",
+                "nameTooLong": "Name too long",
+                "emailInvalid": "Email invalid",
+                "emailTooLong": "Email too long",
+                "onlyNumbers": "Only numbers",
+                "descriptionTooLong": "Description too long"
+            }
+        }
     },
     "footer": {
         "name": "Franco Azari",
@@ -260,6 +280,11 @@
             "user": "francoazari",
             "url": "http://instagram.com/francoazari"
         },
-        "linkedin": "https://www.linkedin.com/francoazari"
+        "linkedin": "https://www.linkedin.com/francoazari",
+        "credits": "Website developed by Franco Azari"
+    },
+    "system": {
+        "readMore": "Read more",
+        "readLess": "Read less"
     }
 }

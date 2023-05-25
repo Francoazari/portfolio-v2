@@ -113,7 +113,7 @@ function Footer({ information }) {
             </div>
 
             <div className={styles.bottom}>
-                <p>Website developed by Franco Azari</p>
+                <p>{information.credits ?? "Website developed by Franco Azari"}</p>
             </div>
         </footer>
     );

@@ -69,7 +69,7 @@ function Portfolio({ model }) {
                                     <img className={styles.image} src={model.aboutMe.image.url} alt={model.aboutMe.image.alternativeText} />
                                 </div>
                             )}
-                            <ReadMore>{model.aboutMe.paragraph}</ReadMore>
+                            <ReadMore localization={model?.system}>{model.aboutMe.paragraph}</ReadMore>
                         </div>
                     </section>
                 )}
@@ -125,7 +125,7 @@ function Portfolio({ model }) {
                         <h2>{model.getInTouch.title ?? "GET IN TOUCH"}</h2>
                         <div className={styles.container}>
                             {model.getInTouch.paragraph && <p>{model.getInTouch.paragraph}</p>}
-                            <ContactForm />
+                            <ContactForm localization={model?.getInTouch?.form} />
                         </div>
                     </section>
                 )}

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./ReadMore.module.scss";
 import clsx from "clsx";
 
-function ReadMore({ length = 200, children, customStyles }) {
+function ReadMore({ length = 200, children, customStyles, localization }) {
     const [isShown, setIsShown] = useState(false);
     const [typeChildren, setTypeChildren] = useState();
     const [paragraphLetter, setParagraphLetter] = useState();
@@ -66,7 +66,7 @@ function ReadMore({ length = 200, children, customStyles }) {
                     })}
                     onClick={toggleButton}
                 >
-                    {isShown ? "Read less" : "Read more"}
+                    {isShown ? localization?.readLess ?? "Read Less" : localization?.readMore ?? "Read More"}
                 </button>
             )}
         </>
