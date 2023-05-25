@@ -30,7 +30,7 @@ function Index() {
         return await fetch(modelName);
     };
 
-    const modelName = model?.nav?.languages?.find((lang) => lang.id === languageActive).modelId || "english-model";
+    const modelName = model?.system?.languages?.find((lang) => lang.id === languageActive).modelId || "english-model";
 
     useEffect(() => {
         setLoading(true);
