@@ -230,7 +230,7 @@
     },
     "getInTouch": {
         "title": "GET IN TOUCH",
-        "paragraph": "If you have an idea or want to tell me something, you can write me in this form.",
+        "paragraph": "If you have an idea or want to tell me something, you can write to me in this form.",
         "form": {
             "placeholder": {
                 "name": "Name",
