@@ -49,15 +49,15 @@
         "title": "EXPERIENCIA",
         "experience": [
             {
-                "heading": "Miracle Devs SA",
+                "heading": "Miracle Devs",
                 "period": "Junio 2019 - Presente",
-                "paragraph": "",
+                "paragraph": "Desarrollador Ssr Front End. Desarrollo de interfaces de usuario atractivas y funcionales utilizando HTML, CSS y JavaScript/React. Resolución eficiente de problemas y depuración de código en diferentes navegadores y dispositivos. Colaboración efectiva en equipos, trabajando en conjunto con diseñadores y otros profesionales.",
                 "skills": ["HTML", "CSS", "SASS", "JAVASCRIPT", "REACT", "GATSBY"]
             },
             {
-                "heading": "Grupo Unión SA",
+                "heading": "Grupo Unión",
                 "period": "Marzo 2018 - Mayo 2019",
-                "paragraph": "",
+                "paragraph": "Programador PHP. Análisis de requerimientos. Planteo de soluciones. Resolución eficiente de problemas.",
                 "skills": ["HTML", "CSS", "JAVASCRIPT", "JQuery", "PHP"]
             },
             {

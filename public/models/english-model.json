@@ -49,21 +49,21 @@
         "title": "EXPERIENCE",
         "experience": [
             {
-                "heading": "Miracle Devs SA",
+                "heading": "Miracle Devs",
                 "period": "June 2019 - Currently",
-                "paragraph": "",
+                "paragraph": "Ssr Front-end Developer. Development of appealing and functional user interfaces using HTML, CSS, and JavaScript/React. Efficient problem-solving and code debugging across different browsers and devices. Effective collaboration within teams, working alongside designers and other professionals.",
                 "skills": ["HTML", "CSS", "SASS", "JAVASCRIPT", "REACT", "GATSBY"]
             },
             {
-                "heading": "Grupo Unión SA",
+                "heading": "Grupo Unión",
                 "period": "March 2018 - May 2019",
-                "paragraph": "",
+                "paragraph": "PHP Programmer. Requirement analysis. Solution formulation. Efficient problem-solving.",
                 "skills": ["HTML", "CSS", "JAVASCRIPT", "JQuery", "PHP"]
             },
             {
-                "heading": "Técnico superior en desarrollo de software",
+                "heading": "Superior Technician in Software Development",
                 "period": "April 2017 - March 2020",
-                "paragraph": "Tertiary degree attained at school Nº 49 J.J. DE URQUIZA.",
+                "paragraph": "Tertiary degree attained at High School of Commerce No. 49 Cap. Gral. Urquiza in Argentina.",
                 "skills": ["HTML", "CSS", "JAVASCRIPT", "PHP"]
             }
         ]
