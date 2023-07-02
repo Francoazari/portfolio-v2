@@ -17,6 +17,7 @@ function ReadMore({ length = 200, children, customStyles, localization }) {
             setTypeChildren("string");
             if (children.length <= length) {
                 setHideButton(true);
+                setIsShown(true);
             }
         } else if (typeof children === "object") {
             let lengthTemp = 0;
@@ -46,14 +47,15 @@ function ReadMore({ length = 200, children, customStyles, localization }) {
 
     return (
         <>
-            {typeChildren === "string" && (isShown ? children : children.substr(0, length))}
+            {console.log(typeChildren, " - ", children)}
+            {typeChildren === "string" && (isShown ? children : children.substr(0, length) + "... ")}
             {typeChildren === "object" &&
                 children.map((child, key) => {
                     if (key <= paragraphLetter?.paragraph || isShown) {
                         if (key !== paragraphLetter?.paragraph || isShown) {
                             return <p key={key}>{child}</p>;
                         } else {
-                            return <p key={key}>{child.substr(0, paragraphLetter?.length)}</p>;
+                            return <p key={key}>{child.substr(0, paragraphLetter?.length) + "... "}</p>;
                         }
                     } else {
                         return <p key={key}></p>;
