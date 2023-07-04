@@ -102,11 +102,8 @@ section {
             width: 300px;
             height: 300px;
             border-radius: 50%;
-
-            img {
-                object-fit: cover;
-                pointer-events: none;
-            }
+            object-fit: cover;
+            pointer-events: none;
         }
 
         p {
