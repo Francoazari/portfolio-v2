@@ -28,6 +28,7 @@
             object-fit: cover;
             border-radius: 20px;
             aspect-ratio: 4/3;
+            pointer-events: none;
         }
     }
 
@@ -102,6 +103,7 @@
                 img {
                     width: 24px;
                     height: auto;
+                    pointer-events: none;
                 }
 
                 p {

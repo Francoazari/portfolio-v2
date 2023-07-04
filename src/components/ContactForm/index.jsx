@@ -47,7 +47,7 @@ function ContactForm({ localization }) {
                         }, 10000);
                     },
                     (error) => {
-                        console.log(error.text);
+                        console.error(error.text);
                     }
                 );
         } else {

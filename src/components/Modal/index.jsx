@@ -30,7 +30,6 @@ function Modal() {
     const closeModal = () => {
         setContentMounted(false);
         setTimeout(() => {
-            console.log("entre");
             setModalContent(null);
         }, 300);
     };

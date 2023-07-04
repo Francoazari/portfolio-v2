@@ -2,7 +2,6 @@ import clsx from "clsx";
 import styles from "./TagList.module.scss";
 
 function TagList({ list, backgroundColor, fontColor, align }) {
-    console.log();
     return (
         <ul
             style={{ "--background-color": `${backgroundColor}`, "--font-color": `${fontColor}` }}

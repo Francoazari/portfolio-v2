@@ -47,7 +47,6 @@ function ReadMore({ length = 200, children, customStyles, localization }) {
 
     return (
         <>
-            {console.log(typeChildren, " - ", children)}
             {typeChildren === "string" && (isShown ? children : children.substr(0, length) + "... ")}
             {typeChildren === "object" &&
                 children.map((child, key) => {
