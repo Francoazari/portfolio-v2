@@ -37,13 +37,26 @@ li {
             }
         }
 
-        > span,
         > p {
-            margin-bottom: 15px;
+            font-size: 14px;
+            margin: 10px 0;
         }
 
-        .period {
-            margin-bottom: 5px;
+        .calendar {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+
+            > svg {
+                width: 18px;
+                height: auto;
+                margin-right: 5px;
+            }
+
+            > span {
+                font-size: 14px;
+                margin-bottom: -2px;
+            }
         }
 
         .heading {
