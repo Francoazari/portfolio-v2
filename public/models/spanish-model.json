@@ -32,7 +32,7 @@
     "main": {
         "firstLine": "Hola, mi nombre es",
         "secondLine": "FRANCO AZARI",
-        "thirdLine": "¡Encantado de conocerte!"
+        "thirdLine": "Soy desarrollador Front End"
     },
     "aboutMe": {
         "title": "SOBRE MÍ",
@@ -42,7 +42,7 @@
         },
         "paragraph": [
             "Soy una persona tranquila, responsable y comprometida con mi trabajo. Me apasiona el aprendizaje continuo y disfruto descubriendo cosas nuevas. Tengo facilidad para aprender de forma autodidacta y me siento cómodo trabajando tanto en equipo como de forma individual.",
-            "Soy proactivo y perseverante, siempre dispuesto a asumir nuevos desafíos y a superar las expectativas. Creo en el valor del esfuerzo y la dedicación para alcanzar mis metas y objetivos profesionales, y mantengo una actitud positiva ante los desafíos y las adversidades. Me enorgullece decir que soy una persona comprometida y orientada a los resultados, y estoy listo para enfrentar cualquier reto que se me presente en mi carrera profesional."
+            "Soy proactivo y perseverante, siempre dispuesto a asumir nuevos desafíos y a superar las expectativas. Creo en el valor del esfuerzo y la dedicación para alcanzar mis metas y objetivos profesionales, y mantengo una actitud positiva ante los desafíos y las adversidades."
         ]
     },
     "experiences": {
@@ -90,7 +90,7 @@
         "project": [
             {
                 "title": "Portfolio V2",
-                "paragraph": "Este proyecto se realizó con el propósito de presentar a una persona, destacando sus virtudes, objetivos, proyectos y experiencias. El código de este portafolio es el resultado concreto de dicha iniciativa.",
+                "paragraph": "Este proyecto se inició con el propósito de presentarme como persona, destacando mis virtudes, objetivos, proyectos y experiencias. El código de este portafolio es el resultado concreto de esta iniciativa.",
                 "image": {
                     "url": "./assets/projects/portfolio-v2.png",
                     "alternativeText": "Portfolio V2"
@@ -230,7 +230,7 @@
     },
     "getInTouch": {
         "title": "CONTACTO",
-        "paragraph": "Si tenes una idea o queres contarme algo, podes escribirme en este formulario.",
+        "paragraph": "¿Tienes alguna idea? Comunicate conmigo a través de este formulario.",
         "form": {
             "placeholder": {
                 "name": "Nombre",

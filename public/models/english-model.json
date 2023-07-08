@@ -32,7 +32,7 @@
     "main": {
         "firstLine": "Hello, my name is",
         "secondLine": "FRANCO AZARI",
-        "thirdLine": "Nice to meet you!"
+        "thirdLine": "I'm Front End developer"
     },
     "aboutMe": {
         "title": "ABOUT ME",
@@ -42,7 +42,7 @@
         },
         "paragraph": [
             "I am a calm, responsible, and committed person in my work. I am passionate about continuous learning and enjoy discovering new things. I have a facility for self-taught learning and feel comfortable working both as part of a team and independently.",
-            "I am proactive and perseverant, always willing to take on new challenges and exceed expectations. I believe in the value of effort and dedication to achieve my professional goals and objectives, and maintain a positive attitude towards challenges and adversity. I am proud to say that I am a results-oriented and committed person, and I am ready to face any challenge that comes my way in my professional career."
+            "I am proactive and perseverant, always willing to take on new challenges and exceed expectations. I believe in the value of effort and dedication to achieve my professional goals and objectives, and maintain a positive attitude towards challenges and adversity."
         ]
     },
     "experiences": {
@@ -90,7 +90,7 @@
         "project": [
             {
                 "title": "Portfolio V2",
-                "paragraph": "This project was carried out with the purpose of presenting an individual, highlighting his virtues, objectives, projects and experiences. The code of this portfolio is the concrete result of this initiative.",
+                "paragraph": "This project was started with the purpose of presenting my self as an individual, highlighting my virtues, objectives, projects and experiences. The code of this portfolio is the concrete result of this initiative.",
                 "image": {
                     "url": "./assets/projects/portfolio-v2.png",
                     "alternativeText": "Portfolio V2"
@@ -113,7 +113,7 @@
             },
             {
                 "title": "Fenox Tech - Coderhouse",
-                "paragraph": "Website created for a client provided by Coderhouse. After the Web Development course, for being in the TOP10 of the students of the course, Coderhouse provides you with a real client to make the website according to your needs. The technologies to be used were limited to those given in the course.",
+                "paragraph": "Website created for a client provided by Coderhouse. After the Web Development course, for being in the TOP10 of the students of the course, Coderhouse provides you with a real client to make the website according to their needs. The technologies to be used were limited to those given in the course.",
                 "image": {
                     "url": "./assets/projects/fenox-tech.png",
                     "alternativeText": "Fenox Tech - Coderhouse"
@@ -230,7 +230,7 @@
     },
     "getInTouch": {
         "title": "GET IN TOUCH",
-        "paragraph": "If you have an idea or want to tell me something, you can write to me in this form.",
+        "paragraph": "Have an idea? Get in touch via this form.",
         "form": {
             "placeholder": {
                 "name": "Name",
